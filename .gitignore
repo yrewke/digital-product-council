@@ -1,0 +1,33 @@
+# Quarantined third-party reference repositories
+reference-sources/github/
+
+# Migration backups and temporary files
+migration/source-backup/
+*.tmp
+*.temp
+*.bak
+*~
+
+# Credentials, auth material, and browser profiles
+.env
+.env.*
+!.env.example
+*.cookie
+*cookies*
+*credentials*
+*auth*.json
+*token*
+browser-profile/
+user-data/
+
+# Generated caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

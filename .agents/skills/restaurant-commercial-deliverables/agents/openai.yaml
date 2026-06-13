@@ -1,0 +1,4 @@
+interface:
+  display_name: "Restaurant Commercial Deliverables"
+  short_description: "Create traceable commercial business artifacts"
+  default_prompt: "Use $restaurant-commercial-deliverables to turn this approved verdict into safe business artifacts."
