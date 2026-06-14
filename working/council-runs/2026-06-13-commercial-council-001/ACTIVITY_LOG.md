@@ -16,3 +16,18 @@
 - 2026-06-14T12:50:00+04:00 - Research librarian executed only the single authorized ER-001 retry.
 - 2026-06-14T12:50:00+04:00 - ER-001 retry reached NotebookLM but failed because `dragon` authentication was expired. Conservatively counted one additional attempted query; total spend is `2 / 25`.
 - 2026-06-14T12:50:00+04:00 - Stopped without login, account switch, ER-002/003/004 execution, deep research, source changes, or advisor memos.
+- 2026-06-14T13:38:00+04:00 - After user-confirmed manual `dragon` re-authentication, recorded and executed ER-001 in both query ledgers.
+- 2026-06-14T13:39:00+04:00 - ER-001 succeeded with 55 numbered citations mapped to 15 NotebookLM source IDs; recorded decision-value claims and limitations. Spend is `3 / 25`.
+- 2026-06-14T13:41:00+04:00 - Recorded and executed ER-002; it succeeded with 54 numbered citations mapped to 23 NotebookLM source IDs.
+- 2026-06-14T13:43:00+04:00 - Recorded operational claims, vendor-claim limitations, candidate pilot gates, and contradictions. Spend is `4 / 25`.
+- 2026-06-14T13:44:00+04:00 - Recorded and executed ER-003; it succeeded with 52 numbered citations mapped to 22 NotebookLM source IDs.
+- 2026-06-14T13:46:00+04:00 - Recorded alternatives/coexistence evidence and source-quality limitations. Spend is `5 / 25`.
+- 2026-06-14T13:47:00+04:00 - Recorded and executed ER-004; it succeeded with 36 numbered citations mapped to 17 NotebookLM source IDs.
+- 2026-06-14T13:49:00+04:00 - Completed ordered retrieval with all four requests successful. Total spend is `6 / 25`; 197 numbered citations were returned across the four successful responses.
+- 2026-06-14T13:49:00+04:00 - Marked the evidence pack sufficient for bounded advisor memos and insufficient for packages, prices, economic promises, or a commercial verdict.
+- 2026-06-14T14:00:00+04:00 - Completed five sealed Stage 1 advisor memos using the prepared evidence pack; no advisor queried NotebookLM.
+- 2026-06-14T14:15:00+04:00 - Completed five anonymous Stage 2 peer reviews and preserved the central minimum-offer disagreement.
+- 2026-06-14T14:25:00+04:00 - Completed the Devil's Advocate attack against the emerging bounded-core direction.
+- 2026-06-14T14:35:00+04:00 - Completed Evidence Auditor review and restrictions.
+- 2026-06-14T14:45:00+04:00 - Chairman completed `artifacts/INTERIM_COMMERCIAL_VERDICT.md`.
+- 2026-06-14T14:55:00+04:00 - Wrote `RUN_001_COMPLETION_REPORT.md`, closed Run 1, and named the bounded primary-validation Run 2.
