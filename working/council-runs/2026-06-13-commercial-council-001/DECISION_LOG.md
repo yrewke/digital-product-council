@@ -9,3 +9,5 @@
 - D-007: Stop after the first query returned `WinError 10061`; classify the issue as a connectivity blocker, not evidence.
 - D-008: Do not run advisor memos, peer review, Devil's Advocate, Evidence Auditor, or Chairman synthesis without a source-backed prepared evidence pack.
 - D-009: Classify the interim commercial verdict as unresolved and make no package, pricing-model, segment, or promise recommendation at this checkpoint.
+- D-010: Treat notebook-list success as confirmation that network connectivity is restored, not confirmation that query authentication remains valid.
+- D-011: Stop after the single ER-001 retry returned expired authentication. Re-authentication requires explicit human authorization; do not execute ER-002/003/004 first.

@@ -4,7 +4,7 @@
 
 **Classification: Unresolved.** The council cannot responsibly recommend a commercial positioning, package ladder, bundle boundaries, add-ons, segment fit, recurring-responsibility model, pricing model, or safe promises because no source-backed evidence or citations were returned.
 
-The five advisors completed sealed evidence-request passes only. Their requests were consolidated by the research librarian into four targeted notebook boundaries. The first query failed with `WinError 10061`, and retrieval stopped at the evidence-pack hard gate.
+The five advisors completed sealed evidence-request passes only. Their requests were consolidated by the research librarian into four targeted notebook boundaries. The first query failed with `WinError 10061`; a later authorized retry confirmed connectivity but failed because the manually selected `dragon` profile authentication was expired. Retrieval remains stopped at the evidence-pack hard gate.
 
 ## Confirmed
 
@@ -54,8 +54,8 @@ No material market claim, number, package recommendation, or sales promise may b
 
 ## Evidence Gates Before Deliverables
 
-1. Restore NotebookLM connectivity for the manually selected `dragon` profile without switching accounts.
-2. Execute the four already-recorded boundary-specific queries sequentially.
+1. Obtain explicit human authorization and re-authenticate the manually selected `dragon` profile without switching accounts.
+2. Retry ER-001, then execute the remaining recorded boundary-specific queries sequentially only after ER-001 succeeds.
 3. Preserve citations and classify claims in the evidence ledger.
 4. Complete five sealed advisor memos and minimum quorum before anonymous review.
 5. Run Devil's Advocate, Evidence Auditor, and Chairman synthesis only after the prepared pack exists.

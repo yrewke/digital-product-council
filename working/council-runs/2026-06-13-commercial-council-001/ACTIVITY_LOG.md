@@ -11,3 +11,8 @@
 - 2026-06-13T20:40:00+04:00 - Query failed with `WinError 10061`; conservatively counted one attempted query. No answer or citations returned.
 - 2026-06-13T20:40:00+04:00 - Stopped remaining retrieval and council deliberation at the prepared-evidence-pack hard gate. No advisor memo, peer review, Devil's Advocate attack, or package verdict was fabricated.
 - 2026-06-13T20:40:00+04:00 - Wrote an unresolved interim verdict and resumable checkpoint.
+- 2026-06-14T12:45:00+04:00 - Resumed from `RUN_STATUS.md` and `NEXT_SESSION_HANDOFF.md`; reused the existing sealed advisor evidence requests.
+- 2026-06-14T12:46:00+04:00 - Verified NotebookLM connectivity by listing notebooks using the manually selected `dragon` profile; all four registered notebooks were visible.
+- 2026-06-14T12:50:00+04:00 - Research librarian executed only the single authorized ER-001 retry.
+- 2026-06-14T12:50:00+04:00 - ER-001 retry reached NotebookLM but failed because `dragon` authentication was expired. Conservatively counted one additional attempted query; total spend is `2 / 25`.
+- 2026-06-14T12:50:00+04:00 - Stopped without login, account switch, ER-002/003/004 execution, deep research, source changes, or advisor memos.
