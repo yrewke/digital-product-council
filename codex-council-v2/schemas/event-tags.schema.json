@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Codex Council V2 Event Tags",
+  "type": "object",
+  "required": ["approved_keywords", "id_patterns"],
+  "properties": {
+    "approved_keywords": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "EVIDENCE_REQUEST",
+          "EVIDENCE_RESPONSE",
+          "FACT_CHECK",
+          "PEER_REVIEW",
+          "OBJECTION",
+          "AUTHOR_RESPONSE",
+          "VETO",
+          "REVISION",
+          "RESOLVED",
+          "UNRESOLVED"
+        ]
+      }
+    },
+    "id_patterns": {
+      "type": "object",
+      "properties": {
+        "EVIDENCE_REQUEST": { "const": "ER-[0-9]{4}" },
+        "EVIDENCE_RESPONSE": { "const": "EV-[0-9]{4}" },
+        "FACT_CHECK": { "const": "FC-[0-9]{4}" },
+        "PEER_REVIEW": { "const": "PR-[0-9]{4}" },
+        "AUTHOR_RESPONSE": { "const": "AR-[0-9]{4}" },
+        "VETO": { "const": "V-[0-9]{4}" },
+        "REVISION": { "const": "R[0-9]+" }
+      }
+    }
+  }
+}

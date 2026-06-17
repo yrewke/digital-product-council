@@ -1,0 +1,11 @@
+{
+  "run_id": "synthetic-fixture-001",
+  "stage": "FINAL_VERDICT_COMPLETE",
+  "last_valid_stage": "FINAL_VERDICT_COMPLETE",
+  "resume_test": {
+    "simulated_interruption_stage": "AUTHOR_REVISION",
+    "resumed_from": "AUTHOR_REVISION",
+    "status": "PASSED"
+  },
+  "old_system_preservation": "PASSED"
+}

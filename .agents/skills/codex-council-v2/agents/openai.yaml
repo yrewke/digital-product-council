@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Council V2"
+  short_description: "Run the separate Codex-only council"
+  default_prompt: "Use $codex-council-v2 to initialize and run a bounded Codex-only council decision."

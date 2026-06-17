@@ -1,0 +1,61 @@
+{
+  "sources": [
+    {
+      "source_id": "SRC-0001",
+      "title": "Fixture Operations Note",
+      "classification": "INTERNAL_PROJECT_FACT",
+      "retrieval_date": "2026-06-17"
+    },
+    {
+      "source_id": "SRC-0002",
+      "title": "Fixture Cost Sheet",
+      "classification": "SCENARIO_ASSUMPTION",
+      "retrieval_date": "2026-06-17"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EV-0001",
+      "request_id": "ER-0001",
+      "claim": "Fixture demand is capped at 40 orders/day.",
+      "classification": "SCENARIO_ASSUMPTION",
+      "source_id": "SRC-0001"
+    },
+    {
+      "evidence_id": "EV-0002",
+      "request_id": "ER-0002",
+      "claim": "Fixture support budget is 20 hours/month, not 200.",
+      "classification": "INTERNAL_PROJECT_FACT",
+      "source_id": "SRC-0002"
+    },
+    {
+      "evidence_id": "EV-0003",
+      "request_id": "ER-0001",
+      "claim": "Repeated request answered from cache.",
+      "classification": "INTERNAL_PROJECT_FACT",
+      "source_id": "SRC-0001",
+      "cache_hit": true
+    }
+  ],
+  "requests": [
+    {
+      "request_id": "ER-0001",
+      "question": "What is fixture demand?",
+      "cache_key": "fixture-demand",
+      "status": "ANSWERED"
+    },
+    {
+      "request_id": "ER-0001-REPEAT",
+      "question": "What is fixture demand?",
+      "cache_key": "fixture-demand",
+      "status": "ANSWERED_FROM_CACHE",
+      "reused_response_id": "EV-0001"
+    },
+    {
+      "request_id": "ER-0002",
+      "question": "What is the support budget?",
+      "cache_key": "fixture-support-budget",
+      "status": "ANSWERED"
+    }
+  ]
+}
