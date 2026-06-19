@@ -86,47 +86,14 @@ class EngineTest(unittest.TestCase):
         self.assertFalse(invalid["valid"])
         self.assertEqual(invalid["status"], "DEMOTED_TO_OBJECTION")
 
-    def test_final_verdict_surfaces_unresolved_valid_vetoes_only(self):
+    def test_forbidden_internal_chairman_and_devils_advocate_commands_fail(self):
         run_dir = self.init()
-        engine.write(run_dir / "CHAIRMAN.md", "# Chairman File\n\n## Provisional Verdict\nStart without owner assignment.\n")
-        valid_judgment = engine.record_veto_record(
-            run_dir,
-            "executor",
-            "POST_CHAIR",
-            "feasible next action",
-            "Start without owner assignment.",
-            "Needs judgment.",
-            "RUN_CHARTER",
-            "Chairman must decide.",
-            challenged_artifact="CHAIRMAN.md",
-            verification_method="requires_judgment",
-        )
-        resolved = engine.record_veto_record(
-            run_dir,
-            "executor",
-            "POST_CHAIR",
-            "feasible next action",
-            "Start without owner assignment.",
-            "Needs owner.",
-            "RUN_CHARTER",
-            "Owner: Fixture Lead",
-            challenged_artifact="CHAIRMAN.md",
-            remedy_must_contain="Owner: Fixture Lead",
-        )
-        engine.append(run_dir / "CHAIRMAN.md", "\nOwner: Fixture Lead\n")
-        engine.resolve_veto_record(run_dir, resolved["veto_id"])
-        invalid = engine.record_veto_record(run_dir, "outsider", "POST_CHAIR", "brand preference", "Start without owner assignment.", "Naming.", "none", "Rename.")
-        data = engine.status(run_dir)
-        data["stage"] = "POST_CHAIR_VETO_REVIEW"
-        data["last_valid_stage"] = "POST_CHAIR_VETO_REVIEW"
-        engine.save_json(engine.status_path(run_dir), data)
-        engine.record_final_verdict(argparse.Namespace(run_dir=str(run_dir), text="Final text.", summary="summary", next_action="next"))
-        chairman = engine.read(run_dir / "CHAIRMAN.md")
-        unresolved_section = chairman.split("Unresolved valid vetoes surfaced to human owner:")[-1].split("Out-of-scope veto attempts")[0]
-        self.assertIn(valid_judgment["veto_id"], unresolved_section)
-        self.assertNotIn(resolved["veto_id"], unresolved_section)
-        self.assertIn(invalid["veto_id"], chairman)
-        self.assertIn("ordinary dissent", chairman)
+        with self.assertRaises(SystemExit):
+            engine.record_first_synthesis(argparse.Namespace(run_dir=str(run_dir), text="forbidden"))
+        with self.assertRaises(SystemExit):
+            engine.record_devils_advocate(argparse.Namespace(run_dir=str(run_dir), attack="forbidden", defeating_change="none"))
+        with self.assertRaises(SystemExit):
+            engine.record_final_verdict(argparse.Namespace(run_dir=str(run_dir), text="forbidden", summary="summary", next_action="next"))
 
     def test_veto_remedy_must_be_verified(self):
         run_dir = self.init()
@@ -202,7 +169,7 @@ class EngineTest(unittest.TestCase):
         engine.waive_peer_review_record(run_dir, route_map[19]["assignment_id"], "Reviewer unavailable after retry.")
         engine.merge_review_events(argparse.Namespace(run_dir=str(run_dir)))
         engine.prepare_chairman_packet(argparse.Namespace(run_dir=str(run_dir), allow_open_vetoes=True))
-        packet = engine.read(run_dir / "_work" / "CHAIRMAN_PACKET.md")
+        packet = engine.read(run_dir / "handoff" / "EXTERNAL_CHAIRMAN_HANDOFF_PACKAGE.md")
         self.assertIn("Reviewer unavailable after retry.", packet)
 
     def test_review_completeness_all_twenty_can_advance(self):
@@ -273,6 +240,11 @@ class EngineTest(unittest.TestCase):
         expansionist = engine.current_memo(engine.read(run_dir / "memos" / "expansionist.md"))
         self.assertNotIn("The fixture has 200 support hours/month.", expansionist)
         self.assertIn("The fixture support budget is 20 hours/month.", expansionist)
+        self.assertEqual(engine.status(run_dir)["stage"], "CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN")
+        self.assertTrue((run_dir / "handoff" / "EXTERNAL_ROLE_HANDOFF_MANIFEST.md").exists())
+        self.assertTrue((run_dir / "templates" / "START_EXTERNAL_CHAIRMAN_SESSION.md").exists())
+        self.assertFalse((run_dir / "CHAIRMAN.md").exists())
+        self.assertFalse((run_dir / "DEVILS_ADVOCATE.md").exists())
         before = engine.load_json(run_dir / "_work" / "old-system-hashes-before.json", {})
         after = engine.load_json(run_dir / "_work" / "old-system-hashes-after.json", {})
         self.assertEqual(before, after)
@@ -288,6 +260,76 @@ class EngineTest(unittest.TestCase):
         failures = engine.release_tree_failures(package_root)
         self.assertTrue(any("_test-tmp" in failure for failure in failures))
         self.assertTrue(any("Missing .agents/skills/codex-council-v2/SKILL.md" in failure for failure in failures))
+
+    def test_chairman_role_violation_artifact_blocks_validation(self):
+        run_dir = engine.synthetic_test(argparse.Namespace())
+        engine.write(run_dir / "CHAIRMAN_FIRST_SYNTHESIS.md", "# Forbidden\n")
+        with self.assertRaises(SystemExit):
+            engine.validate_run(argparse.Namespace(run_dir=str(run_dir)))
+
+    def test_devils_advocate_role_violation_artifact_blocks_validation(self):
+        run_dir = engine.synthetic_test(argparse.Namespace())
+        engine.write(run_dir / "DEVILS_ADVOCATE_ATTACK.md", "# Forbidden\n")
+        with self.assertRaises(SystemExit):
+            engine.validate_run(argparse.Namespace(run_dir=str(run_dir)))
+
+    def test_missing_r2_after_accepted_peer_objection_blocks_handoff(self):
+        run_dir = self.init()
+        self.approve_and_open(run_dir)
+        self.add_evidence(run_dir)
+        self.submit_all_memos(run_dir, bad_expansionist=False)
+        engine.transition(run_dir, "AUDIT_IN_PROGRESS", "unit audit")
+        self.assertFalse(engine.validate_audit_record(run_dir))
+        engine.create_anonymous_review_packets(argparse.Namespace(run_dir=str(run_dir)))
+        route = engine.load_json(run_dir / "_work" / "review-routing-map.private.json", [])[0]
+        review = engine.record_peer_review_record(run_dir, route["packet_id"], "Material objection.")
+        for other in engine.load_json(run_dir / "_work" / "review-routing-map.private.json", [])[1:]:
+            engine.waive_peer_review_record(run_dir, other["assignment_id"], "not needed")
+        engine.merge_review_events(argparse.Namespace(run_dir=str(run_dir)))
+        engine.record_author_response_record(run_dir, review["source_memo"], review["review_id"], "ACCEPTED", "Agree.", "Accepted in response only.")
+        engine.prepare_chairman_packet(argparse.Namespace(run_dir=str(run_dir), allow_open_vetoes=True))
+        with self.assertRaises(SystemExit):
+            engine.validate_run(argparse.Namespace(run_dir=str(run_dir)))
+
+    def test_failed_arithmetic_blocks_handoff(self):
+        run_dir = self.init()
+        self.approve_and_open(run_dir)
+        self.add_evidence(run_dir)
+        self.submit_all_memos(run_dir, bad_expansionist=False)
+        content = engine.read(run_dir / "memos" / "executor.md").replace("The fixture support budget is 20 hours/month.", "AED 100 per month equals AED 1,000 annually.")
+        engine.write(run_dir / "memos" / "executor.md", content)
+        engine.transition(run_dir, "AUDIT_IN_PROGRESS", "unit audit")
+        engine.extract_claims_record(run_dir)
+        failures = engine.validate_audit_record(run_dir)
+        self.assertTrue(any("BROKEN_MONTHLY_TO_ANNUAL" in failure for failure in failures))
+
+    def test_missing_evidence_provenance_blocks_handoff(self):
+        run_dir = engine.synthetic_test(argparse.Namespace())
+        lib = engine.load_json(run_dir / "evidence" / "EVIDENCE_LIBRARY.json", {})
+        lib["evidence"][0]["answer_source"] = "local source"
+        source_id = lib["evidence"][0]["source_id"]
+        for source in lib["sources"]:
+            if source["source_id"] == source_id:
+                source["limitations"] = "unknown"
+        engine.save_json(run_dir / "evidence" / "EVIDENCE_LIBRARY.json", lib)
+        with self.assertRaises(SystemExit):
+            engine.validate_run(argparse.Namespace(run_dir=str(run_dir)))
+
+    def test_external_artifact_injection_advances_without_editing_content(self):
+        run_dir = engine.synthetic_test(argparse.Namespace())
+        source = self.tmp_path / "external-chairman.md"
+        text = "# External Chairman Provisional Memo\n\nHuman supplied judgment."
+        engine.write(source, text)
+        engine.record_external_artifact(argparse.Namespace(run_dir=str(run_dir), role="chairman-provisional", content_file=str(source)))
+        target = run_dir / "external_chairman" / "CHAIRMAN_PROVISIONAL_MEMO.md"
+        self.assertEqual(engine.read(target), text)
+        self.assertEqual(engine.status(run_dir)["stage"], "EXTERNAL_DEVILS_ADVOCATE_PENDING")
+
+    def test_legacy_contamination_blocks_authoritative_loading(self):
+        run_dir = engine.synthetic_test(argparse.Namespace())
+        engine.write(run_dir / "FINAL_COMMERCIAL_VERDICT.md", "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE\n")
+        with self.assertRaises(SystemExit):
+            engine.validate_run(argparse.Namespace(run_dir=str(run_dir)))
 
 
 if __name__ == "__main__":

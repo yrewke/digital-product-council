@@ -10,13 +10,13 @@ Codex Council V2 lives under `codex-council-v2/` with a repository-local skill a
 
 The legal stages are:
 
-`CHARTER_DRAFTED`, `CHARTER_APPROVED`, `EVIDENCE_REQUESTS_OPEN`, `EVIDENCE_READY`, `MEMOS_DRAFTING`, `MEMOS_SUBMITTED`, `AUDIT_IN_PROGRESS`, `AUDIT_BLOCKED`, `AUDIT_PASSED`, `PEER_REVIEW_IN_PROGRESS`, `AUTHOR_REVISION`, `PRE_CHAIR_READY`, `CHAIRMAN_SYNTHESIS`, `DEVILS_ADVOCATE_COMPLETE`, `PROVISIONAL_VERDICT`, `POST_CHAIR_VETO_REVIEW`, `FINAL_VERDICT_COMPLETE`, `RUN_COMPLETE`.
+`CHARTER_DRAFTED`, `CHARTER_APPROVED`, `EVIDENCE_REQUESTS_OPEN`, `EVIDENCE_READY`, `MEMOS_DRAFTING`, `MEMOS_SUBMITTED`, `AUDIT_IN_PROGRESS`, `AUDIT_BLOCKED`, `AUDIT_PASSED`, `PEER_REVIEW_IN_PROGRESS`, `AUTHOR_REVISION`, `CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN`, `EXTERNAL_CHAIRMAN_PROVISIONAL_PENDING`, `EXTERNAL_DEVILS_ADVOCATE_PENDING`, `EXTERNAL_CHAIRMAN_FINAL_PENDING`, `AWAITING_AHMED_DECISION`, `HUMAN_DECISION_RECORDED`.
 
 Every transition is recorded in `RUN_EVENTS.jsonl`. Illegal transitions are rejected.
 
 ## Codex Reasoning Layer
 
-Codex and the custom V2 agents own executive reasoning, evidence-question formulation, Librarian synthesis, Auditor judgment, peer-review comments, author revision text, Chairman synthesis, and Devil's Advocate attack. Their outputs are submitted back through the deterministic engine before the run advances.
+Codex and the custom V2 agents own executive reasoning, evidence-question formulation, Librarian synthesis, Auditor judgment, peer-review comments, author revision text, final internal validation, and the external-role handoff package. External ChatGPT sessions own Chairman synthesis, Devil's Advocate attack, final Chairman verdict, and any later Ahmed-facing judgment. Codex must not write those external-role judgments.
 
 For real runs, substantive reasoning is delegated to visible isolated Codex sub-agents when the session exposes sub-agent tools. The main Codex session acts as operator: it prepares bounded briefs, dispatches role agents, collects outputs, runs engine commands, and validates state.
 
@@ -25,8 +25,7 @@ The default real-run dispatch is:
 - Five executives are spawned independently for first-pass memos: Contrarian, First-Principles Thinker, Expansionist, Outsider, and Executor.
 - The Librarian is spawned for nontrivial evidence routing and cache/provenance work.
 - The Auditor is spawned for factual and numerical review after claim extraction.
-- The Chairman is spawned for synthesis after peer review and veto handling.
-- Devil's Advocate is spawned only after an emerging Chairman direction exists.
+- No Chairman or Devil's Advocate Codex agent is registered or spawned. Those roles run in separate external ChatGPT conversations using the startup prompts in `templates/`.
 
 Sub-agents receive minimal context needed for their role: charter, status summary, role brief, relevant evidence or review packet, allowed files, forbidden actions, and output contract. They do not advance the state machine directly.
 
@@ -42,11 +41,10 @@ If sub-agent tools are unavailable, the operator may run a manual single-session
 6. Run the Evidence Auditor gate.
 7. Route anonymous peer review.
 8. Let authors revise only their own memos.
-9. Produce Chairman first synthesis.
-10. Run Devil's Advocate attack.
-11. Produce provisional verdict.
-12. Run post-chair veto review.
-13. Produce final verdict, completion report, and next-run handoff.
+9. Require genuine revised memos for accepted material objections.
+10. Resolve or explicitly mark blocking factual/numerical defects.
+11. Produce the external Chairman handoff package, external-role handoff manifest, completion report, and startup prompts.
+12. Stop at `CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN`.
 
 ## File Ownership and Merge Control
 
@@ -54,7 +52,8 @@ If sub-agent tools are unavailable, the operator may run a manual single-session
 - Librarian owns evidence library, request routing, anonymized packets, and evidence response appends.
 - Auditor owns audit files and fact-check records.
 - Peer comments are written to controlled review files before deterministic merge.
-- Chairman and Devil's Advocate never edit executive memos.
+- External Chairman and Devil's Advocate artifacts are preserved under `external_chairman/` and `external_devils_advocate/` only when human-supplied through `record-external-artifact`.
+- Codex-owned run space rejects substantive Chairman, Devil's Advocate, and final-verdict artifacts.
 - Scripts use lock files under `_work/locks/` before deterministic writes. In the Windows sandbox, released locks are marked `RELEASED` instead of deleted.
 
 ## Evidence Memory
@@ -80,6 +79,6 @@ See `config/model-routing-policy.md`. The implementation records routing policy 
 
 ## Validation
 
-`scripts/codex_council_v2.py validate-run` checks canonical executive files, event tag grammar, evidence cache reuse, factual blocking and current-memo correction, complete peer-review assignments, anonymous peer review routing, scoped veto handling, veto remedy verification, Chairman stages, Devil's Advocate stage, final verdict, V2 entry points, and old-system hash preservation.
+`scripts/codex_council_v2.py validate-run` checks canonical executive files, event tag grammar, evidence cache reuse, factual blocking and current-memo correction, evidence provenance, arithmetic issues, complete peer-review assignments, genuine accepted-objection revisions, anonymous peer review routing, scoped veto handling, veto remedy verification, prohibited external-role artifacts, handoff manifest/prompts, V2 entry points, and old-system hash preservation.
 
-The test suite in `tests/test_engine.py` covers event parsing, cache deduplication, stage transitions, audit correction enforcement, expanded claim extraction, deterministic arithmetic checks, anonymous packet generation, review completeness and waivers, veto scope and remedy verification, lock behavior, resume guidance, full synthetic pipeline, and old-system hash preservation.
+The test suite in `tests/test_engine.py` covers event parsing, cache deduplication, stage transitions, audit correction enforcement, expanded claim extraction, deterministic arithmetic checks, anonymous packet generation, review completeness and waivers, accepted-objection revision enforcement, veto scope and remedy verification, role-boundary violations, external artifact intake, legacy contamination, lock behavior, resume guidance, full synthetic handoff pipeline, and old-system hash preservation.

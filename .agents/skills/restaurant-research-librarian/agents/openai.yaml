@@ -1,4 +1,0 @@
-interface:
-  display_name: "Restaurant Research Librarian"
-  short_description: "Build evidence packs with narrow online fallback"
-  default_prompt: "Use $restaurant-research-librarian to build a citation-preserving evidence pack and use narrow online fallback only for documented notebook gaps."

@@ -12,7 +12,7 @@ Use for ordinary executive memos, evidence synthesis, implementation analysis, a
 
 ## Frontier Reasoning Tier
 
-Use only for difficult Contrarian or First-Principles analysis, major contradiction resolution, complex Chairman synthesis, and high-stakes final review.
+Use only for difficult Contrarian or First-Principles analysis, major internal contradiction resolution, and high-stakes internal validation. External Chairman and Devil's Advocate work is not routed through Codex.
 
 ## Sub-Agent Dispatch
 
@@ -27,8 +27,7 @@ Required real-run role dispatch:
 - Standard or Frontier: `codex-council-v2-contrarian`, `codex-council-v2-first-principles`, `codex-council-v2-expansionist`, `codex-council-v2-outsider`, and `codex-council-v2-executor` for independent executive memos.
 - Economy or Standard: `codex-council-v2-librarian` for evidence routing and cache/provenance packets.
 - Standard or Frontier: `codex-council-v2-auditor` for substantive factual and numerical review.
-- Frontier for complex decisions, otherwise Standard: `codex-council-v2-chairman`.
-- Standard or Frontier: `codex-council-v2-devils-advocate`, only after Chairman direction exists.
+- External Chairman and Devil's Advocate roles are not Codex sub-agents and must not be dispatched by this routing policy.
 
 The operator keeps deterministic engine commands, state transitions, validation, and user-visible progress in the main Codex session.
 
@@ -38,6 +37,6 @@ The run charter records tier assignments. If sub-agent spawning itself is unavai
 
 - Economy: run engine commands, packet creation, metadata, and validation.
 - Standard: ordinary executive memos, peer review, and evidence synthesis.
-- Frontier: Chairman synthesis, difficult Contrarian / First-Principles passes, and major contradiction resolution.
+- Frontier: difficult Contrarian / First-Principles passes, major internal contradiction resolution, and final internal handoff validation.
 
 Do not spend frontier reasoning on mechanical file operations.

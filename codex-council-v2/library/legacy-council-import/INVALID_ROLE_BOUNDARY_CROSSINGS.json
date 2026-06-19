@@ -1,0 +1,89 @@
+{
+  "marker": "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE",
+  "records": [
+    {
+      "authoritative_by_default": false,
+      "marker": "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE",
+      "path": "library/legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/DEVILS_ADVOCATE_MEMO.md",
+      "reason": "Codex-generated Chairman, Devil's Advocate, or final-verdict artifact from a pre-repair role-boundary-crossing run; preserved for audit history only.",
+      "sha256": "ad35c7c0266e01f6cbfaf03db05614aee96cb0e629432d5f6b48015f15f47b52"
+    },
+    {
+      "authoritative_by_default": false,
+      "marker": "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE",
+      "path": "library/legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/CHAIRMAN_FIRST_PACKAGING_SYNTHESIS.md",
+      "reason": "Codex-generated Chairman, Devil's Advocate, or final-verdict artifact from a pre-repair role-boundary-crossing run; preserved for audit history only.",
+      "sha256": "39f50b460629a6dd8982a762cb0eb976ad4bd9a61a2faae99ab44bb4732e33cf"
+    },
+    {
+      "authoritative_by_default": false,
+      "marker": "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE",
+      "path": "library/legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/DEVILS_ADVOCATE_PACKAGING_ATTACK.md",
+      "reason": "Codex-generated Chairman, Devil's Advocate, or final-verdict artifact from a pre-repair role-boundary-crossing run; preserved for audit history only.",
+      "sha256": "d067d074074323e4277083d5a66ba9cfc9d8ea4d7ce6847e91a9755529d38055"
+    },
+    {
+      "authoritative_by_default": false,
+      "marker": "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE",
+      "path": "library/legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/PACKAGING_FINAL_VERDICT.md",
+      "reason": "Codex-generated Chairman, Devil's Advocate, or final-verdict artifact from a pre-repair role-boundary-crossing run; preserved for audit history only.",
+      "sha256": "938ec8b5b40422502893fed908395def41bbfafb8f912b00cc5c71af98e2e0ff"
+    },
+    {
+      "authoritative_by_default": false,
+      "marker": "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE",
+      "path": "library/legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/CHAIRMAN_FINAL_ROI_VERDICT.md",
+      "reason": "Codex-generated Chairman, Devil's Advocate, or final-verdict artifact from a pre-repair role-boundary-crossing run; preserved for audit history only.",
+      "sha256": "8cb30f6804ad4ca6d4fd958c423ffc64ad8acea097440855eb73c7f1292c0ae2"
+    },
+    {
+      "authoritative_by_default": false,
+      "marker": "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE",
+      "path": "library/legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/CHAIRMAN_FIRST_ROI_SYNTHESIS.md",
+      "reason": "Codex-generated Chairman, Devil's Advocate, or final-verdict artifact from a pre-repair role-boundary-crossing run; preserved for audit history only.",
+      "sha256": "2b6062ec731dfb8e3e01f4fcd978296d11b6b7d2dbb55e3a6da0ffcbe35fb692"
+    },
+    {
+      "authoritative_by_default": false,
+      "marker": "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE",
+      "path": "library/legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/DEVILS_ADVOCATE_ROI_ATTACK.md",
+      "reason": "Codex-generated Chairman, Devil's Advocate, or final-verdict artifact from a pre-repair role-boundary-crossing run; preserved for audit history only.",
+      "sha256": "7ba1ff699908116530c9bb48cd025f2c06bb7a41ac9a73a6c78dd2a538300adb"
+    },
+    {
+      "authoritative_by_default": false,
+      "marker": "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE",
+      "path": "library/legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/CHAIRMAN_FIRST_PRICING_SYNTHESIS.md",
+      "reason": "Codex-generated Chairman, Devil's Advocate, or final-verdict artifact from a pre-repair role-boundary-crossing run; preserved for audit history only.",
+      "sha256": "42ad926beb311ffbdd8d6f22ea81f28251d06c4f3cf8244cb9bc71094d9226c2"
+    },
+    {
+      "authoritative_by_default": false,
+      "marker": "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE",
+      "path": "library/legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/DEVILS_ADVOCATE_PRICING_ATTACK.md",
+      "reason": "Codex-generated Chairman, Devil's Advocate, or final-verdict artifact from a pre-repair role-boundary-crossing run; preserved for audit history only.",
+      "sha256": "43ee5947e009804bdcb6754e1e7ad40dbab61f0cf5231f2ecd4454ad9705b9e6"
+    },
+    {
+      "authoritative_by_default": false,
+      "marker": "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE",
+      "path": "library/legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/PRICING_FINAL_VERDICT.md",
+      "reason": "Codex-generated Chairman, Devil's Advocate, or final-verdict artifact from a pre-repair role-boundary-crossing run; preserved for audit history only.",
+      "sha256": "e90e72f0b9f36a00650df81f1406ca773051f70ad22d60cb038502b68e3991c7"
+    },
+    {
+      "authoritative_by_default": false,
+      "marker": "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE",
+      "path": "library/legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/chairman-verdict.md",
+      "reason": "Codex-generated Chairman, Devil's Advocate, or final-verdict artifact from a pre-repair role-boundary-crossing run; preserved for audit history only.",
+      "sha256": "3a60a5c23a91eab506b7235837d79598300e604308639281d2157c8ee2c07a80"
+    },
+    {
+      "authoritative_by_default": false,
+      "marker": "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE",
+      "path": "library/legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/devils-advocate.md",
+      "reason": "Codex-generated Chairman, Devil's Advocate, or final-verdict artifact from a pre-repair role-boundary-crossing run; preserved for audit history only.",
+      "sha256": "5d39bbc34945993c34c9aff6a9f6742d0b3f117954988664746d9e1750e5458d"
+    }
+  ]
+}

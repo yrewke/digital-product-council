@@ -22,7 +22,8 @@ ROOT = Path(__file__).resolve().parents[1]
 REPO = ROOT.parent
 RUNS = ROOT / "runs"
 EXECUTIVES = ["contrarian", "first-principles", "expansionist", "outsider", "executor"]
-SERVICES = ["librarian", "auditor", "chairman", "devils-advocate"]
+SERVICES = ["librarian", "auditor"]
+EXTERNAL_ROLES = ["external_chairman", "external_devils_advocate", "ahmed"]
 
 STAGES = [
     "CHARTER_DRAFTED",
@@ -36,13 +37,12 @@ STAGES = [
     "AUDIT_PASSED",
     "PEER_REVIEW_IN_PROGRESS",
     "AUTHOR_REVISION",
-    "PRE_CHAIR_READY",
-    "CHAIRMAN_SYNTHESIS",
-    "DEVILS_ADVOCATE_COMPLETE",
-    "PROVISIONAL_VERDICT",
-    "POST_CHAIR_VETO_REVIEW",
-    "FINAL_VERDICT_COMPLETE",
-    "RUN_COMPLETE",
+    "CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN",
+    "EXTERNAL_CHAIRMAN_PROVISIONAL_PENDING",
+    "EXTERNAL_DEVILS_ADVOCATE_PENDING",
+    "EXTERNAL_CHAIRMAN_FINAL_PENDING",
+    "AWAITING_AHMED_DECISION",
+    "HUMAN_DECISION_RECORDED",
 ]
 
 LEGAL_TRANSITIONS = {
@@ -56,13 +56,12 @@ LEGAL_TRANSITIONS = {
     "AUDIT_BLOCKED": ["AUDIT_IN_PROGRESS"],
     "AUDIT_PASSED": ["PEER_REVIEW_IN_PROGRESS"],
     "PEER_REVIEW_IN_PROGRESS": ["AUTHOR_REVISION"],
-    "AUTHOR_REVISION": ["PRE_CHAIR_READY"],
-    "PRE_CHAIR_READY": ["CHAIRMAN_SYNTHESIS"],
-    "CHAIRMAN_SYNTHESIS": ["DEVILS_ADVOCATE_COMPLETE"],
-    "DEVILS_ADVOCATE_COMPLETE": ["PROVISIONAL_VERDICT"],
-    "PROVISIONAL_VERDICT": ["POST_CHAIR_VETO_REVIEW"],
-    "POST_CHAIR_VETO_REVIEW": ["FINAL_VERDICT_COMPLETE"],
-    "FINAL_VERDICT_COMPLETE": ["RUN_COMPLETE"],
+    "AUTHOR_REVISION": ["CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN"],
+    "CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN": ["EXTERNAL_CHAIRMAN_PROVISIONAL_PENDING"],
+    "EXTERNAL_CHAIRMAN_PROVISIONAL_PENDING": ["EXTERNAL_DEVILS_ADVOCATE_PENDING"],
+    "EXTERNAL_DEVILS_ADVOCATE_PENDING": ["EXTERNAL_CHAIRMAN_FINAL_PENDING"],
+    "EXTERNAL_CHAIRMAN_FINAL_PENDING": ["AWAITING_AHMED_DECISION"],
+    "AWAITING_AHMED_DECISION": ["HUMAN_DECISION_RECORDED"],
 }
 
 EVENT_KEYWORDS = {
@@ -93,8 +92,33 @@ REQUIRED_V2_AGENT_NAMES = [
     "executor",
     "librarian",
     "auditor",
-    "devils-advocate",
-    "chairman",
+]
+
+FORBIDDEN_INTERNAL_ARTIFACT_PATTERNS = [
+    r"^CHAIRMAN(?:_.*|\.MD|$)",
+    r"^CHAIRMAN_FIRST_SYNTHESIS\.MD$",
+    r"^CHAIRMAN_PROVISIONAL_VERDICT\.MD$",
+    r"^CHAIRMAN_FINAL.*\.MD$",
+    r"^FINAL_COMMERCIAL_.*VERDICT\.MD$",
+    r"^.*FINAL.*VERDICT.*\.MD$",
+    r"^DEVILS_ADVOCATE(?:_.*|\.MD|$)",
+    r"^DEVILS_ADVOCATE_ATTACK\.MD$",
+]
+
+ALLOWED_EXTERNAL_TEMPLATE_NAMES = {
+    "START_EXTERNAL_CHAIRMAN_SESSION.md",
+    "START_EXTERNAL_DEVILS_ADVOCATE_SESSION.md",
+    "RETURN_TO_EXTERNAL_CHAIRMAN_AFTER_ATTACK.md",
+    "EXTERNAL_ROLE_HANDOFF_MANIFEST_TEMPLATE.md",
+}
+
+LEGACY_INVALID_MARKER = "INVALID_ROLE_BOUNDARY_CROSSING_NOT_AUTHORITATIVE"
+LEGACY_INVALIDATION_PATTERNS = [
+    r".*CHAIRMAN.*(?:SYNTHESIS|VERDICT).*\.md$",
+    r".*DEVILS?_ADVOCATE.*(?:ATTACK|MEMO)?.*\.md$",
+    r".*FINAL.*VERDICT.*\.md$",
+    r".*chairman-verdict\.md$",
+    r".*devils-advocate\.md$",
 ]
 
 
@@ -278,7 +302,48 @@ def release_tree_failures(root: Path = REPO) -> list[str]:
     for name in REQUIRED_V2_AGENT_NAMES:
         if not (root / ".codex" / "agents" / f"codex-council-v2-{name}.toml").exists():
             failures.append(f"Missing .codex/agents/codex-council-v2-{name}.toml")
+    for name in ["chairman", "devils-advocate"]:
+        if (root / ".codex" / "agents" / f"codex-council-v2-{name}.toml").exists():
+            failures.append(f"Forbidden executable external-role agent registered: .codex/agents/codex-council-v2-{name}.toml")
     return failures
+
+
+def legacy_role_boundary_records(root: Path = ROOT) -> list[dict[str, Any]]:
+    archive = root / "library" / "legacy-council-import" / "source-archive"
+    if not archive.exists():
+        return []
+    records = []
+    for path in archive.rglob("*.md"):
+        rel = durable_relpath(path, root)
+        normalized = rel.replace("\\", "/")
+        if any(re.fullmatch(pattern, normalized, re.I) for pattern in LEGACY_INVALIDATION_PATTERNS):
+            records.append({
+                "path": normalized,
+                "sha256": sha256(path),
+                "marker": LEGACY_INVALID_MARKER,
+                "authoritative_by_default": False,
+                "reason": "Codex-generated Chairman, Devil's Advocate, or final-verdict artifact from a pre-repair role-boundary-crossing run; preserved for audit history only.",
+            })
+    return sorted(records, key=lambda r: r["path"])
+
+
+def mark_legacy_role_boundary_crossings(args: argparse.Namespace) -> None:
+    root = run_dir_arg(args.root) if getattr(args, "root", None) else ROOT
+    records = legacy_role_boundary_records(root)
+    target = root / "library" / "legacy-council-import" / "INVALID_ROLE_BOUNDARY_CROSSINGS.json"
+    save_json(target, {"marker": LEGACY_INVALID_MARKER, "records": records})
+    lines = [
+        "# Invalid Legacy External-Role Simulations",
+        "",
+        f"Marker: `{LEGACY_INVALID_MARKER}`",
+        "",
+        "These imported historical artifacts are preserved for audit history but must not be loaded as authoritative external Chairman, Devil's Advocate, final commercial verdict, or Ahmed decision artifacts by default.",
+        "",
+    ]
+    for record in records:
+        lines.append(f"- `{record['path']}` - {record['marker']}")
+    write(root / "library" / "legacy-council-import" / "INVALID_ROLE_BOUNDARY_CROSSINGS.md", "\n".join(lines) + "\n")
+    print(f"MARKED {len(records)} legacy role-boundary artifacts")
 
 
 def validate_release_tree(args: argparse.Namespace) -> None:
@@ -304,14 +369,13 @@ def default_config(run_id: str, title: str, question: str) -> dict[str, Any]:
         },
         "model_routing": {
             "economy": "manual fallback in current Codex session; use for metadata and validation",
-            "standard": "manual fallback in current Codex session; use for ordinary memos and reviews",
-            "frontier": "active Codex model from doctor output when available; reserve for Chairman and hard contradictions",
+            "standard": "manual fallback in current Codex session; use for ordinary memos, audit, and reviews",
+            "frontier": "active Codex model from doctor output when available; reserve for hard internal contradictions only",
             "verified_environment": "Codex Doctor observed model gpt-5.5 on this workstation; per-agent model keys are not guaranteed by local TOML support.",
         },
         "veto_assignments": {
             "executor": [
                 {"stage": "PRE_CHAIR", "protected_domain": "feasible next action"},
-                {"stage": "POST_CHAIR", "protected_domain": "feasible next action"},
             ],
             "contrarian": [
                 {"stage": "PRE_CHAIR", "protected_domain": "unbounded downside claims"}
@@ -361,7 +425,7 @@ def render_charter(config: dict[str, Any]) -> str:
 
 ## Stop Conditions
 
-Stop on unresolved blocking fact checks, malformed tags, missing final verdict, illegal stage transition, failed old-system hash preservation, or skipped authorized veto holder.
+Codex stops after five revised executive memos, completed evidence/audit/review/veto gates, the external Chairman handoff manifest, and reusable external role startup prompts exist. The terminal Codex-owned state is `CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN`; Codex must not generate Chairman, Devil's Advocate, final verdict, or Ahmed decision artifacts.
 """
 
 
@@ -371,7 +435,7 @@ def init_run(args: argparse.Namespace) -> Path:
         if not args.force:
             raise SystemExit(f"Run already exists: {run_dir}")
         shutil.rmtree(run_dir)
-    for sub in ["memos", "evidence", "reviews", "_work/locks", "_work/review-packets", "_work/merge-queue"]:
+    for sub in ["codex_internal", "external_chairman", "external_devils_advocate", "human_decision", "handoff", "templates", "memos", "evidence", "reviews", "_work/locks", "_work/review-packets", "_work/merge-queue"]:
         (run_dir / sub).mkdir(parents=True, exist_ok=True)
     config = default_config(args.run_id, args.title, args.question)
     save_json(run_dir / "RUN_CONFIG.json", config)
@@ -1052,14 +1116,185 @@ def resolve_veto(args: argparse.Namespace) -> None:
     print(json.dumps(veto, indent=2, sort_keys=True))
 
 
+def external_prompt_templates() -> dict[str, str]:
+    return {
+        "START_EXTERNAL_CHAIRMAN_SESSION.md": """# Start External Chairman Session
+
+## Stable Role
+
+You are the independent external ChatGPT Chairman for Ahmed's second council system. You are not Codex, not an executive memo author, not the Devil's Advocate, and not Ahmed.
+
+## Run Variables
+
+- Run ID: `{{RUN_ID}}`
+- Run mission: `{{RUN_MISSION}}`
+- Handoff package path or uploaded files: `{{HANDOFF_PACKAGE_PATH}}`
+- Expected artifact list: `{{EXPECTED_ARTIFACT_LIST}}`
+- Historical context file: `{{HISTORICAL_CONTEXT_FILE}}`
+- Current decision questions: `{{CURRENT_DECISION_QUESTIONS}}`
+- Known unresolved gaps: `{{UNRESOLVED_GAPS}}`
+
+## Context
+
+Ahmed is evaluating a restaurant direct-ordering product and related commercial decisions. Codex has already run the internal council only: five independent executive lenses, research/librarian routing, evidence and arithmetic audit, anonymous peer review, author revisions, scoped veto handling, and final internal validation.
+
+## Required Process
+
+1. Inventory the uploaded/path-listed files before analysis.
+2. Verify that five revised executive memos, evidence provenance, numerical ledger/model files where applicable, peer reviews, author responses, audit report, unresolved defects, and the handoff manifest are present or explicitly marked missing.
+3. Distinguish facts, estimates, assumptions, decisions, and pilot-validation requirements.
+4. Inspect arithmetic and evidence before synthesizing.
+5. Preserve material disagreement and uncertainty instead of smoothing it away.
+6. Do not invent missing artifacts or fill missing evidence as fact.
+7. Produce a provisional consolidated Chairman memo only.
+
+## Prohibited Actions
+
+- Do not act as the Devil's Advocate.
+- Do not issue a final Chairman verdict.
+- Do not claim Ahmed has decided.
+- Do not create guaranteed ROI claims, aggregator-replacement claims, hidden pass-through costs, or universal integration promises.
+
+## Required Output
+
+Produce `CHAIRMAN_PROVISIONAL_MEMO` with: file inventory, process completeness check, agreement/disagreement map, evidence/arithmetic caveats, provisional synthesis, rejected or uncertain claims, required Devil's Advocate focus areas, and questions for Ahmed.
+
+## Stop Condition
+
+Stop after the provisional consolidated Chairman memo and request a separate external Devil's Advocate stage. Ahmed remains the final human authority.
+""",
+        "START_EXTERNAL_DEVILS_ADVOCATE_SESSION.md": """# Start External Devil's Advocate Session
+
+## Stable Role
+
+You are acting only as the independent external ChatGPT Devil's Advocate. Your primary target is the Chairman's provisional consolidated memo, not the five executive memos as a new executive reviewer.
+
+## Run Variables
+
+- Run ID: `{{RUN_ID}}`
+- Chairman provisional memo: `{{CHAIRMAN_PROVISIONAL_MEMO}}`
+- Codex handoff package: `{{CODEX_HANDOFF_PACKAGE}}`
+- Protected decision domains: `{{PROTECTED_DECISION_DOMAINS}}`
+- Known unresolved evidence gaps: `{{UNRESOLVED_GAPS}}`
+
+## Required Process
+
+1. Read the Chairman provisional memo first.
+2. Inspect Codex evidence, audit, ledger, models, peer reviews, and revised memos only as needed to test the Chairman's claims.
+3. Attack assumptions, arithmetic, evidence quality, sequencing, implementation realism, pricing, affordability, ROI logic, delivery/support logic, and failure modes.
+4. Distinguish fatal defects from ordinary uncertainty and from pilot-testable risks.
+5. Preserve contradictions and identify what evidence or model change would defeat each objection.
+
+## Prohibited Actions
+
+- Do not rewrite all five executive memos.
+- Do not act as Chairman.
+- Do not issue a final verdict.
+- Do not claim Ahmed has decided.
+
+## Required Output
+
+Produce `DEVILS_ADVOCATE_ATTACK` with: target claim, objection, severity, evidence basis, arithmetic check, implementation failure mode, what would change the objection, and recommended return questions for the Chairman.
+
+## Stop Condition
+
+Stop after the structured attack for return to the external Chairman. Ahmed remains the final human authority.
+""",
+        "RETURN_TO_EXTERNAL_CHAIRMAN_AFTER_ATTACK.md": """# Return To External Chairman After Attack
+
+## Stable Role
+
+You are returning as the independent external ChatGPT Chairman after receiving the Devil's Advocate attack. You are not Codex, not the Devil's Advocate, and not Ahmed.
+
+## Run Variables
+
+- Run ID: `{{RUN_ID}}`
+- Prior Chairman provisional memo: `{{CHAIRMAN_PROVISIONAL_MEMO}}`
+- Devil's Advocate attack: `{{DEVILS_ADVOCATE_ATTACK}}`
+- Codex handoff package: `{{CODEX_HANDOFF_PACKAGE}}`
+- Scoped vetoes or protected domains: `{{SCOPED_VETOES}}`
+- Known unresolved gaps: `{{UNRESOLVED_GAPS}}`
+
+## Required Process
+
+1. Read the Devil's Advocate attack in full.
+2. Classify each material objection as accepted, partially accepted, rejected, or unresolved.
+3. Give reasons and cite the relevant evidence, arithmetic, model, or assumption boundary.
+4. Revise the commercial model or decision logic where required.
+5. Review valid scoped vetoes and preserve unresolved issues.
+6. Separate what is decided, provisional, rejected, superseded, and awaiting pilot validation.
+7. State which decisions remain for Ahmed.
+
+## Prohibited Actions
+
+- Do not claim the whole external process is complete until Ahmed has reviewed the verdict.
+- Do not hide pass-through costs, unsupported assumptions, or missing integrations.
+- Do not turn pilot-validation requirements into facts.
+
+## Required Output
+
+Produce `CHAIRMAN_FINAL_VERDICT_FOR_AHMED_REVIEW` with objection-by-objection disposition, revised synthesis, final Chairman recommendation, assumptions, estimates, pilot-validation requirements, and Ahmed decision points.
+
+## Stop Condition
+
+Stop after the final Chairman verdict for Ahmed review. Ahmed remains the final human authority.
+""",
+        "EXTERNAL_ROLE_HANDOFF_MANIFEST_TEMPLATE.md": """# External Role Handoff Manifest
+
+- Run ID: `{{RUN_ID}}`
+- Mission: `{{RUN_MISSION}}`
+- Codex completion status: `CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN`
+- Files included: `{{HANDOFF_FILE_LIST}}`
+- Files missing: `{{FILES_MISSING}}`
+- Research quota status: `{{RESEARCH_QUOTA_STATUS}}`
+- Notebook status: `{{NOTEBOOK_STATUS}}`
+- Web-research status: `{{WEB_RESEARCH_STATUS}}`
+- Executive memo revisions: `{{EXECUTIVE_MEMO_REVISIONS}}`
+- Audit status: `{{AUDIT_STATUS}}`
+- Unresolved defects: `{{UNRESOLVED_DEFECTS}}`
+- Numerical-ledger status: `{{NUMERICAL_LEDGER_STATUS}}`
+- Models included: `{{MODELS_INCLUDED}}`
+- Known stale artifacts: `{{KNOWN_STALE_ARTIFACTS}}`
+- Required next external role: `External ChatGPT Chairman`
+- Codex stop instruction: Codex has stopped and must not generate Chairman, Devil's Advocate, final verdict, or Ahmed decision content.
+""",
+    }
+
+
+def write_external_prompt_templates(run_dir: Path) -> None:
+    for name, text in external_prompt_templates().items():
+        write(run_dir / "templates" / name, text)
+
+
+def handoff_file_list(run_dir: Path) -> list[str]:
+    candidates = [
+        "RUN_CHARTER.md",
+        "RUN_CONFIG.json",
+        "RUN_STATUS.json",
+        "RUN_EVENTS.jsonl",
+        "CLAIMS.json",
+        "FACT_CHECKS.json",
+        "AUDITOR.md",
+        "VETOES.json",
+        "reviews/ANONYMOUS_PEER_REVIEW.md",
+        "reviews/PEER_REVIEWS.json",
+        "evidence/EVIDENCE_LIBRARY.json",
+        "evidence/SOURCE_LEDGER.csv",
+    ]
+    candidates.extend(f"memos/{executive}.md" for executive in EXECUTIVES)
+    return [path for path in candidates if (run_dir / path).exists()]
+
+
 def prepare_chairman_packet(args: argparse.Namespace) -> None:
     run_dir = run_dir_arg(args.run_dir)
     vetoes = load_json(run_dir / "VETOES.json", [])
     open_valid = [v["veto_id"] for v in vetoes if v.get("valid") and v.get("status") == "OPEN"]
     if open_valid and not args.allow_open_vetoes:
         raise SystemExit(f"Open valid vetoes remain: {', '.join(open_valid)}")
-    transition(run_dir, "PRE_CHAIR_READY", "author revision and pre-chair veto cycle complete")
-    packet = ["# Chairman Packet\n"]
+    transition(run_dir, "CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN", "internal council handoff complete")
+    packet = ["# External Chairman Handoff Package\n"]
+    packet.append("Status: CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN\n")
+    packet.append("No Chairman verdict has been produced. No Devil's Advocate attack has been produced. The commercial decision is not final.\n")
     for executive in EXECUTIVES:
         packet.append(f"\n## {executive}\n")
         packet.append(current_memo(read(run_dir / "memos" / f"{executive}.md")))
@@ -1071,63 +1306,47 @@ def prepare_chairman_packet(args: argparse.Namespace) -> None:
     waivers = [r for r in route_map if r.get("status") == "WAIVED"]
     packet.append("\n## Peer Review Waivers\n")
     packet.append(json.dumps(waivers, indent=2))
-    write(run_dir / "_work" / "CHAIRMAN_PACKET.md", "\n".join(packet))
-    update_status(run_dir, pending_tasks=["record-first-synthesis"])
-    print("PREPARED chairman packet")
+    write(run_dir / "handoff" / "EXTERNAL_CHAIRMAN_HANDOFF_PACKAGE.md", "\n".join(packet))
+    write_external_prompt_templates(run_dir)
+    manifest = external_prompt_templates()["EXTERNAL_ROLE_HANDOFF_MANIFEST_TEMPLATE.md"]
+    manifest = manifest.replace("{{RUN_ID}}", status(run_dir).get("run_id", ""))
+    manifest = manifest.replace("{{RUN_MISSION}}", load_json(run_dir / "RUN_CONFIG.json", {}).get("question", ""))
+    manifest = manifest.replace("{{HANDOFF_FILE_LIST}}", "\n  - " + "\n  - ".join(handoff_file_list(run_dir)))
+    manifest = manifest.replace("{{FILES_MISSING}}", "None detected by Codex validator")
+    manifest = manifest.replace("{{RESEARCH_QUOTA_STATUS}}", "See evidence/EVIDENCE_LIBRARY.json requests")
+    manifest = manifest.replace("{{NOTEBOOK_STATUS}}", "No NotebookLM query performed unless separately recorded in evidence")
+    manifest = manifest.replace("{{WEB_RESEARCH_STATUS}}", "No web research performed unless separately recorded in evidence")
+    manifest = manifest.replace("{{EXECUTIVE_MEMO_REVISIONS}}", "See memos/*.md REVISION_LOG sections")
+    manifest = manifest.replace("{{AUDIT_STATUS}}", "Final Evidence Auditor report complete or unresolved defects listed")
+    manifest = manifest.replace("{{UNRESOLVED_DEFECTS}}", json.dumps([v for v in vetoes if v.get("valid") and v.get("status") != "RESOLVED"], indent=2))
+    manifest = manifest.replace("{{NUMERICAL_LEDGER_STATUS}}", "Claims and material values recorded in CLAIMS.json; model files listed where included")
+    manifest = manifest.replace("{{MODELS_INCLUDED}}", ", ".join(str(p.relative_to(run_dir)).replace("\\", "/") for p in run_dir.rglob("*MODEL*") if p.is_file()) or "None")
+    manifest = manifest.replace("{{KNOWN_STALE_ARTIFACTS}}", "Legacy invalid role-boundary simulations are excluded by default")
+    write(run_dir / "handoff" / "EXTERNAL_ROLE_HANDOFF_MANIFEST.md", manifest)
+    write(run_dir / "COMPLETION_REPORT.md", "# Codex Internal Completion Report\n\nInternal council work is complete.\n\nNo Chairman verdict has been produced.\n\nNo Devil's Advocate attack has been produced.\n\nThe package is awaiting external ChatGPT Chairman review.\n\nThe commercial decision is not final; commercial decision is not final.\n")
+    update_status(run_dir, pending_tasks=["external ChatGPT Chairman review"], release_gate="AWAITING_EXTERNAL_CHAIRMAN")
+    event(run_dir, "CODEX_HANDOFF_PREPARED", {"handoff": "handoff/EXTERNAL_CHAIRMAN_HANDOFF_PACKAGE.md"})
+    print("PREPARED external chairman handoff")
 
 
 def record_first_synthesis(args: argparse.Namespace) -> None:
-    run_dir = run_dir_arg(args.run_dir)
-    transition(run_dir, "CHAIRMAN_SYNTHESIS", "chairman first synthesis recorded")
-    write(run_dir / "CHAIRMAN.md", "# Chairman File\n\n## First Synthesis\n" + args.text + "\n")
-    update_status(run_dir, pending_tasks=["record-devils-advocate"])
-    event(run_dir, "FIRST_SYNTHESIS_RECORDED", {})
-    print("RECORDED first synthesis")
+    raise SystemExit("Forbidden role boundary crossing: Codex must not record Chairman synthesis. Use external_chairman/ with human-supplied artifacts.")
 
 
 def record_devils_advocate(args: argparse.Namespace) -> None:
-    run_dir = run_dir_arg(args.run_dir)
-    transition(run_dir, "DEVILS_ADVOCATE_COMPLETE", "devils advocate attack recorded")
-    write(run_dir / "DEVILS_ADVOCATE.md", "# Devil's Advocate\n\nAttack: " + args.attack + "\nDefeating change: " + args.defeating_change + "\n")
-    append(run_dir / "CHAIRMAN.md", "\n## Devil's Advocate Considered\n" + args.attack + "\n")
-    update_status(run_dir, pending_tasks=["record-provisional-verdict"])
-    event(run_dir, "DEVILS_ADVOCATE_RECORDED", {})
-    print("RECORDED devils advocate")
+    raise SystemExit("Forbidden role boundary crossing: Codex must not record Devil's Advocate attacks. Use external_devils_advocate/ with human-supplied artifacts.")
 
 
 def record_provisional_verdict(args: argparse.Namespace) -> None:
-    run_dir = run_dir_arg(args.run_dir)
-    transition(run_dir, "PROVISIONAL_VERDICT", "provisional verdict recorded")
-    append(run_dir / "CHAIRMAN.md", "\n## Provisional Verdict\n" + args.text + "\n")
-    update_status(run_dir, pending_tasks=["open-post-chair-review"])
-    event(run_dir, "PROVISIONAL_VERDICT_RECORDED", {})
-    print("RECORDED provisional verdict")
+    raise SystemExit("Forbidden role boundary crossing: Codex must not record Chairman provisional verdicts.")
 
 
 def open_post_chair_review(args: argparse.Namespace) -> None:
-    run_dir = run_dir_arg(args.run_dir)
-    transition(run_dir, "POST_CHAIR_VETO_REVIEW", "post-chair veto review opened")
-    update_status(run_dir, pending_tasks=["record-veto", "record-final-verdict"])
-    print("OPEN post-chair review")
+    raise SystemExit("Forbidden role boundary crossing: post-Chair review belongs to the external Chairman process.")
 
 
 def record_final_verdict(args: argparse.Namespace) -> None:
-    run_dir = run_dir_arg(args.run_dir)
-    vetoes = load_json(run_dir / "VETOES.json", [])
-    unresolved = [v for v in vetoes if v.get("valid") and v.get("status") != "RESOLVED"]
-    ordinary_dissent = [v for v in vetoes if not v.get("valid")]
-    text = args.text
-    if unresolved:
-        text += "\n\nUnresolved valid vetoes surfaced to human owner:\n" + json.dumps(unresolved, indent=2)
-    if ordinary_dissent:
-        text += "\n\nOut-of-scope veto attempts preserved as ordinary dissent:\n" + json.dumps(ordinary_dissent, indent=2)
-    transition(run_dir, "FINAL_VERDICT_COMPLETE", "final verdict recorded")
-    append(run_dir / "CHAIRMAN.md", "\n## Final Verdict\n" + text + "\n\n## Human Owner Decision\nHuman owner may accept, reject, or revise.\n")
-    write(run_dir / "COMPLETION_REPORT.md", "# Completion Report\n\nDecision: " + args.summary + "\nDisagreement: preserved in Chairman file.\nNext action: " + args.next_action + "\n")
-    write(run_dir / "NEXT_RUN_HANDOFF.md", "# Next Run Handoff\n\nCarry forward final verdict, evidence library, unresolved questions, and veto history.\n")
-    update_status(run_dir, pending_tasks=["validate-run", "complete-run"])
-    event(run_dir, "FINAL_VERDICT_RECORDED", {})
-    print("RECORDED final verdict")
+    raise SystemExit("Forbidden role boundary crossing: Codex must not record final Chairman or commercial verdicts.")
 
 
 def validate_event_tags(text: str, label: str) -> list[str]:
@@ -1140,9 +1359,83 @@ def validate_event_tags(text: str, label: str) -> list[str]:
     return failures
 
 
+def is_forbidden_internal_artifact(path: Path, run_dir: Path) -> bool:
+    rel = path.relative_to(run_dir)
+    parts = rel.parts
+    if parts and parts[0] in {"templates", "handoff", "external_chairman", "external_devils_advocate", "human_decision", "library"}:
+        return False
+    if path.name in ALLOWED_EXTERNAL_TEMPLATE_NAMES:
+        return False
+    upper = path.name.upper()
+    return any(re.fullmatch(pattern, upper) for pattern in FORBIDDEN_INTERNAL_ARTIFACT_PATTERNS)
+
+
+def forbidden_internal_artifact_failures(run_dir: Path) -> list[str]:
+    failures = []
+    for path in run_dir.rglob("*.md"):
+        if is_forbidden_internal_artifact(path, run_dir):
+            failures.append(f"Forbidden Codex-generated external-role artifact in internal run space: {durable_relpath(path, run_dir)}")
+    return failures
+
+
+def revision_number(text: str) -> int:
+    nums = [int(n) for n in re.findall(r"\[REVISION:R([0-9]+)\]", text)]
+    return max(nums) if nums else 0
+
+
+def peer_review_revision_failures(run_dir: Path) -> list[str]:
+    failures: list[str] = []
+    reviews = load_json(run_dir / "reviews" / "PEER_REVIEWS.json", [])
+    responses = load_json(run_dir / "AUTHOR_RESPONSES.json", [])
+    accepted = [r for r in responses if str(r.get("disposition", "")).upper() in {"ACCEPTED", "PARTIALLY_ACCEPTED"}]
+    for response in accepted:
+        target = response.get("responds_to", "")
+        if not target.startswith("PR-"):
+            continue
+        review = next((r for r in reviews if r.get("review_id") == target), None)
+        if not review or review.get("type") != "OBJECTION":
+            continue
+        executive = response.get("executive")
+        source_memo = review.get("source_memo")
+        if executive != source_memo:
+            failures.append(f"{response['author_response_id']} responds to {target} for {source_memo} from wrong executive {executive}")
+            continue
+        memo_path = run_dir / "memos" / f"{executive}.md"
+        text = read(memo_path) if memo_path.exists() else ""
+        if revision_number(text) < 2:
+            failures.append(f"{executive} accepted {target} but memo has no R2+ revision")
+        if "# REVISION_LOG" not in text or target not in text:
+            failures.append(f"{executive} accepted {target} but revision log does not reference the objection")
+        current = current_memo(text)
+        if response.get("change") and response["change"] not in current and "append" in response["change"].lower():
+            failures.append(f"{executive} accepted {target} with append-only response; substantive CURRENT_MEMO change required")
+    material_objections = [r for r in reviews if r.get("type") == "OBJECTION"]
+    for review in material_objections:
+        if not any(r.get("responds_to") == review["review_id"] for r in responses):
+            failures.append(f"{review['review_id']} material peer-review objection has no author disposition")
+    return failures
+
+
+def evidence_provenance_failures(run_dir: Path) -> list[str]:
+    failures: list[str] = []
+    lib = load_json(run_dir / "evidence" / "EVIDENCE_LIBRARY.json", {})
+    sources = {s.get("source_id"): s for s in lib.get("sources", [])}
+    for ev in lib.get("evidence", []):
+        source = sources.get(ev.get("source_id"), {})
+        title = source.get("title", "")
+        limitations = source.get("limitations", "")
+        if ev.get("answer_source") == "local source" and (not title or not limitations or limitations.lower() in {"local source", "unknown", "n/a"}):
+            failures.append(f"{ev.get('evidence_id')} uses local source without traceable provenance")
+        for field in ["classification", "geography"]:
+            if not ev.get(field):
+                failures.append(f"{ev.get('evidence_id')} missing {field}")
+    return failures
+
+
 def validate_run(args: argparse.Namespace) -> None:
     run_dir = run_dir_arg(args.run_dir)
     failures: list[str] = []
+    failures.extend(forbidden_internal_artifact_failures(run_dir))
     expected = {f"{e}.md" for e in EXECUTIVES}
     found = {p.name for p in (run_dir / "memos").glob("*.md")}
     if found != expected:
@@ -1162,6 +1455,7 @@ def validate_run(args: argparse.Namespace) -> None:
                 failures.append(f"Duplicate event tag {tag}")
             seen_tags.add(tag)
     lib = load_json(run_dir / "evidence" / "EVIDENCE_LIBRARY.json", {})
+    failures.extend(evidence_provenance_failures(run_dir))
     if not any(r.get("status") == "ANSWERED_FROM_CACHE" for r in lib.get("requests", [])):
         failures.append("No evidence request was answered from real cache logic")
     failures.extend(validate_audit_record(run_dir) if status(run_dir).get("stage") in {"AUDIT_IN_PROGRESS", "AUDIT_BLOCKED"} else [])
@@ -1183,6 +1477,7 @@ def validate_run(args: argparse.Namespace) -> None:
                 failures.append(f"Review assignment {route.get('assignment_id')} is not complete, failed, or waived")
     else:
         failures.append("No anonymous review routing map exists")
+    failures.extend(peer_review_revision_failures(run_dir))
     vetoes = load_json(run_dir / "VETOES.json", [])
     if not any(v.get("valid") for v in vetoes):
         failures.append("No valid scoped veto recorded")
@@ -1195,22 +1490,29 @@ def validate_run(args: argparse.Namespace) -> None:
                 failures.append(f"{veto['veto_id']} valid veto is {veto.get('status')}, not RESOLVED")
             elif not ok:
                 failures.append(f"{veto['veto_id']} status says RESOLVED but remedy does not verify: {reason}")
-    for path in ["CHAIRMAN.md", "DEVILS_ADVOCATE.md", "COMPLETION_REPORT.md", "NEXT_RUN_HANDOFF.md", "RUN_EVENTS.jsonl"]:
+    for path in ["handoff/EXTERNAL_CHAIRMAN_HANDOFF_PACKAGE.md", "handoff/EXTERNAL_ROLE_HANDOFF_MANIFEST.md", "COMPLETION_REPORT.md", "RUN_EVENTS.jsonl"]:
         if not (run_dir / path).exists():
             failures.append(f"Missing {path}")
-    chairman = read(run_dir / "CHAIRMAN.md") if (run_dir / "CHAIRMAN.md").exists() else ""
-    for section in ["## First Synthesis", "## Devil's Advocate Considered", "## Provisional Verdict", "## Final Verdict"]:
-        if section not in chairman:
-            failures.append(f"Chairman missing {section}")
-    if status(run_dir).get("stage") not in {"FINAL_VERDICT_COMPLETE", "RUN_COMPLETE"}:
-        failures.append("Run is not at final verdict or complete stage")
+    for name in ALLOWED_EXTERNAL_TEMPLATE_NAMES:
+        if not (run_dir / "templates" / name).exists():
+            failures.append(f"Missing external prompt template templates/{name}")
+    report = read(run_dir / "COMPLETION_REPORT.md") if (run_dir / "COMPLETION_REPORT.md").exists() else ""
+    for required in ["No Chairman verdict has been produced", "No Devil's Advocate attack has been produced", "awaiting external ChatGPT Chairman review", "commercial decision is not final"]:
+        if required not in report:
+            failures.append(f"Completion report missing boundary statement: {required}")
+    if status(run_dir).get("stage") != "CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN":
+        failures.append("Run is not at CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN")
     failures.extend(verify_old_hashes(run_dir))
-    for agent in [REPO / ".agents" / "skills" / "codex-council-v2" / "SKILL.md", *[REPO / ".codex" / "agents" / f"codex-council-v2-{name}.toml" for name in ["contrarian", "first-principles", "expansionist", "outsider", "executor", "librarian", "auditor", "devils-advocate", "chairman"]]]:
+    for agent in [REPO / ".agents" / "skills" / "codex-council-v2" / "SKILL.md", *[REPO / ".codex" / "agents" / f"codex-council-v2-{name}.toml" for name in REQUIRED_V2_AGENT_NAMES]]:
         if not agent.exists():
             failures.append(f"Missing V2 entry point: {agent}")
+    for removed in ["chairman", "devils-advocate"]:
+        path = REPO / ".codex" / "agents" / f"codex-council-v2-{removed}.toml"
+        if path.exists():
+            failures.append(f"Forbidden executable external-role V2 agent still registered: {path}")
     if failures:
         raise SystemExit("Validation failed:\n- " + "\n- ".join(failures))
-    write(run_dir / "VALIDATION_RESULTS.md", "# Validation Results\n\nPASS: state machine, cache, audit, review routing, veto validation, resume, and old-system hash checks passed.\n")
+    write(run_dir / "VALIDATION_RESULTS.md", "# Validation Results\n\nPASS: Codex internal state machine, cache, audit, peer review, revision, veto, handoff, prompt-template, role-boundary, and old-system hash checks passed.\n")
     print(f"PASS {run_dir}")
 
 
@@ -1232,14 +1534,13 @@ def resume(args: argparse.Namespace) -> None:
         "AUDIT_BLOCKED": "record-author-response and submit corrected memo, then validate-audit",
         "AUDIT_PASSED": "create-anonymous-review-packets",
         "PEER_REVIEW_IN_PROGRESS": "record-peer-review and merge-review-events",
-        "AUTHOR_REVISION": "record-author-response, record-veto, then prepare-chairman-packet",
-        "PRE_CHAIR_READY": "record-first-synthesis",
-        "CHAIRMAN_SYNTHESIS": "record-devils-advocate",
-        "DEVILS_ADVOCATE_COMPLETE": "record-provisional-verdict",
-        "PROVISIONAL_VERDICT": "open-post-chair-review",
-        "POST_CHAIR_VETO_REVIEW": "record-final-verdict",
-        "FINAL_VERDICT_COMPLETE": "validate-run or complete-run",
-        "RUN_COMPLETE": "no pending workflow",
+        "AUTHOR_REVISION": "record-author-response, record-veto, resolve-veto, then prepare-chairman-packet",
+        "CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN": "validate-run; then Ahmed starts external ChatGPT Chairman session",
+        "EXTERNAL_CHAIRMAN_PROVISIONAL_PENDING": "await human-supplied external Chairman provisional memo",
+        "EXTERNAL_DEVILS_ADVOCATE_PENDING": "await human-supplied external Devil's Advocate attack",
+        "EXTERNAL_CHAIRMAN_FINAL_PENDING": "await human-supplied external Chairman final verdict",
+        "AWAITING_AHMED_DECISION": "await Ahmed decision",
+        "HUMAN_DECISION_RECORDED": "no pending workflow",
     }
     expected_agents = {
         "CHARTER_DRAFTED": "codex-council-v2 operator",
@@ -1252,13 +1553,12 @@ def resume(args: argparse.Namespace) -> None:
         "AUDIT_PASSED": "codex-council-v2-librarian",
         "PEER_REVIEW_IN_PROGRESS": "five executive agents as reviewers",
         "AUTHOR_REVISION": "memo owners and veto holders",
-        "PRE_CHAIR_READY": "codex-council-v2-chairman",
-        "CHAIRMAN_SYNTHESIS": "codex-council-v2-devils-advocate",
-        "DEVILS_ADVOCATE_COMPLETE": "codex-council-v2-chairman",
-        "PROVISIONAL_VERDICT": "codex-council-v2 operator",
-        "POST_CHAIR_VETO_REVIEW": "authorized veto holders or Chairman",
-        "FINAL_VERDICT_COMPLETE": "codex-council-v2 operator",
-        "RUN_COMPLETE": "none",
+        "CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN": "external ChatGPT Chairman, not Codex",
+        "EXTERNAL_CHAIRMAN_PROVISIONAL_PENDING": "external ChatGPT Chairman",
+        "EXTERNAL_DEVILS_ADVOCATE_PENDING": "external ChatGPT Devil's Advocate",
+        "EXTERNAL_CHAIRMAN_FINAL_PENDING": "external ChatGPT Chairman",
+        "AWAITING_AHMED_DECISION": "Ahmed",
+        "HUMAN_DECISION_RECORDED": "none",
     }
     required_inputs = {
         "EVIDENCE_REQUESTS_OPEN": ["RUN_CHARTER.md", "RUN_CONFIG.json", "evidence/EVIDENCE_LIBRARY.json"],
@@ -1266,8 +1566,7 @@ def resume(args: argparse.Namespace) -> None:
         "AUDIT_IN_PROGRESS": ["memos/*.md", "evidence/EVIDENCE_LIBRARY.json", "CLAIMS.json"],
         "PEER_REVIEW_IN_PROGRESS": ["_work/review-packets/*.md", "_work/review-routing-map.private.json"],
         "AUTHOR_REVISION": ["memos/*.md", "reviews/PEER_REVIEWS.json", "VETOES.json"],
-        "PRE_CHAIR_READY": ["_work/CHAIRMAN_PACKET.md"],
-        "POST_CHAIR_VETO_REVIEW": ["CHAIRMAN.md", "VETOES.json"],
+        "CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN": ["handoff/EXTERNAL_CHAIRMAN_HANDOFF_PACKAGE.md", "handoff/EXTERNAL_ROLE_HANDOFF_MANIFEST.md", "templates/*.md"],
     }
     events = [json.loads(line) for line in read(run_dir / "RUN_EVENTS.jsonl").splitlines() if line.strip()] if (run_dir / "RUN_EVENTS.jsonl").exists() else []
     completed = [e["kind"] for e in events]
@@ -1288,16 +1587,50 @@ def resume(args: argparse.Namespace) -> None:
     print(json.dumps(result, indent=2, sort_keys=True))
 
 
+def record_external_artifact(args: argparse.Namespace) -> None:
+    run_dir = run_dir_arg(args.run_dir)
+    source = Path(args.content_file)
+    if not source.exists():
+        raise SystemExit(f"External artifact file not found: {source}")
+    text = read(source)
+    if args.role == "chairman-provisional":
+        if status(run_dir).get("stage") != "CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN":
+            raise SystemExit("Chairman provisional artifact can only be recorded after Codex handoff")
+        target = run_dir / "external_chairman" / "CHAIRMAN_PROVISIONAL_MEMO.md"
+        transition(run_dir, "EXTERNAL_CHAIRMAN_PROVISIONAL_PENDING", "human supplied external Chairman provisional memo")
+        transition(run_dir, "EXTERNAL_DEVILS_ADVOCATE_PENDING", "await external Devil's Advocate attack")
+    elif args.role == "devils-advocate":
+        if status(run_dir).get("stage") != "EXTERNAL_DEVILS_ADVOCATE_PENDING":
+            raise SystemExit("Devil's Advocate artifact requires external Chairman provisional memo first")
+        target = run_dir / "external_devils_advocate" / "DEVILS_ADVOCATE_ATTACK.md"
+        transition(run_dir, "EXTERNAL_CHAIRMAN_FINAL_PENDING", "human supplied external Devil's Advocate attack")
+    elif args.role == "chairman-final":
+        if status(run_dir).get("stage") != "EXTERNAL_CHAIRMAN_FINAL_PENDING":
+            raise SystemExit("Chairman final artifact requires external Devil's Advocate attack first")
+        target = run_dir / "external_chairman" / "CHAIRMAN_FINAL_VERDICT_FOR_AHMED_REVIEW.md"
+        transition(run_dir, "AWAITING_AHMED_DECISION", "human supplied external Chairman final verdict")
+    elif args.role == "ahmed-decision":
+        if status(run_dir).get("stage") != "AWAITING_AHMED_DECISION":
+            raise SystemExit("Ahmed decision requires external Chairman final verdict first")
+        target = run_dir / "human_decision" / "AHMED_DECISION.md"
+        transition(run_dir, "HUMAN_DECISION_RECORDED", "human supplied Ahmed decision")
+    else:
+        raise SystemExit(f"Unknown external role: {args.role}")
+    write(target, text)
+    event(run_dir, "HUMAN_SUPPLIED_EXTERNAL_ARTIFACT_RECORDED", {"role": args.role, "path": durable_relpath(target, run_dir)})
+    update_status(run_dir, pending_tasks=[])
+    print(f"RECORDED human-supplied external artifact {durable_relpath(target, run_dir)}")
+
+
 def complete_run(args: argparse.Namespace) -> None:
     run_dir = run_dir_arg(args.run_dir)
     validate_run(argparse.Namespace(run_dir=str(run_dir)))
-    transition(run_dir, "RUN_COMPLETE", "validation passed and completion accepted")
     update_status(
         run_dir,
-        pending_tasks=[],
-        release_gate="READY_FOR_BOUNDED_REAL_RUN",
+        pending_tasks=["external ChatGPT Chairman review"],
+        release_gate="CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN",
     )
-    print(f"COMPLETE {run_dir}")
+    print(f"CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN {run_dir}")
 
 
 def status_cmd(args: argparse.Namespace) -> None:
@@ -1377,7 +1710,7 @@ def synthetic_test(_: argparse.Namespace) -> Path:
     route_map = load_json(run_dir / "_work" / "review-routing-map.private.json", [])
     resume(argparse.Namespace(run_dir=str(run_dir)))
     for route in route_map:
-        record_peer_review_record(run_dir, route["packet_id"], "Clarify failure criteria and support cap.")
+        record_peer_review_record(run_dir, route["packet_id"], "Clarify failure criteria and support cap.", objection=False)
     merge_review_events(argparse.Namespace(run_dir=str(run_dir)))
     valid_veto = record_veto_record(run_dir, "executor", "PRE_CHAIR", "feasible next action", "Launch without support cap.", "A launch without the support cap violates feasible next action.", ev2["evidence_id"], "Add the 20-hour/month support cap before Chairman review.", challenged_artifact="memos/executor.md", challenged_section="CURRENT_MEMO", remedy_must_contain="20-hour/month support cap before launch")
     invalid_veto = record_veto_record(run_dir, "outsider", "PRE_CHAIR", "brand preference", "Synthetic fixture decision.", "Plain naming is less attractive.", "none", "Rename the fixture.")
@@ -1387,14 +1720,6 @@ def synthetic_test(_: argparse.Namespace) -> Path:
     record_author_response_record(run_dir, "executor", valid_veto["veto_id"], "ACCEPTED", "Support cap added.", "Resolved valid pre-chair veto.")
     resume(argparse.Namespace(run_dir=str(run_dir)))
     prepare_chairman_packet(argparse.Namespace(run_dir=str(run_dir), allow_open_vetoes=False))
-    record_first_synthesis(argparse.Namespace(run_dir=str(run_dir), text="The emerging direction is a bounded one-week pilot with a 20-hour support cap."))
-    record_devils_advocate(argparse.Namespace(run_dir=str(run_dir), attack="The pilot may validate only the fixture audience and hide real-world support variance.", defeating_change="Require failure criteria and a second evidence gate before scaling."))
-    record_provisional_verdict(argparse.Namespace(run_dir=str(run_dir), text="Proceed with the pilot only if owner, support cap, and failure criteria are explicit. Start without owner assignment."))
-    open_post_chair_review(argparse.Namespace(run_dir=str(run_dir)))
-    post = record_veto_record(run_dir, "executor", "POST_CHAIR", "feasible next action", "Start without owner assignment.", "No executable owner means the next action is not feasible.", "RUN_CHARTER", "Assign owner and date.", challenged_artifact="CHAIRMAN.md", remedy_must_contain="Owner: Fixture Lead")
-    append(run_dir / "CHAIRMAN.md", "\n## Post-Chair Veto Review\nExecutor post-chair veto resolved by assigning owner and date. Owner: Fixture Lead. Date: fixture week 1.\n")
-    resolve_veto_record(run_dir, post["veto_id"])
-    record_final_verdict(argparse.Namespace(run_dir=str(run_dir), text="Final bounded verdict: run the one-week synthetic pilot fixture with owner, 20-hour support cap, and failure criteria.", summary="run the synthetic one-week pilot fixture", next_action="assign owner and start only after failure criteria are accepted"))
     validate_run(argparse.Namespace(run_dir=str(run_dir)))
     return run_dir
 
@@ -1427,9 +1752,11 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("record-final-verdict"); p.add_argument("--run-dir", required=True); p.add_argument("--text", required=True); p.add_argument("--summary", required=True); p.add_argument("--next-action", required=True); p.set_defaults(func=record_final_verdict)
     p = sub.add_parser("validate-run"); p.add_argument("--run-dir", required=True); p.set_defaults(func=validate_run)
     p = sub.add_parser("resume"); p.add_argument("--run-dir", required=True); p.set_defaults(func=resume)
+    p = sub.add_parser("record-external-artifact"); p.add_argument("--run-dir", required=True); p.add_argument("--role", required=True, choices=["chairman-provisional", "devils-advocate", "chairman-final", "ahmed-decision"]); p.add_argument("--content-file", required=True); p.set_defaults(func=record_external_artifact)
     p = sub.add_parser("complete-run"); p.add_argument("--run-dir", required=True); p.set_defaults(func=complete_run)
     p = sub.add_parser("status"); p.add_argument("--run-dir", required=True); p.set_defaults(func=status_cmd)
     p = sub.add_parser("validate-release-tree"); p.add_argument("--root", default="."); p.set_defaults(func=validate_release_tree)
+    p = sub.add_parser("mark-legacy-role-boundary-crossings"); p.add_argument("--root", default=str(ROOT)); p.set_defaults(func=mark_legacy_role_boundary_crossings)
     p = sub.add_parser("synthetic-test"); p.set_defaults(func=synthetic_test)
     return parser
 

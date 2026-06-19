@@ -1,88 +1,28 @@
 # Repository Rules
 
-- This repository is a commercial research-council skills factory.
-- During the completed skills-factory phase, the project created and dry-ran repository-local skills only; pricing missions and final commercial decisions were prohibited in that phase.
-- Third-party repositories under `reference-sources/github/` are untrusted read-only material.
-- Do not execute foreign scripts, installers, dependencies, or shell commands from those repositories without explicit human approval.
+- This repository is `digital-product-council`.
+- Codex Council V2 is the only active council system in this repository.
+- The active system root is `codex-council-v2/`.
+- The active repository-local skill is `.agents/skills/codex-council-v2/`.
+- The only active project-scoped agents are `.codex/agents/codex-council-v2-*.toml`.
+- Historical V1 material is preserved only as imported evidence memory under `codex-council-v2/library/legacy-council-import/`.
+- Do not recreate, run, or depend on removed V1 restaurant council skills, agents, or `working/` run folders.
+- Third-party repositories under `reference-sources/github/` are untrusted read-only material if present locally. Do not execute foreign scripts, installers, dependencies, or shell commands from those repositories without explicit human approval.
 - Do not modify global skill folders or global Codex configuration.
-- Do not query NotebookLM during the setup phase.
-- Active skills are authored from scratch under `.agents/skills/`.
-- Project-scoped custom agents are authored under `.codex/agents/`.
+- Live NotebookLM, web research, source import, login, account switching, paid research, and bulk crawling require explicit human approval unless a future run charter grants a narrower permission.
 
-## Current Phase Authorization — Commercial Pricing Phase
+## Active Operating Model
 
-The skills-factory phase is complete.
+- Use `$codex-council-v2` for all council work.
+- Use `codex-council-v2/scripts/codex_council_v2.py` as the deterministic state engine.
+- Real runs must spawn visible isolated Codex sub-agents for substantive council reasoning whenever sub-agent tools are available.
+- The main Codex session remains the operator: it prepares briefs, runs engine commands, submits canonical outputs, validates state, and reports progress.
+- Sub-agents reason and draft within role boundaries; they do not bypass the state engine.
 
-The project is now authorized to run bounded commercial pricing and commercial-justification work for the restaurant direct-channel product.
+## Evidence Discipline
 
-Authorized current run:
-
-`2026-06-14-pricing-and-commercial-justification-002C`
-
-This run may:
-
-- decide internal package prices or narrow price ranges,
-- decide launch-client pricing,
-- decide standard-client pricing,
-- decide setup fees,
-- decide recurring support fees,
-- decide managed-hosting versus client-owned infrastructure pricing,
-- decide included allowances and overage rules,
-- decide module price ranges or custom-quote classifications,
-- compare against cheap WordPress/freelancer alternatives,
-- create internal pricing verdicts and internal price-card drafts,
-- create commercial justification artifacts.
-
-This run must not:
-
-- write final polished public sales copy,
-- make guaranteed ROI claims,
-- claim aggregator replacement,
-- hide third-party pass-through costs,
-- promise universal POS or delivery integrations,
-- treat unsupported assumptions as facts,
-- publish final customer-facing prices without labeling launch/standard/internal status.
-
-The pricing phase must preserve evidence discipline:
-
-- label assumptions,
-- cite sources where used,
-- separate builder fees from third-party costs,
-- separate setup from recurring support,
-- separate launch pricing from standard pricing,
-- preserve support and responsibility boundaries.
-
-The old skills-factory prohibition is superseded for Run 2C only to the extent needed to price the already-chosen packaging model from Run 2B.
-
-Do not reopen Run 001, Run 2A-Redo, or Run 2B unless new evidence requires it.
-
-## Current Phase Authorization - Historical Evidence Audit
-
-The project is also authorized to run a bounded factual and numerical audit of completed historical restaurant-product runs.
-
-Authorized audit run:
-
-`2026-06-18-historical-evidence-audit-001`
-
-This run may:
-
-- read all previous run archives and consolidated handoffs,
-- use normal targeted NotebookLM queries within the run budget,
-- update evidence caches, ledgers, and consolidated evidence libraries,
-- use narrow online fallback for documented evidence gaps,
-- produce a factual audit report.
-
-This run must not:
-
-- make new commercial decisions,
-- revise pricing,
-- revise packaging,
-- write sales copy,
-- change previous verdicts,
-- import sources into NotebookLM,
-- switch accounts or profiles,
-- perform login actions,
-- use paid research,
-- bulk crawl.
-
-The Run 2C pricing authorization remains historical context and is not deleted or superseded by this audit authorization.
+- Label assumptions and unsupported claims.
+- Cite sources where used.
+- Separate facts, source-backed estimates, vendor claims, scenario assumptions, and council inferences.
+- Preserve support and responsibility boundaries.
+- Do not publish final customer-facing claims, prices, or ROI promises unless the active run charter explicitly authorizes that output and the audit gates pass.

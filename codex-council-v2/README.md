@@ -5,7 +5,7 @@ Codex Council V2 is a separate, Codex-only council framework for bounded researc
 ## What It Is
 
 - Five permanent executive lenses: Contrarian, First-Principles Thinker, Expansionist, Outsider, and Executor.
-- Service agents outside the five: Librarian, Evidence Auditor / Accountant, Devil's Advocate, and Chairman.
+- Codex service agents outside the five: Librarian and Evidence Auditor / Accountant. Chairman and Devil's Advocate are external ChatGPT roles.
 - One canonical memo file per executive per run.
 - Central evidence memory and request deduplication.
 - Permanent factual / numerical evidence veto for the Auditor.
@@ -61,18 +61,20 @@ python codex-council-v2/scripts/codex_council_v2.py status --run-dir codex-counc
 
 ## Real Run Pattern
 
-The Codex skill orchestrates these engine operations: `init-run`, `validate-charter`, `open-evidence-requests`, `register-evidence-request`, `resolve-evidence-request`, `mark-evidence-ready`, `submit-memo`, `extract-claims`, `record-fact-check`, `validate-audit`, `create-anonymous-review-packets`, `record-peer-review`, `merge-review-events`, `record-author-response`, `record-veto`, `prepare-chairman-packet`, `record-first-synthesis`, `record-devils-advocate`, `record-provisional-verdict`, `open-post-chair-review`, `record-final-verdict`, `validate-run`, `resume`, and `complete-run`.
+The Codex skill orchestrates these engine operations: `init-run`, `validate-charter`, `open-evidence-requests`, `register-evidence-request`, `resolve-evidence-request`, `mark-evidence-ready`, `submit-memo`, `extract-claims`, `record-fact-check`, `validate-audit`, `create-anonymous-review-packets`, `record-peer-review`, `merge-review-events`, `record-author-response`, `record-veto`, `resolve-veto`, `prepare-chairman-packet`, `validate-run`, `resume`, and `complete-run`.
 
-Python validates state, locks, cache reuse, review routing, audit resolution, veto scope, and old-system hashes. Codex supplies the reasoning text submitted into those commands.
+Python validates state, locks, cache reuse, review routing, audit resolution, genuine revisions, evidence provenance, veto scope, prohibited external-role artifacts, handoff prompts, and old-system hashes. Codex supplies the internal reasoning text submitted into those commands.
 
 For real runs, the main Codex session is the operator, not the hidden author of every role. It must spawn visible isolated sub-agents for substantive council reasoning whenever the current Codex session exposes sub-agent tools:
 
 - Executive memo drafting: spawn `codex-council-v2-contrarian`, `codex-council-v2-first-principles`, `codex-council-v2-expansionist`, `codex-council-v2-outsider`, and `codex-council-v2-executor` separately.
 - Evidence routing: spawn `codex-council-v2-librarian` for nontrivial routing, cache checks, and provenance-preserving evidence packets.
 - Audit: spawn `codex-council-v2-auditor` for substantive factual and numerical review before peer review.
-- Synthesis and attack: spawn `codex-council-v2-chairman` for synthesis and `codex-council-v2-devils-advocate` only after a Chairman direction exists.
+- External handoff: run `prepare-chairman-packet`, validate, and stop at `CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN`. Do not spawn Chairman or Devil's Advocate as Codex agents.
 
 Each sub-agent receives a bounded role brief, the run charter, only relevant evidence or review packets, and a strict output contract. The operator collects outputs and submits them through `codex_council_v2.py`; sub-agents do not bypass the deterministic state machine.
+
+External ChatGPT stages use reusable startup prompts in `codex-council-v2/templates/` and per-run copies under `runs/<run-id>/templates/`. Human-supplied external artifacts may be recorded later with `record-external-artifact`; Codex must not write their substantive judgment.
 
 If sub-agent spawning is unavailable, the operator must tell the user before continuing and label the run as `MANUAL_SINGLE_SESSION_FALLBACK` in the run notes. The fallback is allowed only because it is explicit, not silent.
 
@@ -82,6 +84,7 @@ The old restaurant council memory has been imported into `codex-council-v2/libra
 
 ```powershell
 python codex-council-v2/scripts/import_legacy_council_memory.py
+python codex-council-v2/scripts/codex_council_v2.py mark-legacy-role-boundary-crossings
 ```
 
 Additional hardening commands:
@@ -93,10 +96,10 @@ python codex-council-v2/scripts/codex_council_v2.py resolve-veto --run-dir <run-
 
 ## Release Status
 
-`READY_FOR_BOUNDED_REAL_RUN`
+`CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN` is the terminal Codex-owned run state. External Chairman, external Devil's Advocate, final Chairman verdict, and Ahmed decision stages are outside Codex's substantive authority.
 
 The first real mission must still be treated as a controlled pilot. Live NotebookLM, web research, source import, login, account switching, paid research, and bulk crawling still require explicit approval.
 
 ## First Real Run Prompt
 
-Use `$codex-council-v2` to initialize and run a new Codex-only council for `[decision question]`. Use `codex-council-v2/scripts/codex_council_v2.py` as the deterministic state engine, spawn visible isolated V2 sub-agents for reasoning, and stop before live NotebookLM or web research unless explicitly approved.
+Use `$codex-council-v2` to initialize and run a new Codex-only council for `[decision question]`. Use `codex-council-v2/scripts/codex_council_v2.py` as the deterministic state engine, spawn visible isolated V2 sub-agents for internal reasoning, and stop at `CODEX_COUNCIL_COMPLETE_AWAITING_EXTERNAL_CHAIRMAN`. Stop before live NotebookLM or web research unless explicitly approved.

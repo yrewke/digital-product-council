@@ -1,4 +1,0 @@
-interface:
-  display_name: "Restaurant Commercial Council"
-  short_description: "Deliberate on evidence-backed commercial choices"
-  default_prompt: "Use $restaurant-commercial-council to deliberate on this prepared evidence pack."
