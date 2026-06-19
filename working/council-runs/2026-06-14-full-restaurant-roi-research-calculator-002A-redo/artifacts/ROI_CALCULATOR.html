@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="An evidence-gated UAE restaurant owned-channel ROI scenario calculator based on Run 2A-Redo research.">
+  <meta name="theme-color" content="#10231d">
+  <title>Restaurant Owned-Channel ROI Calculator</title>
+  <style>
+    :root {
+      --color-bg: #f4f1e9;
+      --color-surface: #fffdf7;
+      --color-surface-strong: #10231d;
+      --color-surface-soft: #e9eee8;
+      --color-text: #17221d;
+      --color-muted: #617068;
+      --color-border: #cdd5ce;
+      --color-primary: #0d7151;
+      --color-primary-dark: #08563e;
+      --color-accent: #d9a441;
+      --color-positive: #14734f;
+      --color-warning: #9a6515;
+      --color-negative: #a33e36;
+      --color-focus: #2a8f6c;
+      --shadow-card: 0 14px 36px rgb(16 35 29 / 0.08);
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.5rem;
+      --space-6: 2rem;
+      --space-7: 3rem;
+      --radius-sm: 0.5rem;
+      --radius-md: 0.85rem;
+      --radius-lg: 1.25rem;
+      --radius-pill: 999px;
+      --container: 96rem;
+      --transition: 160ms ease;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    button, input, select { font: inherit; }
+    button, select, input {
+      min-height: 44px;
+    }
+    button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--color-focus);
+      outline-offset: 2px;
+    }
+    .container {
+      width: min(100%, var(--container));
+      margin-inline: auto;
+      padding-inline: var(--space-4);
+    }
+    .hero {
+      background: var(--color-surface-strong);
+      color: var(--color-surface);
+      padding-block: var(--space-6);
+      border-block-end: 5px solid var(--color-accent);
+    }
+    .hero-grid {
+      display: grid;
+      gap: var(--space-5);
+      align-items: end;
+    }
+    .eyebrow {
+      margin: 0 0 var(--space-2);
+      color: var(--color-accent);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, p { margin-block-start: 0; }
+    h1 {
+      max-width: 18ch;
+      margin-block-end: var(--space-3);
+      font-size: clamp(2rem, 5vw, 4.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+    h2 {
+      margin-block-end: var(--space-3);
+      font-size: 1.3rem;
+      line-height: 1.15;
+    }
+    h3 {
+      margin-block-end: var(--space-2);
+      font-size: 1rem;
+    }
+    .hero-copy {
+      max-width: 68ch;
+      margin-block-end: 0;
+      color: #dce8e1;
+    }
+    .hero-note {
+      padding: var(--space-4);
+      border: 1px solid rgb(255 255 255 / 0.2);
+      border-radius: var(--radius-md);
+      background: rgb(255 255 255 / 0.06);
+    }
+    .hero-note strong { color: var(--color-accent); }
+    .toolbar {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: 10;
+      border-block-end: 1px solid var(--color-border);
+      background: rgb(244 241 233 / 0.94);
+      backdrop-filter: blur(12px);
+    }
+    .toolbar-inner {
+      display: flex;
+      gap: var(--space-2);
+      align-items: center;
+      justify-content: space-between;
+      padding-block: var(--space-3);
+      overflow-x: auto;
+    }
+    .toolbar-actions {
+      display: flex;
+      gap: var(--space-2);
+      align-items: center;
+    }
+    .status-pill, .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-pill);
+      font-size: 0.78rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .status-pill { background: var(--color-surface-soft); color: var(--color-primary-dark); }
+    .tag { background: #f1e3bf; color: #72500e; }
+    .button {
+      min-width: 44px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: var(--space-2) var(--space-4);
+      background: var(--color-surface);
+      color: var(--color-text);
+      font-weight: 750;
+      cursor: pointer;
+      transition: background var(--transition), border-color var(--transition), transform var(--transition);
+    }
+    .button:hover, .button[aria-pressed="true"] {
+      border-color: var(--color-primary);
+      background: var(--color-surface-soft);
+    }
+    .button:active { transform: translateY(1px); }
+    .button-primary {
+      border-color: var(--color-primary);
+      background: var(--color-primary);
+      color: var(--color-surface);
+    }
+    .button-primary:hover { background: var(--color-primary-dark); }
+    main { padding-block: var(--space-5) var(--space-7); }
+    .layout {
+      display: grid;
+      gap: var(--space-5);
+    }
+    .stack { display: grid; gap: var(--space-4); }
+    .card {
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+      box-shadow: var(--shadow-card);
+    }
+    .card-header {
+      padding: var(--space-4);
+      border-block-end: 1px solid var(--color-border);
+    }
+    .card-header p {
+      margin-block-end: 0;
+      color: var(--color-muted);
+      font-size: 0.9rem;
+    }
+    .card-body { padding: var(--space-4); }
+    .field-grid {
+      display: grid;
+      gap: var(--space-4);
+    }
+    .field {
+      display: grid;
+      gap: var(--space-2);
+    }
+    label {
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    .label-row {
+      display: flex;
+      gap: var(--space-2);
+      align-items: center;
+      justify-content: space-between;
+    }
+    .hint {
+      margin: 0;
+      color: var(--color-muted);
+      font-size: 0.76rem;
+    }
+    input, select {
+      width: 100%;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: var(--space-2) var(--space-3);
+      background: #ffffff;
+      color: var(--color-text);
+    }
+    input:invalid { border-color: var(--color-negative); }
+    .scenario-picker {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-2);
+    }
+    .scenario-picker .button { padding-inline: var(--space-2); font-size: 0.78rem; }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-3);
+    }
+    .metric {
+      min-width: 0;
+      padding: var(--space-4);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: var(--color-surface);
+    }
+    .metric-wide { grid-column: 1 / -1; }
+    .metric-label {
+      display: block;
+      color: var(--color-muted);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .metric-value {
+      display: block;
+      margin-block-start: var(--space-1);
+      font-size: clamp(1.25rem, 4vw, 2.25rem);
+      font-weight: 850;
+      line-height: 1.05;
+      overflow-wrap: anywhere;
+    }
+    .metric-detail {
+      display: block;
+      margin-block-start: var(--space-2);
+      color: var(--color-muted);
+      font-size: 0.76rem;
+    }
+    .positive { color: var(--color-positive); }
+    .negative { color: var(--color-negative); }
+    .warning { color: var(--color-warning); }
+    .result-hero {
+      padding: var(--space-5);
+      background: var(--color-surface-strong);
+      color: var(--color-surface);
+    }
+    .result-hero .metric-label, .result-hero .metric-detail { color: #c8d6ce; }
+    .result-hero .metric-value { color: var(--color-accent); }
+    .bar-list { display: grid; gap: var(--space-3); }
+    .bar-row { display: grid; gap: var(--space-1); }
+    .bar-meta {
+      display: flex;
+      gap: var(--space-3);
+      justify-content: space-between;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+    .bar-track {
+      overflow: hidden;
+      height: 12px;
+      border-radius: var(--radius-pill);
+      background: var(--color-surface-soft);
+    }
+    .bar-fill {
+      height: 100%;
+      width: 0;
+      border-radius: inherit;
+      background: var(--color-primary);
+      transition: width var(--transition);
+    }
+    .bar-fill.cost { background: var(--color-negative); }
+    .recommendation {
+      padding: var(--space-4);
+      border-inline-start: 4px solid var(--color-primary);
+      border-radius: var(--radius-sm);
+      background: var(--color-surface-soft);
+    }
+    .recommendation.warning-box { border-color: var(--color-warning); background: #fff6e5; }
+    .recommendation.danger-box { border-color: var(--color-negative); background: #fff0ee; }
+    .recommendation p:last-child { margin-block-end: 0; }
+    .checklist {
+      display: grid;
+      gap: var(--space-2);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .checklist li {
+      display: grid;
+      grid-template-columns: 1.2rem 1fr;
+      gap: var(--space-2);
+      align-items: start;
+      font-size: 0.85rem;
+    }
+    .check { color: var(--color-positive); font-weight: 900; }
+    .missing { color: var(--color-negative); font-weight: 900; }
+    details {
+      border-block-start: 1px solid var(--color-border);
+      padding: var(--space-4);
+    }
+    summary {
+      min-height: 44px;
+      cursor: pointer;
+      font-weight: 850;
+    }
+    .source-list {
+      margin-block-end: 0;
+      padding-inline-start: var(--space-5);
+      color: var(--color-muted);
+      font-size: 0.82rem;
+    }
+    .footer-note {
+      max-width: 80ch;
+      margin: var(--space-6) auto 0;
+      color: var(--color-muted);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    @media (min-width: 640px) {
+      .container { padding-inline: var(--space-5); }
+      .field-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .metric-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .metric-wide { grid-column: auto; }
+    }
+    @media (min-width: 1024px) {
+      .hero { padding-block: var(--space-7); }
+      .hero-grid { grid-template-columns: 1.7fr 0.8fr; }
+      .layout { grid-template-columns: minmax(0, 1.45fr) minmax(22rem, 0.75fr); align-items: start; }
+      .results-column { position: sticky; inset-block-start: 5.5rem; }
+    }
+    @media print {
+      :root { --color-bg: #ffffff; --shadow-card: none; }
+      .toolbar, .inputs-column, .button { display: none !important; }
+      .layout { display: block; }
+      .results-column { position: static; }
+      .card { break-inside: avoid; margin-block-end: var(--space-4); }
+      .hero { padding-block: var(--space-4); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Run 2A-Redo · Evidence-gated model</p>
+        <h1>Restaurant owned-channel ROI calculator</h1>
+        <p class="hero-copy">Estimate how a website, direct ordering, WhatsApp, Telegram, pickup, and structured fulfilment may gain, save, protect, or risk money. Shifted orders are separated from genuinely incremental orders.</p>
+      </div>
+      <aside class="hero-note" aria-label="Calculator safety note">
+        <strong>Not a guaranteed ROI forecast.</strong>
+        Positive causal assumptions start at zero. Use actual restaurant statements, logs, and quotes whenever possible.
+      </aside>
+    </div>
+  </header>
+
+  <nav class="toolbar" aria-label="Calculator actions">
+    <div class="container toolbar-inner">
+      <span class="status-pill" id="dataStatus">Evidence gate: incomplete</span>
+      <div class="toolbar-actions">
+        <button class="button" id="resetButton" type="button">Reset</button>
+        <button class="button button-primary" id="printButton" type="button">Print report</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="layout">
+      <section class="inputs-column stack" aria-labelledby="inputs-heading">
+        <h2 id="inputs-heading" class="sr-only">Calculator inputs</h2>
+
+        <article class="card">
+          <div class="card-header">
+            <h2>1. Restaurant profile</h2>
+            <p>Start with actual monthly volume and contribution economics.</p>
+          </div>
+          <div class="card-body field-grid">
+            <div class="field">
+              <label for="archetype">Restaurant archetype</label>
+              <select id="archetype">
+                <option value="neighborhood-qsr">Neighborhood QSR</option>
+                <option value="whatsapp-heavy">WhatsApp-heavy restaurant</option>
+                <option value="family-tray">Family-tray / group meals</option>
+                <option value="catering">Catering-led restaurant</option>
+                <option value="aggregator-heavy">Aggregator-heavy restaurant</option>
+                <option value="cafe">Café</option>
+                <option value="fine-dining">Premium / fine dining</option>
+                <option value="multi-branch">Small multi-branch group</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="currentChannel">Current dominant channel</label>
+              <select id="currentChannel">
+                <option value="aggregator">Aggregator</option>
+                <option value="whatsapp">WhatsApp / phone</option>
+                <option value="social">Instagram / social</option>
+                <option value="pickup">Pickup</option>
+                <option value="pos">POS-native ordering</option>
+                <option value="none">No structured direct channel</option>
+              </select>
+            </div>
+            <div class="field">
+              <div class="label-row"><label for="monthlyOrders">Monthly orders</label><span class="tag">Required</span></div>
+              <input id="monthlyOrders" type="number" min="0" step="1" placeholder="e.g. 1200">
+            </div>
+            <div class="field">
+              <div class="label-row"><label for="aov">Average order value</label><span class="tag">Required</span></div>
+              <input id="aov" type="number" min="0" step="1" placeholder="AED">
+            </div>
+            <div class="field">
+              <div class="label-row"><label for="margin">Contribution margin</label><span class="tag">Required</span></div>
+              <input id="margin" type="number" min="0" max="100" step="1" placeholder="% after food and packaging">
+              <p class="hint">Use contribution after food, packaging, and other variable production costs.</p>
+            </div>
+            <div class="field">
+              <label for="operationalOwner">Named staff owner for direct orders?</label>
+              <select id="operationalOwner">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h2>2. Shifted and incremental orders</h2>
+            <p>Shifted orders save channel costs. Incremental orders add contribution. They are not the same thing.</p>
+          </div>
+          <div class="card-body stack">
+            <div class="field-grid">
+              <div class="field">
+                <label for="aggregatorShare">Aggregator share of monthly orders</label>
+                <input id="aggregatorShare" type="number" min="0" max="100" step="1" value="0">
+              </div>
+              <div class="field">
+                <div class="label-row"><label for="deductionRate">Actual marketplace deductions</label><span class="tag">Statement preferred</span></div>
+                <input id="deductionRate" type="number" min="0" max="100" step="0.1" placeholder="%">
+              </div>
+              <div class="field">
+                <label for="shiftRate">Orders expected to shift direct</label>
+                <input id="shiftRate" type="number" min="0" max="100" step="0.1" value="0">
+                <p class="hint">Starts at zero. Shifted orders are not new revenue.</p>
+              </div>
+              <div class="field">
+                <label for="incrementalRate">Genuinely incremental direct orders</label>
+                <input id="incrementalRate" type="number" min="0" max="100" step="0.1" value="0">
+                <p class="hint">Starts at zero. Use only when demand would otherwise be lost.</p>
+              </div>
+              <div class="field">
+                <label for="directDiscount">Direct-channel discount</label>
+                <input id="directDiscount" type="number" min="0" max="100" step="0.1" value="0">
+              </div>
+              <div class="field">
+                <label for="directDeliveryCost">Incremental direct fulfilment cost</label>
+                <input id="directDeliveryCost" type="number" min="0" step="0.1" value="0">
+                <p class="hint">Per shifted or incremental direct order.</p>
+              </div>
+            </div>
+            <div>
+              <h3>Illustrative sensitivity presets</h3>
+              <div class="scenario-picker" role="group" aria-label="Illustrative sensitivity presets">
+                <button class="button scenario" type="button" data-scenario="conservative">Conservative</button>
+                <button class="button scenario" type="button" data-scenario="base">Base</button>
+                <button class="button scenario" type="button" data-scenario="optimistic">Optimistic</button>
+              </div>
+              <p class="hint">These are council-selected illustrations, not UAE benchmarks. Applying a preset explicitly opts into assumptions.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h2>3. Operational leakage</h2>
+            <p>Measure WhatsApp, phone, missed-order, correction, and staff-time burden.</p>
+          </div>
+          <div class="card-body field-grid">
+            <div class="field">
+              <label for="manualOrders">Manual WhatsApp / phone orders</label>
+              <input id="manualOrders" type="number" min="0" step="1" value="0">
+            </div>
+            <div class="field">
+              <label for="minutesSaved">Minutes saved per manual order</label>
+              <input id="minutesSaved" type="number" min="0" step="0.1" value="0">
+            </div>
+            <div class="field">
+              <label for="hourlyValue">Loaded staff value per hour</label>
+              <input id="hourlyValue" type="number" min="0" step="1" value="0">
+            </div>
+            <div class="field">
+              <label for="timeCashShare">Time value realizable as cash</label>
+              <input id="timeCashShare" type="number" min="0" max="100" step="1" value="0">
+              <p class="hint">Keep at zero unless labor or productive capacity changes measurably.</p>
+            </div>
+            <div class="field">
+              <label for="errorReduction">Mistake / missed-order reduction</label>
+              <input id="errorReduction" type="number" min="0" max="100" step="0.1" value="0">
+            </div>
+            <div class="field">
+              <label for="errorCost">Average cost per error or missed order</label>
+              <input id="errorCost" type="number" min="0" step="1" value="0">
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h2>4. Pickup, high-ticket leads, and system cost</h2>
+            <p>Add only benefits and costs that are not already counted above.</p>
+          </div>
+          <div class="card-body field-grid">
+            <div class="field">
+              <label for="pickupOrders">Additional or shifted pickup orders</label>
+              <input id="pickupOrders" type="number" min="0" step="1" value="0">
+            </div>
+            <div class="field">
+              <label for="pickupSaving">Net fulfilment saving per pickup order</label>
+              <input id="pickupSaving" type="number" min="0" step="0.1" value="0">
+            </div>
+            <div class="field">
+              <label for="cateringWins">Incremental catering / group wins</label>
+              <input id="cateringWins" type="number" min="0" step="1" value="0">
+            </div>
+            <div class="field">
+              <label for="cateringTicket">Average catering / group ticket</label>
+              <input id="cateringTicket" type="number" min="0" step="1" value="0">
+            </div>
+            <div class="field">
+              <label for="cateringMargin">Catering contribution margin</label>
+              <input id="cateringMargin" type="number" min="0" max="100" step="1" value="0">
+            </div>
+            <div class="field">
+              <label for="monthlySystemCost">Monthly support, hosting, API, AI, WhatsApp</label>
+              <input id="monthlySystemCost" type="number" min="0" step="1" placeholder="AED">
+            </div>
+            <div class="field">
+              <label for="setupCost">One-time setup cost</label>
+              <input id="setupCost" type="number" min="0" step="1" placeholder="AED">
+            </div>
+            <div class="field">
+              <label for="otherMonthlyCost">Other monthly costs / risks</label>
+              <input id="otherMonthlyCost" type="number" min="0" step="1" value="0">
+              <p class="hint">Promotion, refunds, failure costs, integrations, and unlisted costs.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <aside class="results-column stack" aria-labelledby="results-heading" aria-live="polite">
+        <article class="card">
+          <div class="result-hero">
+            <span class="metric-label">Estimated monthly net impact</span>
+            <strong class="metric-value" id="netImpact">AED 0</strong>
+            <span class="metric-detail" id="payback">Payback not demonstrated</span>
+          </div>
+          <div class="card-body metric-grid">
+            <div class="metric">
+              <span class="metric-label">Shifted orders</span>
+              <strong class="metric-value" id="shiftedOrders">0</strong>
+              <span class="metric-detail">Existing orders moved direct</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Incremental orders</span>
+              <strong class="metric-value" id="incrementalOrders">0</strong>
+              <span class="metric-detail">New completed demand</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Annualized scenario</span>
+              <strong class="metric-value" id="annualImpact">AED 0</strong>
+              <span class="metric-detail">Not a forecast or guarantee</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h2 id="results-heading">ROI path breakdown</h2>
+            <p>Benefits are kept separate to reduce double counting.</p>
+          </div>
+          <div class="card-body bar-list" id="breakdown"></div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h2>Decision guidance</h2>
+            <p>Recommendation follows the reports, not a generic “buy” outcome.</p>
+          </div>
+          <div class="card-body stack">
+            <div class="recommendation" id="channelRecommendation"></div>
+            <div class="recommendation warning-box" id="worksIf"></div>
+            <div class="recommendation danger-box" id="doNotBuy"></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h2>Evidence gate</h2>
+            <p>Payback is credible only when the core inputs come from records.</p>
+          </div>
+          <div class="card-body">
+            <ul class="checklist" id="evidenceChecklist"></ul>
+          </div>
+          <details>
+            <summary>Report-derived evidence and restrictions</summary>
+            <ul class="source-list">
+              <li>Stripe UAE reference: 2.9% + AED 1 per successful domestic-card transaction. Editable provider reference only.</li>
+              <li>Marketplace deduction sensitivity: 15% / 25% / 35%. Illustrative only; use actual restaurant statements.</li>
+              <li>Shifted-order sensitivity: 2% / 7% / 15%. Council scenario, not a UAE benchmark.</li>
+              <li>Incremental-order sensitivity: 0% / 2% / 5%. Positive values require explicit opt-in.</li>
+              <li>Trust, SEO, credibility, customer data, and brand legitimacy are not automatically monetized.</li>
+              <li>Aggregators remain discovery engines; this calculator does not model replacing them.</li>
+            </ul>
+          </details>
+        </article>
+      </aside>
+    </div>
+
+    <p class="footer-note">Based on Run 2A-Redo artifacts: Full Restaurant ROI Map, ROI Numbers and Ranges Ledger, ROI Calculator Specification, Evidence Auditor Review, and Chairman Final ROI Verdict. Results exclude taxes, financing, and any cost not entered.</p>
+  </main>
+
+  <script>
+    const ids = [
+      "archetype", "currentChannel", "monthlyOrders", "aov", "margin", "operationalOwner",
+      "aggregatorShare", "deductionRate", "shiftRate", "incrementalRate", "directDiscount",
+      "directDeliveryCost", "manualOrders", "minutesSaved", "hourlyValue", "timeCashShare",
+      "errorReduction", "errorCost", "pickupOrders", "pickupSaving", "cateringWins",
+      "cateringTicket", "cateringMargin", "monthlySystemCost", "setupCost", "otherMonthlyCost"
+    ];
+    const $ = (id) => document.getElementById(id);
+    const val = (id) => Number($(id).value) || 0;
+    const pct = (id) => val(id) / 100;
+    const money = new Intl.NumberFormat("en-AE", { style: "currency", currency: "AED", maximumFractionDigits: 0 });
+    const number = new Intl.NumberFormat("en-AE", { maximumFractionDigits: 1 });
+    const presets = {
+      conservative: { deductionRate: 15, shiftRate: 2, incrementalRate: 0, directDiscount: 0, minutesSaved: 3, errorReduction: 1, cateringWins: 0 },
+      base: { deductionRate: 25, shiftRate: 7, incrementalRate: 2, directDiscount: 5, minutesSaved: 5, errorReduction: 3, cateringWins: 1 },
+      optimistic: { deductionRate: 35, shiftRate: 15, incrementalRate: 5, directDiscount: 10, minutesSaved: 8, errorReduction: 5, cateringWins: 3 }
+    };
+
+    function calculate() {
+      const monthlyOrders = val("monthlyOrders");
+      const aov = val("aov");
+      const margin = pct("margin");
+      const aggregatorOrders = monthlyOrders * pct("aggregatorShare");
+      const shiftedOrders = Math.min(aggregatorOrders, monthlyOrders * pct("shiftRate"));
+      const incrementalOrders = monthlyOrders * pct("incrementalRate");
+      const gatewayPerOrder = aov * 0.029 + 1;
+      const discountPerOrder = aov * pct("directDiscount");
+      const fulfilmentPerOrder = val("directDeliveryCost");
+
+      const avoidedDeductions = shiftedOrders * aov * pct("deductionRate");
+      const shiftedCosts = shiftedOrders * (gatewayPerOrder + discountPerOrder + fulfilmentPerOrder);
+      const shiftedBenefit = avoidedDeductions - shiftedCosts;
+
+      const incrementalGrossContribution = incrementalOrders * aov * margin;
+      const incrementalCosts = incrementalOrders * (gatewayPerOrder + discountPerOrder + fulfilmentPerOrder);
+      const incrementalBenefit = incrementalGrossContribution - incrementalCosts;
+
+      const capacityValue = val("manualOrders") * val("minutesSaved") / 60 * val("hourlyValue");
+      const cashTimeValue = capacityValue * pct("timeCashShare");
+      const errorValue = val("manualOrders") * pct("errorReduction") * val("errorCost");
+      const pickupBenefit = val("pickupOrders") * val("pickupSaving");
+      const cateringBenefit = val("cateringWins") * val("cateringTicket") * pct("cateringMargin");
+      const systemCosts = val("monthlySystemCost") + val("otherMonthlyCost");
+      const net = shiftedBenefit + incrementalBenefit + cashTimeValue + errorValue + pickupBenefit + cateringBenefit - systemCosts;
+      const paybackMonths = net > 0 ? val("setupCost") / net : Infinity;
+
+      $("shiftedOrders").textContent = number.format(shiftedOrders);
+      $("incrementalOrders").textContent = number.format(incrementalOrders);
+      $("netImpact").textContent = money.format(net);
+      $("annualImpact").textContent = money.format(net * 12);
+      $("netImpact").className = "metric-value " + (net > 0 ? "positive" : net < 0 ? "negative" : "warning");
+      $("payback").textContent = evidenceComplete()
+        ? (Number.isFinite(paybackMonths) ? `Scenario payback: ${number.format(paybackMonths)} months` : "No break-even under this scenario")
+        : "Evidence-gated: complete required owner inputs";
+
+      renderBreakdown([
+        ["Shifted-order net benefit", shiftedBenefit, false],
+        ["Incremental-order contribution", incrementalBenefit, false],
+        ["Staff-time cash value", cashTimeValue, false],
+        ["Error / missed-order protection", errorValue, false],
+        ["Pickup benefit", pickupBenefit, false],
+        ["Catering / group-order upside", cateringBenefit, false],
+        ["Monthly system and other costs", systemCosts, true]
+      ]);
+      renderEvidence();
+      renderRecommendation(net, shiftedOrders, incrementalOrders, capacityValue);
+    }
+
+    function renderBreakdown(items) {
+      const max = Math.max(1, ...items.map((item) => Math.abs(item[1])));
+      $("breakdown").innerHTML = items.map(([label, amount, isCost]) => `
+        <div class="bar-row">
+          <div class="bar-meta"><span>${label}</span><span>${money.format(amount)}</span></div>
+          <div class="bar-track"><div class="bar-fill ${isCost ? "cost" : ""}" style="width:${Math.min(100, Math.abs(amount) / max * 100)}%"></div></div>
+        </div>
+      `).join("");
+    }
+
+    function evidenceItems() {
+      return [
+        ["Monthly orders entered", val("monthlyOrders") > 0],
+        ["Average order value entered", val("aov") > 0],
+        ["Contribution margin entered", val("margin") > 0],
+        ["Actual deduction entered when aggregator ROI is used", pct("aggregatorShare") === 0 || val("deductionRate") > 0],
+        ["Monthly system cost entered", $("monthlySystemCost").value !== ""],
+        ["Setup cost entered", $("setupCost").value !== ""],
+        ["Named operational owner", $("operationalOwner").value === "yes"]
+      ];
+    }
+
+    function evidenceComplete() {
+      return evidenceItems().every((item) => item[1]);
+    }
+
+    function renderEvidence() {
+      const items = evidenceItems();
+      $("evidenceChecklist").innerHTML = items.map(([label, ok]) =>
+        `<li><span class="${ok ? "check" : "missing"}">${ok ? "✓" : "!"}</span><span>${label}</span></li>`
+      ).join("");
+      const complete = evidenceComplete();
+      $("dataStatus").textContent = complete ? "Evidence gate: core inputs complete" : "Evidence gate: incomplete";
+      $("dataStatus").className = "status-pill " + (complete ? "positive" : "warning");
+    }
+
+    function renderRecommendation(net, shiftedOrders, incrementalOrders, capacityValue) {
+      const channel = $("currentChannel").value;
+      const archetype = $("archetype").value;
+      const noOwner = $("operationalOwner").value === "no";
+      let stack = "Start with the smallest reversible intervention that solves a measured problem.";
+      if (channel === "whatsapp" && val("manualOrders") > 0) stack = "Test a structured ordering page plus WhatsApp handoff and bounded staff notification.";
+      if (channel === "aggregator" && shiftedOrders > 0) stack = "Keep aggregators for discovery; test a source-tracked direct repeat-order path.";
+      if ((archetype === "family-tray" || archetype === "catering") && val("cateringWins") > 0) stack = "Prioritize a clear website, structured group-order enquiry, and WhatsApp handoff.";
+      if (channel === "pos") stack = "Compare the existing POS ordering module first; avoid creating a second queue unless net value is clear.";
+      $("channelRecommendation").innerHTML = `<h3>Suggested starting point</h3><p>${stack}</p>`;
+
+      const conditions = [];
+      if (shiftedOrders > 0) conditions.push("repeat customers actually choose the direct path");
+      if (incrementalOrders > 0) conditions.push("incremental orders are source-tracked and genuinely new");
+      if (capacityValue > 0) conditions.push("released staff capacity creates measurable productive value");
+      conditions.push("the restaurant maintains accurate menu and availability");
+      conditions.push("all fulfilment, promotion, refund, and support costs are included");
+      $("worksIf").innerHTML = `<h3>This works only if…</h3><p>${conditions.join("; ")}.</p>`;
+
+      let warning = "Do not buy yet if demand is absent, records are unavailable, or an existing tool solves the job better.";
+      if (noOwner) warning = "Do not buy yet: no staff owner is assigned to monitor, acknowledge, fulfil, and close direct orders.";
+      else if (net <= 0) warning = "Do not buy yet: the entered scenario has no positive monthly net impact.";
+      else if (!evidenceComplete()) warning = "Do not buy yet: the positive scenario is missing required owner evidence.";
+      $("doNotBuy").innerHTML = `<h3>Stop / wait warning</h3><p>${warning}</p>`;
+    }
+
+    function applyPreset(name) {
+      const preset = presets[name];
+      Object.entries(preset).forEach(([id, value]) => { $(id).value = value; });
+      document.querySelectorAll(".scenario").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.scenario === name)));
+      calculate();
+    }
+
+    function reset() {
+      document.querySelectorAll("input").forEach((input) => {
+        input.value = input.hasAttribute("value") ? input.getAttribute("value") : "";
+      });
+      $("archetype").value = "neighborhood-qsr";
+      $("currentChannel").value = "aggregator";
+      $("operationalOwner").value = "yes";
+      document.querySelectorAll(".scenario").forEach((button) => button.setAttribute("aria-pressed", "false"));
+      calculate();
+    }
+
+    ids.forEach((id) => $(id).addEventListener("input", calculate));
+    document.querySelectorAll(".scenario").forEach((button) => button.addEventListener("click", () => applyPreset(button.dataset.scenario)));
+    $("resetButton").addEventListener("click", reset);
+    $("printButton").addEventListener("click", () => window.print());
+    calculate();
+  </script>
+</body>
+</html>

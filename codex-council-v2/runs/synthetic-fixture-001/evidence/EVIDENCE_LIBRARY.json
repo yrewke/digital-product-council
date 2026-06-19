@@ -1,61 +1,133 @@
 {
-  "sources": [
+  "contradictions": [
     {
-      "source_id": "SRC-0001",
-      "title": "Fixture Operations Note",
-      "classification": "INTERNAL_PROJECT_FACT",
-      "retrieval_date": "2026-06-17"
-    },
-    {
-      "source_id": "SRC-0002",
-      "title": "Fixture Cost Sheet",
-      "classification": "SCENARIO_ASSUMPTION",
-      "retrieval_date": "2026-06-17"
+      "claim_a": "Fixture support budget is 20 hours/month.",
+      "claim_b": "Fixture support budget is 200 hours/month.",
+      "contradiction_id": "CON-0001",
+      "status": "RESOLVED_BY_EV-0002"
     }
   ],
   "evidence": [
     {
-      "evidence_id": "EV-0001",
-      "request_id": "ER-0001",
+      "answer_source": "user-supplied fact",
+      "cache_key": "fixture-demand-cap",
       "claim": "Fixture demand is capped at 40 orders/day.",
       "classification": "SCENARIO_ASSUMPTION",
+      "evidence_id": "EV-0001",
+      "freshness_days": 9999,
+      "geography": "SYNTHETIC",
+      "request_id": "ER-0001",
       "source_id": "SRC-0001"
     },
     {
-      "evidence_id": "EV-0002",
-      "request_id": "ER-0002",
+      "answer_source": "user-supplied fact",
+      "cache_key": "fixture-support-budget",
       "claim": "Fixture support budget is 20 hours/month, not 200.",
       "classification": "INTERNAL_PROJECT_FACT",
+      "evidence_id": "EV-0002",
+      "freshness_days": 9999,
+      "geography": "SYNTHETIC",
+      "request_id": "ER-0003",
       "source_id": "SRC-0002"
     },
     {
-      "evidence_id": "EV-0003",
-      "request_id": "ER-0001",
-      "claim": "Repeated request answered from cache.",
+      "answer_source": "user-supplied fact",
+      "cache_key": "fixture-safe-price",
+      "claim": "Fixture safe price is AED 499, not AED 999.",
       "classification": "INTERNAL_PROJECT_FACT",
-      "source_id": "SRC-0001",
-      "cache_hit": true
+      "evidence_id": "EV-0003",
+      "freshness_days": 9999,
+      "geography": "SYNTHETIC",
+      "request_id": "ER-0004",
+      "source_id": "SRC-0003"
     }
   ],
   "requests": [
     {
+      "acceptable_evidence_type": "SCENARIO_ASSUMPTION",
+      "answer_source": "user-supplied fact",
+      "cache_key": "fixture-demand-cap",
+      "decision_affected": "pilot size",
+      "freshness_days": 9999,
+      "geography": "SYNTHETIC",
+      "normalized_question": "fixture-demand-cap",
+      "question": "What is the fixture demand cap?",
       "request_id": "ER-0001",
-      "question": "What is fixture demand?",
-      "cache_key": "fixture-demand",
+      "requester": "contrarian",
+      "response_id": "EV-0001",
+      "scope": "synthetic",
       "status": "ANSWERED"
     },
     {
-      "request_id": "ER-0001-REPEAT",
-      "question": "What is fixture demand?",
-      "cache_key": "fixture-demand",
-      "status": "ANSWERED_FROM_CACHE",
-      "reused_response_id": "EV-0001"
-    },
-    {
+      "acceptable_evidence_type": "SCENARIO_ASSUMPTION",
+      "answer_source": "cache",
+      "cache_key": "fixture-demand-cap",
+      "decision_affected": "pilot size",
+      "freshness_days": 9999,
+      "geography": "SYNTHETIC",
+      "normalized_question": "fixture-demand-cap",
+      "question": "What is the fixture demand cap?",
       "request_id": "ER-0002",
-      "question": "What is the support budget?",
+      "requester": "outsider",
+      "response_id": "EV-0001",
+      "scope": "synthetic",
+      "status": "ANSWERED_FROM_CACHE"
+    },
+    {
+      "acceptable_evidence_type": "INTERNAL_PROJECT_FACT",
+      "answer_source": "user-supplied fact",
       "cache_key": "fixture-support-budget",
+      "decision_affected": "support load",
+      "freshness_days": 9999,
+      "geography": "SYNTHETIC",
+      "normalized_question": "fixture-support-budget",
+      "question": "What is the fixture support budget?",
+      "request_id": "ER-0003",
+      "requester": "executor",
+      "response_id": "EV-0002",
+      "scope": "synthetic",
       "status": "ANSWERED"
+    },
+    {
+      "acceptable_evidence_type": "INTERNAL_PROJECT_FACT",
+      "answer_source": "user-supplied fact",
+      "cache_key": "fixture-safe-price",
+      "decision_affected": "price audit",
+      "freshness_days": 9999,
+      "geography": "SYNTHETIC",
+      "normalized_question": "fixture-safe-price",
+      "question": "What is the fixture safe price?",
+      "request_id": "ER-0004",
+      "requester": "auditor",
+      "response_id": "EV-0003",
+      "scope": "synthetic",
+      "status": "ANSWERED"
+    }
+  ],
+  "sources": [
+    {
+      "classification": "SCENARIO_ASSUMPTION",
+      "geography": "SYNTHETIC",
+      "limitations": "fixture",
+      "retrieval_date": "2026-06-18",
+      "source_id": "SRC-0001",
+      "title": "Fixture Operations Note"
+    },
+    {
+      "classification": "INTERNAL_PROJECT_FACT",
+      "geography": "SYNTHETIC",
+      "limitations": "fixture",
+      "retrieval_date": "2026-06-18",
+      "source_id": "SRC-0002",
+      "title": "Fixture Cost Sheet"
+    },
+    {
+      "classification": "INTERNAL_PROJECT_FACT",
+      "geography": "SYNTHETIC",
+      "limitations": "fixture",
+      "retrieval_date": "2026-06-18",
+      "source_id": "SRC-0003",
+      "title": "Fixture Price Sheet"
     }
   ]
 }

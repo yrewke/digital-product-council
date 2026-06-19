@@ -1,0 +1,467 @@
+[
+  {
+    "blocking": false,
+    "claim_id": "CL-0001",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0004"
+    ],
+    "fact_check_id": "FC-0001",
+    "finding": "Scope statement for memo; not an external ROI fact.",
+    "required_correction": "No correction; keep as assigned audit question.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0002",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0001",
+      "EV-0008"
+    ],
+    "fact_check_id": "FC-0002",
+    "finding": "Supported as a negative boundary against unsupported marketplace replacement and fast payback claims.",
+    "required_correction": "No correction; retain as council caution.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0003",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0003",
+      "EV-0015"
+    ],
+    "fact_check_id": "FC-0003",
+    "finding": "Supported ROI logic: commission avoided is not profit unless costs and incentives are netted.",
+    "required_correction": "No correction; retain ROI boundary.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0005",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0002",
+      "EV-0012",
+      "EV-0015"
+    ],
+    "fact_check_id": "FC-0004",
+    "finding": "Illustrative scenario showing sensitivity to delivery and discount costs, not a verified typical order.",
+    "required_correction": "Label as scenario illustration in downstream artifacts.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0006",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0004",
+      "EV-0027",
+      "EV-0028"
+    ],
+    "fact_check_id": "FC-0005",
+    "finding": "Provider-economics planning conclusion supported by support/pass-through evidence.",
+    "required_correction": "Keep as internal commercial rule; avoid presenting as universal fact.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0007",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0001",
+      "EV-0008"
+    ],
+    "fact_check_id": "FC-0006",
+    "finding": "Migration range is internal pilot planning assumption based on counter-evidence to broad migration.",
+    "required_correction": "Label as INTERNAL_PLANNING_ASSUMPTION and pilot variable.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0008",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0001",
+      "EV-0008"
+    ],
+    "fact_check_id": "FC-0007",
+    "finding": "Base/optimistic migration ranges are scenario variables requiring pilot validation.",
+    "required_correction": "Label as SCENARIO_VARIABLE / REQUIRES_PILOT_VALIDATION.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0009",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0003"
+    ],
+    "fact_check_id": "FC-0008",
+    "finding": "ROI method is a council modeling rule to prevent double counting.",
+    "required_correction": "Retain as internal ROI rule.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0010",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0003",
+      "EV-0004",
+      "EV-0006"
+    ],
+    "fact_check_id": "FC-0009",
+    "finding": "Product-structure recommendation from executive memo.",
+    "required_correction": "Retain as provisional council recommendation pending synthesis.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0011",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0003"
+    ],
+    "fact_check_id": "FC-0010",
+    "finding": "Shifted-order margin delta is supported by ROI causal model.",
+    "required_correction": "Retain but define formula in ROI model.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0012",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0003",
+      "EV-0015"
+    ],
+    "fact_check_id": "FC-0011",
+    "finding": "Parser false positive: sentence lists separate scenario ranges and Stripe fee, not a margin calculation.",
+    "required_correction": "No correction; downstream ledger must label ranges separately.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0013",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0003"
+    ],
+    "fact_check_id": "FC-0012",
+    "finding": "Sensitivity requirement follows from scenario-variable evidence.",
+    "required_correction": "Retain in calculator requirements.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0014",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0001",
+      "EV-0003"
+    ],
+    "fact_check_id": "FC-0013",
+    "finding": "Scenario recommendation follows from evidence uncertainty.",
+    "required_correction": "Retain as council modeling rule.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0015",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0003",
+      "EV-0004"
+    ],
+    "fact_check_id": "FC-0014",
+    "finding": "Replace means measurement substitution, not marketplace replacement.",
+    "required_correction": "Clarify in downstream pilot plan.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0016",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0005",
+      "EV-0006"
+    ],
+    "fact_check_id": "FC-0015",
+    "finding": "Operational return paths are supported but must remain partly unquantified until measured.",
+    "required_correction": "Retain with operational-return classification.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0017",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0005"
+    ],
+    "fact_check_id": "FC-0016",
+    "finding": "Strategic value paths are supported but not immediate cash ROI.",
+    "required_correction": "Retain with strategic/unquantified classification.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0018",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0005",
+      "EV-0019",
+      "EV-0020",
+      "EV-0021",
+      "EV-0022"
+    ],
+    "fact_check_id": "FC-0017",
+    "finding": "Best target segment is a council hypothesis, not external fact.",
+    "required_correction": "Label as provisional target-segment decision.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0019",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0007",
+      "EV-0008"
+    ],
+    "fact_check_id": "FC-0018",
+    "finding": "Next-best alternative rule is a commercial qualification principle.",
+    "required_correction": "Retain as council selling rule.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0020",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0007",
+      "EV-0024",
+      "EV-0025",
+      "EV-0026"
+    ],
+    "fact_check_id": "FC-0019",
+    "finding": "Low-cost website alternatives are cheaper for static web presence; limitations supported by competitor comparison.",
+    "required_correction": "Retain with alternative-fit caveat.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0021",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0007",
+      "EV-0026",
+      "EV-0030"
+    ],
+    "fact_check_id": "FC-0020",
+    "finding": "POS ecosystems are better for operational backbone when mature-operator need exists; not for all restaurants.",
+    "required_correction": "Retain with condition.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0022",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0007",
+      "EV-0025",
+      "EV-0026"
+    ],
+    "fact_check_id": "FC-0021",
+    "finding": "Ordering SaaS/POS pricing provides a recurring-price market anchor, not a hard ceiling.",
+    "required_correction": "Use as competitor ceiling signal, not absolute cap.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0023",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0007"
+    ],
+    "fact_check_id": "FC-0022",
+    "finding": "Condition for changing Outsider view; not external fact.",
+    "required_correction": "No correction.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0024",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0004",
+      "EV-0007",
+      "EV-0009",
+      "EV-0010"
+    ],
+    "fact_check_id": "FC-0023",
+    "finding": "Pricing range is provisional council decision triangulating affordability, alternatives, support, and cost.",
+    "required_correction": "Label as PROVISIONAL_COUNCIL_DECISION.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0025",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0004",
+      "EV-0007",
+      "EV-0009",
+      "EV-0010"
+    ],
+    "fact_check_id": "FC-0024",
+    "finding": "Pricing range is provisional council decision.",
+    "required_correction": "Label as PROVISIONAL_COUNCIL_DECISION.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0026",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0004",
+      "EV-0006",
+      "EV-0009",
+      "EV-0010"
+    ],
+    "fact_check_id": "FC-0025",
+    "finding": "Pricing range is provisional council decision requiring pilot validation.",
+    "required_correction": "Label as PROVISIONAL_COUNCIL_DECISION / REQUIRES_PILOT_VALIDATION.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0027",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0004",
+      "EV-0006",
+      "EV-0009",
+      "EV-0010"
+    ],
+    "fact_check_id": "FC-0026",
+    "finding": "Pricing range is provisional council decision requiring pilot validation.",
+    "required_correction": "Label as PROVISIONAL_COUNCIL_DECISION / REQUIRES_PILOT_VALIDATION.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0028",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0006",
+      "EV-0016",
+      "EV-0028"
+    ],
+    "fact_check_id": "FC-0027",
+    "finding": "Module price is provisional setup range.",
+    "required_correction": "Label as PROVISIONAL_COUNCIL_DECISION.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0029",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0017",
+      "EV-0028"
+    ],
+    "fact_check_id": "FC-0028",
+    "finding": "Module price is provisional range; Telegram platform has no comparable WhatsApp per-message fee found, but build/hosting/support remain.",
+    "required_correction": "Label as PROVISIONAL_COUNCIL_DECISION.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0030",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0016",
+      "EV-0028"
+    ],
+    "fact_check_id": "FC-0029",
+    "finding": "WhatsApp bot price is provisional and must exclude pass-through messaging costs.",
+    "required_correction": "Label as PROVISIONAL_COUNCIL_DECISION plus pass-through.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0031",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0027",
+      "EV-0028"
+    ],
+    "fact_check_id": "FC-0030",
+    "finding": "AI assistant price is provisional and must include AI usage cap/pass-through.",
+    "required_correction": "Label as PROVISIONAL_COUNCIL_DECISION plus cap.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0032",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0004",
+      "EV-0009"
+    ],
+    "fact_check_id": "FC-0031",
+    "finding": "Pilot threshold is a hypothesis for Tier 0 close resistance.",
+    "required_correction": "Label as pilot validation trigger.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": false,
+    "claim_id": "CL-0033",
+    "contradicted_text": null,
+    "corrected_text": null,
+    "evidence_ids": [
+      "EV-0001",
+      "EV-0003"
+    ],
+    "fact_check_id": "FC-0032",
+    "finding": "ROI diagnostic-not-promise rule is supported by lack of verified universal payback and double-counting risk.",
+    "required_correction": "Retain as sales governance rule.",
+    "status": "RESOLVED"
+  }
+]

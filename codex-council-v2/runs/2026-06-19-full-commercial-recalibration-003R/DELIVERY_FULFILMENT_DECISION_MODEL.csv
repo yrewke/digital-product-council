@@ -1,0 +1,11 @@
+model,fixed_monthly_cost,variable_cost_per_delivery,capacity_logic,break_even_logic,operational_feasibility,software_role,status
+Pickup only,AED 0 incremental,AED 0 delivery cost,Limited by store handling,Best for low delivery readiness,High if customers will pick up,Ordering slots/status/QR,RETAINED
+Existing restaurant drivers,Existing payroll/fleet plus fuel,Low to medium if capacity unused,Limited by rider hours and peak load,Break-even depends on idle capacity,Feasible when riders already reliable,Dispatch zones/status/batching,RETAINED_WITH_LIMITS
+Third-party delivery per order,AED 0-setup or account fees,AED per order quoted by provider,Provider fleet capacity,Works when per-order cost < margin delta,Feasible but SLA/account terms vary,Integration/status/tracking,REVISED_CUSTOM
+External delivery via integration,Subscription/integration fees + 3PL,AED per order + platform fee,Provider + integration limits,Needs subscription and volume,Feasible for mature operator,Automated dispatch and tracking,CUSTOM_QUOTE
+Dedicated rider/monthly provider,Monthly rider/fleet package,Low variable fuel/ops,One rider capacity by hours/radius,Needs enough dense orders per shift,Operationally fragile with absence/peaks,Capacity visibility/dispatch,PENDING_PILOT_DATA
+Rented motorcycle + hired rider,Rider salary + bike rent + visa/insurance/fuel,Low variable fuel,One rider capacity,Needs steady daily volume and management,Management burden high,Dispatch/zones,PENDING_PILOT_DATA
+Owned motorcycle + hired rider,Capex + salary + maintenance/licensing,Low variable fuel,One rider capacity,Needs volume and long horizon,Feasible for committed operators,Fleet tracking/status,PENDING_PILOT_DATA
+Restaurant-owned delivery operation,Fleet/riders/management,Low/medium variable,Multi-rider capacity,Needs dense high volume,High complexity,Dispatch/batching/analytics,CUSTOM_QUOTE
+Shared delivery resource,Shared fixed cost,Medium variable,Depends on partner availability,Needs route density and coordination,Complex liability/SLA,Capacity scheduling,CUSTOM_QUOTE
+Hybrid pickup + 3PL + existing rider,Mixed,Mixed,Allocate by zone/time/order value,Often best early model,Feasible if rules are simple,Routing rules and customer status,RECOMMENDED_DEFAULT_FOR_PILOTS

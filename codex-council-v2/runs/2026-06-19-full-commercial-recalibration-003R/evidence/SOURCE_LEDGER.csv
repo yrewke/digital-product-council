@@ -1,0 +1,33 @@
+source_id,title,classification,geography,publication_date,retrieval_date,limitations
+SRC-0001,NotebookLM ROI Research - migration counter-evidence,SOURCE_BACKED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,NotebookLM synthesized existing sources; several figures are vendor/industry estimates and not pilot proof.
+SRC-0002,NotebookLM UAE Delivery Research - delivery failure economics,SOURCE_BACKED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Vendor claims and benchmarks vary by volume, density, SLA, and contract.
+SRC-0003,NotebookLM ROI Research - causal model query,COUNCIL_INFERENCE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Model guidance; pilot data must replace scenario variables.
+SRC-0004,NotebookLM PMF Research - provider economics query,SOURCE_BACKED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Generic SaaS benchmarks are not UAE restaurant-specific.
+SRC-0005,NotebookLM ROI Research - value map query,SOURCE_BACKED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Vendor uplift claims require pilot validation for independent UAE restaurants.
+SRC-0006,NotebookLM Competitors Research - module value query,COUNCIL_INFERENCE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Module fit depends on restaurant type and operating maturity.
+SRC-0007,NotebookLM Competitors Research - alternatives query,SOURCE_BACKED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Some prices are global or vendor-specific, not exact UAE quote guarantees.
+SRC-0008,NotebookLM ROI Research - channel mix query,SOURCE_BACKED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Migration rates remain scenario variables requiring pilot validation.
+SRC-0009,NotebookLM PMF Research - package and support query,SOURCE_BACKED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Current prices require re-check before public sale.
+SRC-0010,NotebookLM Delivery Research - dependency boundary query,COUNCIL_INFERENCE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Notebook answer was more integration-forward than council risk posture; final model narrows defaults.
+SRC-0011,NotebookLM + inspected vendor/industry pages,SUPPORTED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Restaurant-specific contracts vary.
+SRC-0012,Careem Express and Deliverect Careem pages,SUPPORTED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,No public SLA remedies or price table found on inspected pages.
+SRC-0013,NotebookLM PMF + SaaS benchmark evidence,SOURCE_BACKED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Generic SaaS benchmark, not exact UAE restaurant-provider cohort.
+SRC-0014,NotebookLM ROI channel-mix query,SOURCE_BACKED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Specific UAE direct-channel conversion remains unverified.
+SRC-0015,Stripe UAE Pricing,VERIFIED_FACT,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Provider pricing is date-sensitive and may differ under custom contracts.
+SRC-0016,Meta docs and Twilio WhatsApp pricing page,SUPPORTED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Official Meta page was less inspectable for UAE exact rates in this session.
+SRC-0017,Telegram Bot API official docs,SUPPORTED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Telegram monetization/Stars/payment rules may affect special features.
+SRC-0018,NotebookLM delivery evidence and inspected Careem/Deliverect pages,SUPPORTED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Needs quotes from delivery/rider providers.
+SRC-0019,NotebookLM ROI and competitors queries,COUNCIL_INFERENCE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Do not count customer data as immediate revenue.
+SRC-0020,NotebookLM ROI value-map query,SOURCE_BACKED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Requires restaurant-level pilot measurement.
+SRC-0021,NotebookLM ROI value-map query,COUNCIL_INFERENCE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,UAE-specific conversion and margin data remain limited.
+SRC-0022,NotebookLM ROI/competitor evidence,COUNCIL_INFERENCE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Specific multilingual ROI not verified.
+SRC-0023,Wix pricing and website-cost sources,SUPPORTED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Local freelancer quotes still need direct market sampling.
+SRC-0024,Owner, Zyda, GloriaFood, Deliverect, Foodics pages,SUPPORTED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Some pages are global and may not map exactly to UAE.
+SRC-0025,Foodics, Sapaad, Deliverect pages,SUPPORTED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Exact API access and local contract terms require vendor confirmation.
+SRC-0026,NotebookLM alternatives query,COUNCIL_INFERENCE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Alternatives may not create structured order history or first-party CRM.
+SRC-0027,Cloudflare, Supabase, OpenAI pricing pages,VERIFIED_FACT,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Actual cost depends on architecture and usage.
+SRC-0028,Twilio WhatsApp and OpenAI pricing pages plus NotebookLM PMF,SUPPORTED_ESTIMATE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Exact SMS/BSP rates require provider quotes.
+SRC-0029,Careem Express and Deliverect Careem pages,COUNCIL_INFERENCE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,Capability pages are vendor claims.
+SRC-0030,Foodics, Sapaad, Deliverect and NotebookLM evidence,COUNCIL_INFERENCE,UAE primary; GCC/global where UAE unavailable,,2026-06-19,No universal POS promise is allowed.
+SRC-0031,V2 cache reuse process note,PROCESS_NOTE,UAE,,2026-06-19,process marker
+SRC-0032,V2 cache reuse process note,PROCESS_NOTE,UAE/GCC,,2026-06-19,process marker

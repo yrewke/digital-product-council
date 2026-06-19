@@ -1,0 +1,6 @@
+query_id,date,channel,question_or_query,purpose,status,result_or_source
+Q-001,2026-06-14,repository,"Locate RESTAURANT_MASTER_HISTORICAL_HANDOFF_V0_2.md or closest match",Load company memory,complete,"Closest match: handoffs/company-memory.md"
+Q-002,2026-06-14,web,"Stripe UAE pricing; WhatsApp Business Platform pricing; Telegram Bot API pricing; UAE aggregator commission",Find direct calculator cost and deduction anchors,complete,"S-006 through S-011"
+Q-003,2026-06-14,web,"UAE rider salary; outsourced delivery cost; online ordering AOV; restaurant website trust/local search",Find fulfilment and uplift evidence,complete,"S-012 through S-017; delivery/AOV claims downgraded"
+Q-004,2026-06-14,web,"OpenAI API pricing; UAE ordering software pricing; motorcycle rental; Google LocalBusiness documentation",Find AI/alternative/search context,complete,"S-017 through S-020; no motorcycle default approved"
+Q-005,2026-06-14,council,"Six independent first-round role memos",Generate sealed owner/operator/economics/alternatives/provider/audit perspectives,complete,"Integrated into artifacts/EXECUTIVE_MEMOS.md"

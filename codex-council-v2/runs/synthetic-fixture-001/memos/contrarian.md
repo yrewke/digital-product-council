@@ -2,8 +2,8 @@
 run_id: synthetic-fixture-001
 executive: contrarian
 memo_status: READY
-revision: R2
-last_updated: 2026-06-17
+revision: R1
+last_updated: 2026-06-18
 evidence_gate: PASSED
 active_vetoes: []
 ---
@@ -17,11 +17,11 @@ Synthetic fixture decision.
 Proceed only if the fixture has an explicit kill switch.
 
 ## Reasoning
-This memo applies the contrarian lens to synthetic fixture facts and keeps the decision bounded.
+contrarian fixture reasoning from role-specific prompt.
 
 ## Evidence Used
-- [EVIDENCE_RESPONSE:EV-0001] Fixture demand cap.
-- [EVIDENCE_RESPONSE:EV-0002] Support budget correction.
+- [EVIDENCE_RESPONSE:EV-0001] Synthetic evidence used.
+- [EVIDENCE_RESPONSE:EV-0002] Synthetic evidence used.
 
 ## Assumptions
 - Synthetic facts are fixtures, not real market evidence.
@@ -30,7 +30,7 @@ This memo applies the contrarian lens to synthetic fixture facts and keeps the d
 - Fixture evidence could fail outside the test.
 
 ## Economic Consequences
-No unsupported material numbers.
+Scenario assumption: AED 100 per month equals AED 1,200 annually for the fixture pilot.
 
 ## What Would Change This Position
 Different support budget or failure threshold evidence.
@@ -40,44 +40,41 @@ Choose the bounded pilot with explicit failure criteria.
 
 # EVIDENCE_REQUESTS
 
-## [EVIDENCE_REQUEST:ER-0001]
-Status: ANSWERED
-Question: What is fixture demand?
-Decision affected: pilot size
-Response IDs: EV-0001
-
 # FACT_CHECK
 
-## [FACT_CHECK:FC-0001:BLOCKING]
-Claim: The fixture has 200 support hours/month.
-Finding: False numerical claim; fixture support budget is 20 hours/month.
-Evidence: EV-0002
-Required correction: Replace 200 with 20 or downgrade claim.
-Status: NOT_APPLICABLE
-
 # PEER_REVIEW
+## [PEER_REVIEW:PR-0005:OBJECTION]
+Anonymous reviewer: R-5b4f3e
+Comment: Clarify failure criteria and support cap.
+Evidence:
+Requested response: Author must accept, reject, or partially accept.
 
-## [PEER_REVIEW:PR-0001:OBJECTION]
-Anonymous reviewer: R-1
-Comment: Strongest insight recorded; weakest assumption challenged.
-Evidence: EV-0001
-Requested response: Clarify failure criteria.
+## [PEER_REVIEW:PR-0009:OBJECTION]
+Anonymous reviewer: R-6d9571
+Comment: Clarify failure criteria and support cap.
+Evidence:
+Requested response: Author must accept, reject, or partially accept.
+
+## [PEER_REVIEW:PR-0013:OBJECTION]
+Anonymous reviewer: R-efb7f2
+Comment: Clarify failure criteria and support cap.
+Evidence:
+Requested response: Author must accept, reject, or partially accept.
+
+## [PEER_REVIEW:PR-0017:OBJECTION]
+Anonymous reviewer: R-b1033a
+Comment: Clarify failure criteria and support cap.
+Evidence:
+Requested response: Author must accept, reject, or partially accept.
 
 # AUTHOR_RESPONSES
 
-## [AUTHOR_RESPONSE:AR-0001]
-Responds to: PR-0001
-Disposition: ACCEPTED
-Reason: The correction improves boundedness.
-Change made: Added failure criteria and support cap.
-
 # VETOES
-
 
 # REVISION_LOG
 
-## [REVISION:R2]
-Summary: No correction required.
-Reason: Pre-chair review and audit.
-Resolved IDs: FC-0001, PR-0001
+## [REVISION:R1]
+Summary: Memo submitted through workflow engine.
+Reason: Stage-controlled submission.
+Resolved IDs:
 Remaining disagreement: bounded upside value.

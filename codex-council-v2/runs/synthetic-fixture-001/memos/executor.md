@@ -2,9 +2,9 @@
 run_id: synthetic-fixture-001
 executive: executor
 memo_status: READY
-revision: R2
-last_updated: 2026-06-17
-evidence_gate: PASSED
+revision: R3
+last_updated: 2026-06-18
+evidence_gate: PENDING
 active_vetoes: []
 ---
 
@@ -14,14 +14,14 @@ active_vetoes: []
 Synthetic fixture decision.
 
 ## Position
-Run a one-week pilot with a support-hour cap and failure criteria.
+Run a one-week pilot with a 20-hour/month support cap before launch and explicit failure criteria.
 
 ## Reasoning
-This memo applies the executor lens to synthetic fixture facts and keeps the decision bounded.
+Executor fixture reasoning from role-specific prompt.
 
 ## Evidence Used
-- [EVIDENCE_RESPONSE:EV-0001] Fixture demand cap.
-- [EVIDENCE_RESPONSE:EV-0002] Support budget correction.
+- [EVIDENCE_RESPONSE:EV-0001] Synthetic evidence used.
+- [EVIDENCE_RESPONSE:EV-0002] Synthetic evidence used.
 
 ## Assumptions
 - Synthetic facts are fixtures, not real market evidence.
@@ -30,7 +30,7 @@ This memo applies the executor lens to synthetic fixture facts and keeps the dec
 - Fixture evidence could fail outside the test.
 
 ## Economic Consequences
-No unsupported material numbers.
+Scenario assumption: the pilot requires 20 support hours/month and one owner. 20% of AED 200 is AED 40. A margin with revenue AED 100 and cost AED 60 is 40%.
 
 ## What Would Change This Position
 Different support budget or failure threshold evidence.
@@ -40,52 +40,33 @@ Choose the bounded pilot with explicit failure criteria.
 
 # EVIDENCE_REQUESTS
 
-## [EVIDENCE_REQUEST:ER-0001]
-Status: ANSWERED
-Question: What is fixture demand?
-Decision affected: pilot size
-Response IDs: EV-0001
-
 # FACT_CHECK
-
-## [FACT_CHECK:FC-0001:BLOCKING]
-Claim: The fixture has 200 support hours/month.
-Finding: False numerical claim; fixture support budget is 20 hours/month.
-Evidence: EV-0002
-Required correction: Replace 200 with 20 or downgrade claim.
-Status: NOT_APPLICABLE
 
 # PEER_REVIEW
 
-## [PEER_REVIEW:PR-0005:OBJECTION]
-Anonymous reviewer: R-5
-Comment: Strongest insight recorded; weakest assumption challenged.
-Evidence: EV-0001
-Requested response: Clarify failure criteria.
-
 # AUTHOR_RESPONSES
-
-## [AUTHOR_RESPONSE:AR-0005]
-Responds to: PR-0005
+## [AUTHOR_RESPONSE:AR-0002]
+Responds to: V-0001
 Disposition: ACCEPTED
-Reason: The correction improves boundedness.
-Change made: Added failure criteria and support cap.
+Reason: Support cap added.
+Change made: Resolved valid pre-chair veto.
 
 # VETOES
-
-## [VETO:V-0001:PRE_CHAIR]
-Holder: Executor
+## [VETO:V-0003:POST_CHAIR]
+Holder: executor
 Protected domain: feasible next action
-Challenged statement: Launch without support cap.
-Reason: The remedy must include a cap.
-Evidence: EV-0002
-Required remedy: Add 20-hour/month support cap.
-Status: RESOLVED
+Challenged statement: Start without owner assignment.
+Reason: No executable owner means the next action is not feasible.
+Evidence: RUN_CHARTER
+Required remedy: Assign owner and date.
+Verification method: contains_text
+Status: OPEN
+Validation: valid scoped veto
 
 # REVISION_LOG
 
-## [REVISION:R2]
-Summary: No correction required.
-Reason: Pre-chair review and audit.
-Resolved IDs: FC-0001, PR-0005
+## [REVISION:R3]
+Summary: Memo submitted through workflow engine.
+Reason: Stage-controlled submission.
+Resolved IDs:
 Remaining disagreement: bounded upside value.

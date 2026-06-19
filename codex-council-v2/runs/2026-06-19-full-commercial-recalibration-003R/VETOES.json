@@ -1,0 +1,38 @@
+[
+  {
+    "chairman_resolution_note": "Final verdict now explicitly requires number labels, support caps, pass-throughs, and pilot validation; artifact pack operationalizes these requirements.",
+    "challenged_artifact": "CHAIRMAN.md",
+    "challenged_section": null,
+    "challenged_statement": "Use internal launch prices only, not public guaranteed pricing.",
+    "evidence": "FC-0023 through FC-0032 and EV-0004, EV-0015, EV-0016, EV-0027, EV-0028 require numeric labels, support caps, pass-throughs, and pilot replacement measurements.",
+    "holder": "auditor",
+    "protected_domain": "factual and numerical validity",
+    "reason": "This is directionally correct but insufficient unless the final model also labels every material number, exposes support caps, separates pass-through costs, and marks pilot-validation assumptions.",
+    "remedy_must_contain": "number labels, support caps, pass-throughs, and pilot validation",
+    "required_remedy": "Final verdict and artifacts must include number labels, support caps, pass-throughs, and pilot validation.",
+    "stage": "POST_CHAIR",
+    "status": "RESOLVED",
+    "valid": true,
+    "validation_reason": "required remedy text found",
+    "verification_method": "contains_text",
+    "veto_id": "V-0001"
+  },
+  {
+    "chairman_resolution_note": null,
+    "challenged_artifact": "CHAIRMAN.md",
+    "challenged_section": null,
+    "challenged_statement": "Nonexistent statement for demotion-path validation.",
+    "evidence": "No matching challenged statement exists.",
+    "holder": "outsider",
+    "protected_domain": "factual and numerical validity",
+    "reason": "Process marker to confirm invalid scoped vetoes are demoted rather than blocking the run.",
+    "remedy_must_contain": "No remedy required; demote to objection.",
+    "required_remedy": "No remedy required; demote to objection.",
+    "stage": "POST_CHAIR",
+    "status": "DEMOTED_TO_OBJECTION",
+    "valid": false,
+    "validation_reason": "outsider is not authorized for POST_CHAIR / factual and numerical validity",
+    "verification_method": "contains_text",
+    "veto_id": "V-0002"
+  }
+]

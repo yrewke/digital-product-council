@@ -1,0 +1,13 @@
+item,conservative,base,optimistic,label,commercial_rule
+Lead-to-close rate,10%,20%,35%,INTERNAL_PLANNING_ASSUMPTION,Replace after first 30 qualified opportunities
+Sales time per closed client,8 h,5 h,3 h,INTERNAL_PLANNING_ASSUMPTION,Keep diagnostic short for low-tier products
+Onboarding/build Ordering Page,6 h,10 h,16 h,INTERNAL_PLANNING_ASSUMPTION,Template aggressively
+Onboarding/build Website + Ordering,16 h,28 h,45 h,INTERNAL_PLANNING_ASSUMPTION,Content readiness gate required
+Onboarding/build Dashboard,35 h,55 h,85 h,INTERNAL_PLANNING_ASSUMPTION,Custom workflow pressure must be capped
+Monthly support basic,30 min,60 min,90 min,INTERNAL_PLANNING_ASSUMPTION,Overage after allowance
+Monthly support advanced,2 h,4 h,6 h,INTERNAL_PLANNING_ASSUMPTION,No unlimited support
+Hosting/infrastructure per basic client,AED 20,AED 50,AED 120,SUPPORTED_ESTIMATE,Usage cap and shared platform
+Messaging/AI pass-through,AED actual,AED actual,AED actual,PROVISIONAL_COUNCIL_DECISION,Pass-through or capped allowance
+Gross margin target,55%,70%,80%,INTERNAL_PLANNING_ASSUMPTION,Do not accept recurring plans below support floor
+Churn risk first 90 days,High,Medium,Low,REQUIRES_PILOT_VALIDATION,Track usage and owner adoption
+Clients supportable per operator,15,30,50,INTERNAL_PLANNING_ASSUMPTION,Depends on package mix and tickets

@@ -1,0 +1,29 @@
+# Decision Log
+
+- D-001: Treat this as an authorized real commercial council run, not a skills-factory dry run.
+- D-002: Do not finalize public prices, final sales copy, or unsupported commercial claims.
+- D-003: Use the manually selected `dragon` profile only. No automatic account rotation.
+- D-004: Require a compact librarian-prepared evidence pack before sealed advisor deliberation.
+- D-005: Count every attempted NotebookLM chat query conservatively against the 25-query ceiling.
+- D-006: Consolidate fifteen sealed advisor evidence requests into four boundary-specific librarian requests rather than spending one query per advisor request.
+- D-007: Stop after the first query returned `WinError 10061`; classify the issue as a connectivity blocker, not evidence.
+- D-008: Do not run advisor memos, peer review, Devil's Advocate, Evidence Auditor, or Chairman synthesis without a source-backed prepared evidence pack.
+- D-009: Classify the interim commercial verdict as unresolved and make no package, pricing-model, segment, or promise recommendation at this checkpoint.
+- D-010: Treat notebook-list success as confirmation that network connectivity is restored, not confirmation that query authentication remains valid.
+- D-011: Stop after the single ER-001 retry returned expired authentication. Re-authentication requires explicit human authorization; do not execute ER-002/003/004 first.
+- D-012: Accept the user's confirmation of manual `dragon` re-authentication as authorization to resume the four existing requests in order.
+- D-013: Downgrade NotebookLM-described "verified facts" to vendor claims where the cited source is a provider or vendor-style guide; do not treat uplift figures as safe promises.
+- D-014: Treat delivery-provider SLA percentages and elasticity promises as candidate pilot thresholds/vendor claims, not verified operating benchmarks.
+- D-015: Preserve distinct alternative categories and treat coexistence/migration claims as available strategies rather than proven channel-shift outcomes.
+- D-016: Treat generic SaaS retention/unit-economics benchmarks as boundary evidence only; do not generalize them into UAE provider profitability.
+- D-017: Close ordered retrieval after ER-001 through ER-004 succeeded; no additional query is authorized or needed for this stage.
+- D-018: The prepared pack is sufficient for bounded advisor memos with explicit gaps, but insufficient for final packages, prices, economic promises, or a commercial verdict.
+- D-019: Confirm a bounded multi-account pilot portfolio before broad sale or final deliverables.
+- D-020: Confirm that the offer must not be positioned as aggregator replacement or general superiority.
+- D-021: Confirm that scope and package decisions must follow responsibility and operational burden, not feature count.
+- D-022: Propose a controlled validation engagement for Run 2; do not call it a proven recurring product.
+- D-023: Propose pickup-first as the best-controlled initial test configuration, while preserving dissent that it may be too weak to buy or retain.
+- D-024: Propose setup-plus-recurring terms and finite add-ons only as pricing experiments; no final public prices are authorized.
+- D-025: Reject broad all-in-one launch, bespoke/open-ended obligations, guaranteed outcomes, and treating one favorable pilot as commercial validation.
+- D-026: Defer final public package ladder, sales copy, POS/delivery standard packages, advanced capabilities, and final pricing until Run 2 resolves primary-validation gates.
+- D-027: Close Run 1 and recommend `2026-06-14-commercial-validation-pilot-002` as the next run.

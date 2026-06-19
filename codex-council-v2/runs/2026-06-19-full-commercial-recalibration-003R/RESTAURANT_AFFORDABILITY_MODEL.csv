@@ -1,0 +1,7 @@
+restaurant_type,monthly_order_signal,affordability_signal,recommended_entry_setup_AED,recommended_recurring_AED,avoid_until_ready,payment_rationale
+Low-volume new restaurant,Under 300 total orders/month,Owner cash constrained,750-1500,100-200,AI/POS/custom delivery,Small staged asset with low risk
+Pickup-friendly QSR,300-900 total orders/month,Can pay if order flow visible,1500-3500,150-350,Owned rider fleet,Pickup/direct ordering can show quick operational value
+Repeat local delivery,500-1500 total orders/month,Can pay if margin retained measurable,3000-8000,300-900,Uncapped delivery/WhatsApp/support,ROI case depends on shifted repeat orders
+Premium/specialty brand,300-1200 total orders/month,Higher brand/value tolerance,4000-10000,400-1000,Cheap static-only build,Brand/data/repeat value matters
+Catering/group order,Lead volume variable,Pay for lead capture if close rate exists,2000-7000,250-700,Guaranteed enquiry revenue,High-ticket upside but conversion must be tracked
+Multi-branch operator,Branch/system complexity,Higher budget but expects reliability,10000-30000+,1000-3000+,Generic package pricing,Needs custom scope and support SLA

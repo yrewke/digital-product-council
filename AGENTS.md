@@ -55,3 +55,34 @@ The pricing phase must preserve evidence discipline:
 The old skills-factory prohibition is superseded for Run 2C only to the extent needed to price the already-chosen packaging model from Run 2B.
 
 Do not reopen Run 001, Run 2A-Redo, or Run 2B unless new evidence requires it.
+
+## Current Phase Authorization - Historical Evidence Audit
+
+The project is also authorized to run a bounded factual and numerical audit of completed historical restaurant-product runs.
+
+Authorized audit run:
+
+`2026-06-18-historical-evidence-audit-001`
+
+This run may:
+
+- read all previous run archives and consolidated handoffs,
+- use normal targeted NotebookLM queries within the run budget,
+- update evidence caches, ledgers, and consolidated evidence libraries,
+- use narrow online fallback for documented evidence gaps,
+- produce a factual audit report.
+
+This run must not:
+
+- make new commercial decisions,
+- revise pricing,
+- revise packaging,
+- write sales copy,
+- change previous verdicts,
+- import sources into NotebookLM,
+- switch accounts or profiles,
+- perform login actions,
+- use paid research,
+- bulk crawl.
+
+The Run 2C pricing authorization remains historical context and is not deleted or superseded by this audit authorization.

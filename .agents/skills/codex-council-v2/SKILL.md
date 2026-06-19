@@ -15,15 +15,29 @@ Read `codex-council-v2/AGENTS.md`, `codex-council-v2/README.md`, `codex-council-
 
 1. Inspect applicable `AGENTS.md` files and confirm no governance conflict.
 2. Initialize or resume a run under `codex-council-v2/runs/`.
-3. Create one run charter before executive work.
-4. Give the five executives role-specific briefs, not a generic shared prompt.
-5. Route evidence through the Librarian cache before new NotebookLM or web research.
-6. Keep exactly one canonical memo per executive under `memos/`.
-7. Run the Evidence Auditor gate before peer review.
-8. Route anonymous peer review through controlled review files.
-9. Allow authors to revise only their own canonical memo.
-10. Let the Chairman synthesize; run Devil's Advocate; then produce provisional and final verdicts.
-11. Validate the run with `python codex-council-v2/scripts/codex_council_v2.py validate-run --run-dir <run-dir>`.
+3. Use `python codex-council-v2/scripts/codex_council_v2.py status|resume --run-dir <run-dir>` before dispatching work.
+4. Advance only through legal engine commands; do not hand-edit state files to skip stages.
+5. Create one run charter before executive work and validate it with `validate-charter`.
+6. For real runs, dispatch isolated visible sub-agents for the five executive roles before executive reasoning. Use `codex-council-v2-contrarian`, `codex-council-v2-first-principles`, `codex-council-v2-expansionist`, `codex-council-v2-outsider`, and `codex-council-v2-executor`.
+7. Give each sub-agent a role-specific brief, the run charter, only the relevant evidence packet, and a required output contract. Do not give a generic shared prompt.
+8. Keep the main Codex session as operator only: run engine commands, maintain state, collect sub-agent outputs, submit canonical text, validate, and report progress.
+9. Route evidence through engine cache commands before new NotebookLM or web research. Use `codex-council-v2-librarian` as an isolated sub-agent for nontrivial evidence routing when sub-agent tools are available.
+10. Submit each executive's one canonical memo through `submit-memo`.
+11. Run `extract-claims`, then dispatch `codex-council-v2-auditor` for substantive fact/accounting review and record its findings with `record-fact-check`; run `validate-audit` before peer review.
+12. If audit blocks a memo, return the issue only to the original author sub-agent for revision; `validate-audit` must confirm the contradicted claim is removed, corrected, or explicitly downgraded in the claim text.
+13. Use `create-anonymous-review-packets`, dispatch isolated peer-review sub-agents by assigned role, then use `record-peer-review`, optional `waive-peer-review`, and `merge-review-events`; never let reviewers rewrite another executive's memo. Merge only after every assignment is complete, failed after retry, or waived.
+14. Use `record-veto` so invalid vetoes become ordinary dissent. Use `resolve-veto` to verify required remedies before treating a valid veto as resolved.
+15. Dispatch `codex-council-v2-chairman` for Chairman synthesis and `codex-council-v2-devils-advocate` for the attack pass; then produce provisional and final verdicts through the engine.
+16. Validate the run with `python codex-council-v2/scripts/codex_council_v2.py validate-run --run-dir <run-dir>`.
+
+## Isolated Sub-Agent Rule
+
+- Real council runs must use visible Codex sub-agents for substantive role reasoning whenever the `spawn_agent` capability is available in the current session.
+- The five executive agents must be spawned separately so their first-pass reasoning stays independent.
+- Service agents are spawned at their stage boundaries: Librarian for evidence routing, Auditor for fact/accounting review, Chairman for synthesis, and Devil's Advocate only after an emerging Chairman direction exists.
+- The operator must not silently replace sub-agent dispatch with single-session roleplay. If sub-agent spawning is unavailable, state that limitation to the user before continuing and label the run log as `MANUAL_SINGLE_SESSION_FALLBACK`.
+- Sub-agents should not receive the full repository by default. Pass bounded context: charter, role brief, status summary, evidence packet IDs or excerpts, output format, allowed files, and forbidden actions.
+- Sub-agents may reason and draft, but deterministic state transitions remain the operator's responsibility through `codex_council_v2.py`.
 
 ## Hard Gates
 
@@ -33,3 +47,6 @@ Read `codex-council-v2/AGENTS.md`, `codex-council-v2/README.md`, `codex-council-
 - Do not conceal unresolved valid vetoes.
 - Do not mark a run complete without `CHAIRMAN.md`, `COMPLETION_REPORT.md`, and `NEXT_RUN_HANDOFF.md`.
 - Do not use a real commercial or pricing mission as the framework test.
+- Do not mark a blocking fact check `RESOLVED` unless the current memo itself passes the audit validator.
+- Do not advance to author revision with incomplete peer-review assignments.
+- Do not mark a veto `RESOLVED` unless the engine verifies the remedy or records a Chairman judgment note for a non-automatic remedy.

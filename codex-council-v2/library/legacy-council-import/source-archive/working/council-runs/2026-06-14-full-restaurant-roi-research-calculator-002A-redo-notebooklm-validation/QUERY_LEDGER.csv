@@ -1,0 +1,5 @@
+timestamp,profile,query_id,purpose,notebook_id,estimated_cost,observed_cost,status,notes
+2026-06-14,existing-selected,Q-001,Validate restaurant-side ROI assumptions,97f23980-485a-4301-9e07-424f3c0c8825,1,0,rejected,"Blocked before execution by tenant external-disclosure policy; no answer or citations returned"
+2026-06-14,existing-selected,Q-002,Validate delivery and fulfilment assumptions,250c6ede-521c-48a2-ad9c-4310d0e9d21d,1,pending,planned,"Existing sources only; user-authorized validation"
+2026-06-14,existing-selected,Q-003,Validate competitor and alternative-cost logic,9f472613-c991-4447-83d8-008f6e4f89cb,1,pending,planned,"Existing sources only; user-authorized validation"
+2026-06-14,existing-selected,Q-004,Validate archetype and provider viability,d22b2ac2-8915-4108-b06c-2307a80db8ec,1,pending,planned,"Existing sources only; user-authorized validation"

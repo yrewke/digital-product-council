@@ -1,0 +1,5 @@
+query_id,query_type,query_text,result,notes
+Q-001,repo_search,"Locate RESTAURANT_MASTER_HISTORICAL_HANDOFF_V0_2.md",not_found,"Closest matching historical run materials used instead"
+Q-002,repo_search,"Locate prior Run 001 completion/evidence/assumption/decision artifacts",found,"Used 2026-06-13-commercial-council-001"
+Q-003,repo_search,"Locate restaurant commercial council skill instructions and templates",found,"Used repository-local skill bundle under .agents/skills"
+

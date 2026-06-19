@@ -1,0 +1,31 @@
+id,type,originator,notebook_or_source,question_or_task,classification,geography,retrieval_date,supported_evidence_ids,limitations
+RQ-001,NotebookLM,Contrarian,Restaurant Website ROI Research - Consolidated,Counter-evidence to optimistic marketplace-to-direct migration and fast payback,Internal evidence synthesis,UAE/GCC,2026-06-19,EV-0001,Notebook synthesis; not direct external publication
+RQ-002,NotebookLM,Contrarian,UAE Third-Party Restaurant Delivery Companies Research,How delivery economics can erase direct-channel savings,Internal evidence synthesis,UAE,2026-06-19,EV-0002,Notebook synthesis; model needs pilot costs
+RQ-003,NotebookLM,First-Principles,Restaurant Website ROI Research - Consolidated,Variables and formulas needed to separate incremental shifted phone pickup delivery catering ROI,Internal evidence synthesis,UAE/GCC,2026-06-19,EV-0003,Notebook synthesis
+RQ-004,NotebookLM,First-Principles,UAE Restaurant Direct-Ordering Product-Market Fit,Provider unit economics and support burden,Internal evidence synthesis,UAE,2026-06-19,EV-0004,Notebook synthesis
+RQ-005,NotebookLM,Expansionist,Restaurant Website ROI Research - Consolidated,Full value map beyond commission saving,Internal evidence synthesis,UAE/GCC,2026-06-19,EV-0005,Notebook synthesis
+RQ-006,NotebookLM,Expansionist,Restaurant Website and Direct-Ordering Competitors,Which modules create independent value,Internal evidence synthesis,Global/UAE,2026-06-19,EV-0006,Notebook synthesis
+RQ-007,NotebookLM,Outsider,Restaurant Website and Direct-Ordering Competitors,Compare direct-ordering product against alternatives,Internal evidence synthesis,Global/UAE,2026-06-19,EV-0007,Notebook synthesis
+RQ-008,NotebookLM,Outsider,Restaurant Website ROI Research - Consolidated,Why restaurants and customers stay with marketplaces,Internal evidence synthesis,UAE/GCC,2026-06-19,EV-0008,Notebook synthesis
+RQ-009,NotebookLM,Executor,UAE Restaurant Direct-Ordering Product-Market Fit,Package support pass-through and pricing boundaries,Internal evidence synthesis,UAE,2026-06-19,EV-0009,Notebook synthesis
+RQ-010,NotebookLM,Executor,UAE Third-Party Restaurant Delivery Companies Research,Default optional pilot and custom delivery dependencies,Internal evidence synthesis,UAE,2026-06-19,EV-0010,Notebook answer integration-heavy; narrowed by council
+RQ-011,Web,Contrarian,Stripe UAE Pricing,Verify UAE card payment cost and dispute fee,Official vendor fact,UAE,2026-06-19,EV-0015,Stripe pricing can change
+RQ-012,Web,Contrarian,Careem Express,Inspect practical 3PL delivery offer and SLA claims,Vendor claim,UAE,2026-06-19,EV-0012,Vendor claims; no restaurant contract price
+RQ-013,Web,Contrarian,Deliverect Careem Express Integration,Inspect dispatch/integration claims for external delivery,Vendor claim,UAE,2026-06-19,EV-0012,Requires Deliverect and Careem subscriptions
+RQ-014,Web,Contrarian,Ordering SaaS/competitor sites,Check whether cheap SaaS creates price pressure,Vendor/market listing,Global/UAE,2026-06-19,EV-0014,Listed prices may exclude modules
+RQ-015,Web,First-Principles,Stripe UAE Pricing,Payment formula input for ROI model,Official vendor fact,UAE,2026-06-19,EV-0015,Applies to online cards
+RQ-016,Web,First-Principles,Meta/Twilio WhatsApp Pricing,Messaging cost and pass-through policy,Official/vendor fact,Global/UAE,2026-06-19,EV-0016,Exact UAE WhatsApp rate should be quoted from active BSP before contract
+RQ-017,Web,First-Principles,Telegram Bot API,Telegram bot platform dependency check,Official platform fact,Global,2026-06-19,EV-0017,No comparable per-message platform fee found; build/support still cost
+RQ-018,Web,First-Principles,Cloudflare/Supabase/OpenAI pricing,Infrastructure and AI cost floor,Official vendor fact,Global,2026-06-19,EV-0027,Usage-sensitive and may change
+RQ-019,Web,Expansionist,Foodics pricing/features,POS ecosystem feature and price anchor,Vendor listing,UAE/GCC,2026-06-19,EV-0026,Vendor pricing/features can change
+RQ-020,Web,Expansionist,Owner.com pricing,Owned ordering competitor reference,Vendor listing,US,2026-06-19,EV-0025,US market; not directly UAE
+RQ-021,Web,Expansionist,GloriaFood pricing,Low-cost/ordering SaaS comparison,Vendor listing,Global,2026-06-19,EV-0025,May not reflect UAE support needs
+RQ-022,Web,Expansionist,Sapaad pricing/features,POS/cloud restaurant platform comparison,Vendor listing,UAE/GCC,2026-06-19,EV-0026,Quote-dependent details
+RQ-023,Web,Outsider,Wix pricing,Cheap website alternative,Vendor listing,Global/UAE,2026-06-19,EV-0024,Static-site comparison only
+RQ-024,Web,Outsider,WordPress/freelancer market scan,Cheap build alternative,Market listing/anecdote,UAE,2026-06-19,EV-0024,Quality and support highly variable
+RQ-025,Web,Outsider,Google Business Profile/Instagram/WhatsApp public docs,Low-cost customer-acquisition alternatives,Official platform facts,Global/UAE,2026-06-19,EV-0023,Not a full owned ordering system
+RQ-026,Web,Outsider,Foodics/Sapaad/POS comparison,Alternative operational backbone,Vendor listing,UAE/GCC,2026-06-19,EV-0026,Feature fit depends on restaurant maturity
+RQ-027,Web,Executor,Cloudflare pricing,Hosting responsibility/cost floor,Official vendor fact,Global,2026-06-19,EV-0027,Usage-sensitive
+RQ-028,Web,Executor,Supabase pricing,Database/auth/storage cost floor,Official vendor fact,Global,2026-06-19,EV-0027,Usage-sensitive
+RQ-029,Web,Executor,OpenAI pricing,AI assistant usage cost floor,Official vendor fact,Global,2026-06-19,EV-0028,Model prices change
+RQ-030,Web,Executor,Deliverect developer docs,Delivery/POS integration custom-quote boundary,Official/vendor docs,Global/UAE,2026-06-19,EV-0029;EV-0030,Docs do not guarantee customer account access

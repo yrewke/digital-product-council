@@ -1,0 +1,72 @@
+[
+  {
+    "blocking": true,
+    "claim_id": "CL-0003",
+    "contradicted_text": "The fixture has 200 support hours/month.",
+    "corrected_text": "The fixture support budget is 20 hours/month.",
+    "evidence_ids": [
+      "EV-0002"
+    ],
+    "fact_check_id": "FC-0001",
+    "finding": "False. Fixture support budget is 20 hours/month.",
+    "required_correction": "Replace 200 with 20 or explicitly downgrade to assumption.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": true,
+    "claim_id": "CL-0004",
+    "contradicted_text": "The fixture price is AED 999.",
+    "corrected_text": "The fixture price is AED 499.",
+    "evidence_ids": [
+      "EV-0003"
+    ],
+    "fact_check_id": "FC-0002",
+    "finding": "False AED value. Fixture safe price is AED 499.",
+    "required_correction": "Replace AED 999 with AED 499.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": true,
+    "claim_id": "CL-0002",
+    "contradicted_text": "AED 100 per month equals AED 1,000 annually.",
+    "corrected_text": "AED 100 per month equals AED 1,200 annually.",
+    "evidence_ids": [],
+    "fact_check_id": "FC-0003",
+    "finding": "Broken monthly-to-annual calculation.",
+    "required_correction": "Replace AED 1,000 annually with AED 1,200 annually.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": true,
+    "claim_id": "CL-0005",
+    "contradicted_text": "This fixture is guaranteed to be the best substitute.",
+    "corrected_text": "Scenario assumption: this fixture may be a useful substitute.",
+    "evidence_ids": [],
+    "fact_check_id": "FC-0004",
+    "finding": "Unsupported guaranteed/best claim.",
+    "required_correction": "Downgrade to a scenario assumption.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": true,
+    "claim_id": "CL-0007",
+    "contradicted_text": "20% of AED 200 is AED 30.",
+    "corrected_text": "20% of AED 200 is AED 40.",
+    "evidence_ids": [],
+    "fact_check_id": "FC-0005",
+    "finding": "Broken percentage calculation.",
+    "required_correction": "Replace AED 30 with AED 40.",
+    "status": "RESOLVED"
+  },
+  {
+    "blocking": true,
+    "claim_id": "CL-0008",
+    "contradicted_text": "A margin with revenue AED 100 and cost AED 60 is 70%.",
+    "corrected_text": "A margin with revenue AED 100 and cost AED 60 is 40%.",
+    "evidence_ids": [],
+    "fact_check_id": "FC-0006",
+    "finding": "Broken margin calculation.",
+    "required_correction": "Replace 70% with 40%.",
+    "status": "RESOLVED"
+  }
+]

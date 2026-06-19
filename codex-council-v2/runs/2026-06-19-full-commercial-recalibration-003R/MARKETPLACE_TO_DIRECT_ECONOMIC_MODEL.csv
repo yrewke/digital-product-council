@@ -1,0 +1,8 @@
+flow,what_it_is,counts_as_incremental_revenue,benefit_formula,costs_to_subtract,default_scenario_label,pilot_measurement
+Marketplace retained,Orders that remain on aggregator,no,None,None,PROVISIONAL_COUNCIL_DECISION,Marketplace orders retained by source
+Shifted repeat marketplace,Existing repeat customers moved direct,no,AOV * shifted_orders * contribution_margin + avoided_marketplace_fees,"payment_fee + delivery_cost + incentive + loyalty + direct_marketing + support/refund cost",SCENARIO_VARIABLE,Customer-level repeat source migration
+Phone/WhatsApp structured,Existing manual orders captured in structured direct flow,no,error_cost_reduction + handling_time_value + data_capture_value,"payment_fee if online + platform/message cost + support",SCENARIO_VARIABLE,Manual order baseline vs structured orders
+Incremental direct order,New order caused by direct channel,yes,AOV * incremental_orders * contribution_margin,"payment_fee + delivery_cost + incentive + marketing + support/refund cost",REQUIRES_PILOT_VALIDATION,New-customer/source tracking
+Pickup direct,Pickup order via direct page,maybe,AOV * pickup_orders * contribution_margin,"payment_fee + incentive + packaging/ops cost",SCENARIO_VARIABLE,Pickup order count and source
+Direct delivery,Direct order requiring fulfillment,maybe,AOV * orders * contribution_margin + avoided_marketplace_fees_if_shifted,"delivery_cost + payment_fee + incentive + refund/liability + dispatch cost",REQUIRES_PILOT_VALIDATION,Delivery cost and SLA by zone
+Catering/enquiry,Lead captured by direct channel,not until closed,closed_sales * contribution_margin,"follow-up labor + delivery/quote cost + incentive",REQUIRES_PILOT_VALIDATION,Lead-to-sale conversion and margin

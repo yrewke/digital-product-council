@@ -25,6 +25,8 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .cache/
+codex-council-v2/_test-tmp/
+_clean-codex-council-v2-final/
 
 # OS/editor noise
 .DS_Store

@@ -1,0 +1,1150 @@
+[
+  {
+    "archive_path": "legacy-council-import/source-archive/handoffs/company-memory.md",
+    "bytes": 37170,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "handoffs/company-memory.md",
+    "sha256": "9861dcda7ca865c53e38f8d22a89d5bd4f68fe2c8de185e257a164fa5b675e0a"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/cache/evidence-packs/2026-06-13-commercial-council-001-evidence-pack.md",
+    "bytes": 5876,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/cache/evidence-packs/2026-06-13-commercial-council-001-evidence-pack.md",
+    "sha256": "12314d3599aedc23124aa5633d6f04bbee51fa7bea764632585110e390cd0036"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/ACTIVITY_LOG.md",
+    "bytes": 4493,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/ACTIVITY_LOG.md",
+    "sha256": "3554a5b9a49671d51bc862dc6dcba242adc91d9a892994920f17a4fc325d48e9"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/advisor-memos/BUSINESS_BUILDER_MEMO.md",
+    "bytes": 8953,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/advisor-memos/BUSINESS_BUILDER_MEMO.md",
+    "sha256": "b7e9d4043230d432e5c3f3872cbf0aefda54d3fcd118587621cd18a642500809"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/advisor-memos/COMPETITOR_ALTERNATIVES_MEMO.md",
+    "bytes": 10837,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/advisor-memos/COMPETITOR_ALTERNATIVES_MEMO.md",
+    "sha256": "41b1e4f44695f9b9089e2747c5add331b4c640c114d70c0b685963bc6693ad4c"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/advisor-memos/MARKET_ECONOMICS_MEMO.md",
+    "bytes": 9307,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/advisor-memos/MARKET_ECONOMICS_MEMO.md",
+    "sha256": "f5f7f4ed2a7e0e76f933db51d90b47a92474b3d3466b8504d7bd5c7225169739"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/advisor-memos/RESTAURANT_OPERATOR_MEMO.md",
+    "bytes": 11718,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/advisor-memos/RESTAURANT_OPERATOR_MEMO.md",
+    "sha256": "ba1bbba234e72f65392ae4c042b55ae70b9cea92d452232d0e575a2ab74bd125"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/advisor-memos/RESTAURANT_OWNER_MEMO.md",
+    "bytes": 10836,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/advisor-memos/RESTAURANT_OWNER_MEMO.md",
+    "sha256": "61fcdc40e86b826ad8dc4ea29b212eba4760d97aac0124195837ba3278aac17c"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/DEVILS_ADVOCATE_MEMO.md",
+    "bytes": 14503,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/DEVILS_ADVOCATE_MEMO.md",
+    "sha256": "ad35c7c0266e01f6cbfaf03db05614aee96cb0e629432d5f6b48015f15f47b52"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/EVIDENCE_AUDITOR_MEMO.md",
+    "bytes": 25420,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/EVIDENCE_AUDITOR_MEMO.md",
+    "sha256": "38fd3cf3bd59fcf204ddc66e46ab7f3e9784fc2941eb1694c61526735300f265"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/INTERIM_COMMERCIAL_VERDICT.md",
+    "bytes": 30517,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/INTERIM_COMMERCIAL_VERDICT.md",
+    "sha256": "4b4f2a518fec2b5c1a07b479173ba1fb60807629064844134c1aa39d8027fd94"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/peer-reviews/REVIEW_01.md",
+    "bytes": 4358,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/peer-reviews/REVIEW_01.md",
+    "sha256": "1b94a8a81cd545c33e12b233029abf289856eb0b143779e4f0e989a89ffc8f27"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/peer-reviews/REVIEW_02.md",
+    "bytes": 5271,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/peer-reviews/REVIEW_02.md",
+    "sha256": "dd70265d066dd2e24375934453d000449291ae308bc4f10ca422b3c6105a77ba"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/peer-reviews/REVIEW_03.md",
+    "bytes": 3705,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/peer-reviews/REVIEW_03.md",
+    "sha256": "caabe392b90355272d1b5ad4a4966c135546ed667493a1c6b13651eb08bb9eac"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/peer-reviews/REVIEW_04.md",
+    "bytes": 3201,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/peer-reviews/REVIEW_04.md",
+    "sha256": "de14ecad5e3a8678c85dd990a15bd660a8eeccdd491477e673a90f4fe20874d7"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/peer-reviews/REVIEW_05.md",
+    "bytes": 5310,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/peer-reviews/REVIEW_05.md",
+    "sha256": "80f56ff3e9ae096a200b510d3935faf8c0a9399c6c68d36dcf8aa374b1393f9c"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/artifacts/STAGE1_ADVISOR_EVIDENCE_REQUESTS.md",
+    "bytes": 2809,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/artifacts/STAGE1_ADVISOR_EVIDENCE_REQUESTS.md",
+    "sha256": "276054c68d26f79ef79d5abb7299aa56924f11b1670a6bb906b73d551bc68790"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/ASSUMPTION_LEDGER.md",
+    "bytes": 1352,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/ASSUMPTION_LEDGER.md",
+    "sha256": "022699a5704bf2f65611a3724ca3624977e0d90302f6a8b55043ce3cff241edb"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/DECISION_LOG.md",
+    "bytes": 3619,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/DECISION_LOG.md",
+    "sha256": "a58be5d5fee67d3317888cc49e712b7134f40016fc93d2078ac4d6ab0769bb69"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/EVIDENCE_LEDGER.md",
+    "bytes": 10394,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/EVIDENCE_LEDGER.md",
+    "sha256": "18ac2b85d98bf3024433886d4ff3ea839e2f96db2faaa557f0df880db61521b7"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/EVIDENCE_REQUESTS.md",
+    "bytes": 1762,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/EVIDENCE_REQUESTS.md",
+    "sha256": "fa6a050e2c2c2b003b66b3a59079d4179611eb3c8c9259d7fe02938bc1417adb"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/NEXT_SESSION_HANDOFF.md",
+    "bytes": 1260,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/NEXT_SESSION_HANDOFF.md",
+    "sha256": "a50a8a4bf21b920f4cfade48a2ac276283bed06533738fe22fbb0577fc3daa1e"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/QUERY_LEDGER.csv",
+    "bytes": 4630,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/QUERY_LEDGER.csv",
+    "sha256": "5c0f5ef4d362eea20eab9ab0dda3855d521bdc5276f3bd108f173d89789cffbc"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/RUN_001_COMPLETION_REPORT.md",
+    "bytes": 3168,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/RUN_001_COMPLETION_REPORT.md",
+    "sha256": "d50090b1623f2a5a43bbeeb9ba7b18d4cc2cbe1caf52665b8f41adfacce4bbc7"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-commercial-council-001/RUN_STATUS.md",
+    "bytes": 1153,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-commercial-council-001/RUN_STATUS.md",
+    "sha256": "fd2c9bb90f4b14db864ec8c5a264c2f97102edef641ec3698593be9846aa3f25"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-live-smoke-test-001/ACTIVITY_LOG.md",
+    "bytes": 2423,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-live-smoke-test-001/ACTIVITY_LOG.md",
+    "sha256": "f86a837a2dcfb3e284281928a471fde8a021c39c2641b4ba938f816e6b1aeae0"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-live-smoke-test-001/artifacts/query-01-provider-viability.md",
+    "bytes": 1286,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-live-smoke-test-001/artifacts/query-01-provider-viability.md",
+    "sha256": "a93e5222aba6619205d30aa81f7eeea217e2e2074869e5afcb8863359e1e174a"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-live-smoke-test-001/artifacts/SMOKE_TEST_EVIDENCE_PACK.md",
+    "bytes": 4033,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-13-live-smoke-test-001/artifacts/SMOKE_TEST_EVIDENCE_PACK.md",
+    "sha256": "e80f8879c273d6204623d2880369279a94a51585347480b89a8b8479574ee27a"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-live-smoke-test-001/DECISION_LOG.md",
+    "bytes": 2147,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-live-smoke-test-001/DECISION_LOG.md",
+    "sha256": "0b5cefb813af299e7eef0f5412e3389d861ed626465a1ee6a8c4b5d28b73c94c"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-live-smoke-test-001/EVIDENCE_REQUESTS.md",
+    "bytes": 2113,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-13-live-smoke-test-001/EVIDENCE_REQUESTS.md",
+    "sha256": "49f84d721defaedaa12ee92cb27e31e3b7cc158ae90f2a6a81f9407d2bc39ac0"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-live-smoke-test-001/NEXT_SESSION_HANDOFF.md",
+    "bytes": 1100,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-13-live-smoke-test-001/NEXT_SESSION_HANDOFF.md",
+    "sha256": "3b3b81a64e66d7d32bb3374ae8255c633d6d1e19f29e48566d0ff1d7e2f54b28"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-live-smoke-test-001/QUERY_LEDGER.csv",
+    "bytes": 2238,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-live-smoke-test-001/QUERY_LEDGER.csv",
+    "sha256": "3664f530c12b33fb644b54a01f797df8d5b89b4842de0715f72548a7e0b3c884"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-13-live-smoke-test-001/RUN_STATUS.md",
+    "bytes": 2553,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-13-live-smoke-test-001/RUN_STATUS.md",
+    "sha256": "be27b9f2eb63e277e4df47d17061744dcc35be4f409548f5ec25231d5f45f291"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/ACTIVITY_LOG.md",
+    "bytes": 1334,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/ACTIVITY_LOG.md",
+    "sha256": "08ed8498d09fc07b3a0d179e87765080baca02c688315487dfbc5e3c578c097e"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/ADD_ON_MODULE_CATALOG.md",
+    "bytes": 4666,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/ADD_ON_MODULE_CATALOG.md",
+    "sha256": "2269262bb31ed8c86c4cd51e090e317584cd7c243033747cc02c5eb534323d7b"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/ANONYMOUS_PEER_REVIEW.md",
+    "bytes": 2734,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/ANONYMOUS_PEER_REVIEW.md",
+    "sha256": "201ccf1cc3f5a74adc62ea3a0cdc6ab31b2c77ec2e0c745c0541f183fbe74a8e"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/CHAIRMAN_FIRST_PACKAGING_SYNTHESIS.md",
+    "bytes": 2685,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/CHAIRMAN_FIRST_PACKAGING_SYNTHESIS.md",
+    "sha256": "39f50b460629a6dd8982a762cb0eb976ad4bd9a61a2faae99ab44bb4732e33cf"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/DEVILS_ADVOCATE_PACKAGING_ATTACK.md",
+    "bytes": 2199,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/DEVILS_ADVOCATE_PACKAGING_ATTACK.md",
+    "sha256": "d067d074074323e4277083d5a66ba9cfc9d8ea4d7ce6847e91a9755529d38055"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/EVIDENCE_AUDITOR_PACKAGING_REVIEW.md",
+    "bytes": 1890,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/EVIDENCE_AUDITOR_PACKAGING_REVIEW.md",
+    "sha256": "6bf42187fb081e1421d7f0f3c36be1b9918730d893b362e08de13062d4071729"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/EXECUTIVE_MEMOS.md",
+    "bytes": 8202,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/EXECUTIVE_MEMOS.md",
+    "sha256": "401749b1a4ddd5187b897c70d81abcbe856bb8d640ff5fa8c3785f7a5a4a9952"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/EXECUTIVE_POST_DECISION_RESPONSES.md",
+    "bytes": 3921,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/EXECUTIVE_POST_DECISION_RESPONSES.md",
+    "sha256": "e23b922b7e2acb3bc2e798d6a57d921c725e7ecc2e24219a8ecbfc956428c77a"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/FEATURE_CLASSIFICATION_MATRIX.md",
+    "bytes": 5578,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/FEATURE_CLASSIFICATION_MATRIX.md",
+    "sha256": "f0adae52b61bf5d4f133130230b46c5dcf81b5cce887a8eb8c5678ac7b944742"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/FEATURE_INVENTORY_NORMALIZED.md",
+    "bytes": 9710,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/FEATURE_INVENTORY_NORMALIZED.md",
+    "sha256": "86f97a856133806a9ddbc07907d23f1b2fc97f25311882960c4e9051713ae127"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/OLD_TIER_RECONCILIATION.md",
+    "bytes": 1577,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/OLD_TIER_RECONCILIATION.md",
+    "sha256": "9166663081fee12233cb8334c48434be72c5bf047fec916d51d3c1d867c5f408"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/PACKAGE_LADDER_DRAFT.md",
+    "bytes": 3306,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/PACKAGE_LADDER_DRAFT.md",
+    "sha256": "9cac681882ccbf56fcbff4aea848b441d5810725449d9191fa8acecbf27bfc34"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/PACKAGE_STRUCTURE_OPTIONS.md",
+    "bytes": 4052,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/PACKAGE_STRUCTURE_OPTIONS.md",
+    "sha256": "1e8876855ef7092d61ed83618171bc6ff9533be7ed700bf1c059b57f3fb2f9dd"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/PACKAGING_FINAL_VERDICT.md",
+    "bytes": 10615,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/PACKAGING_FINAL_VERDICT.md",
+    "sha256": "938ec8b5b40422502893fed908395def41bbfafb8f912b00cc5c71af98e2e0ff"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/PROVIDER_COST_SCORECARD.md",
+    "bytes": 2185,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/PROVIDER_COST_SCORECARD.md",
+    "sha256": "53d08f0f3360a0a91ced5313223bba053851d7482eea969946501e5be986707e"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/RESPONSIBILITY_AND_ACCEPTANCE_BOUNDARIES.md",
+    "bytes": 1910,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/RESPONSIBILITY_AND_ACCEPTANCE_BOUNDARIES.md",
+    "sha256": "ffa45b2488f49b4a22d552e87d4d45888783ca64daba48f83c1a31cdaaa67fd7"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/ROLE_SPECIFIC_STARTING_BRIEFS.md",
+    "bytes": 2701,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/ROLE_SPECIFIC_STARTING_BRIEFS.md",
+    "sha256": "a91192161b7a21f121de5e91d504cde819f3be7f66e927144f039672a7220ad6"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/RUN_2C_PRICING_HANDOFF.md",
+    "bytes": 3296,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/artifacts/RUN_2C_PRICING_HANDOFF.md",
+    "sha256": "f7a3d6c59196683cad39198e0ab4d1a96b62e07533a630928fb5b5f009d99041"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/ASSUMPTION_LEDGER.md",
+    "bytes": 1219,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/ASSUMPTION_LEDGER.md",
+    "sha256": "6dea4ee32a6fcca5c1e2d428eec53a7204804720e4b4d489d0f34a984b316ede"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/DECISION_LOG.md",
+    "bytes": 1481,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/DECISION_LOG.md",
+    "sha256": "6191c434d7b393f0f6854a76f479365fee9a43efd3fad7bf9b83f0f7e9881fbc"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/EVIDENCE_LEDGER.md",
+    "bytes": 1755,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/EVIDENCE_LEDGER.md",
+    "sha256": "84ce708197f342d49b7cc63aa11062b1cae0e8d24004c102b3e3e9ede27e9adc"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/FEATURE_LEDGER.md",
+    "bytes": 1551,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/FEATURE_LEDGER.md",
+    "sha256": "5018cc3d4b0f444c22b9cf0fb68ae121990a32aa6c57227f172cc701d24e0ef9"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/NEXT_SESSION_HANDOFF.md",
+    "bytes": 296,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/NEXT_SESSION_HANDOFF.md",
+    "sha256": "f81d3c80de954c4dfe60ceb070b2feceb9ef3937c30abf60ed436670736c6ebd"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/PACKAGE_LEDGER.md",
+    "bytes": 1182,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/PACKAGE_LEDGER.md",
+    "sha256": "5b52fffe8aabe819aa5f40786dc4f8996f2541534b3629fff285418ded997f6c"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/PROVIDER_COST_LEDGER.md",
+    "bytes": 1222,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/PROVIDER_COST_LEDGER.md",
+    "sha256": "5e475d16e381862e53399b8649d3ae556ccc5126e8831bcdca1ec30cd1eed33c"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/RESEARCH_LEDGER.md",
+    "bytes": 683,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/RESEARCH_LEDGER.md",
+    "sha256": "6271d102916c4b1cbbd547e52cb73befa76dd485b00916dea2606acc2e72ce6c"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/RESPONSIBILITY_LEDGER.md",
+    "bytes": 1408,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/RESPONSIBILITY_LEDGER.md",
+    "sha256": "f51fa2168ba24e5fcff9fef90356149824fafe53585da09b59ea9c9832cd450f"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/RUN_002B_COMPLETION_REPORT.md",
+    "bytes": 3089,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/RUN_002B_COMPLETION_REPORT.md",
+    "sha256": "e10ed9bfa85f1aa66b080959dd522e43429f7e898f6e5e0ec842bed0c1d69c95"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/RUN_STATUS.md",
+    "bytes": 808,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/RUN_STATUS.md",
+    "sha256": "cd00f6ce57ceab86b7c6073a21ffbc1ba72d33714e1ff6e4e4dc181a7802a109"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-feature-packaging-decision-002B/SOURCE_LEDGER.md",
+    "bytes": 949,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-feature-packaging-decision-002B/SOURCE_LEDGER.md",
+    "sha256": "433fe455a1aa1e108ef34e9662d3f1e2f57698c3dcac848ede8c6ff151ed982f"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/ACTIVITY_LOG.md",
+    "bytes": 1651,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/ACTIVITY_LOG.md",
+    "sha256": "677edf7df0b4320365fe09b6b23720a3e49b5ccdad84e2c2757df4975dca8bab"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ANONYMOUS_PEER_REVIEW.md",
+    "bytes": 2348,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ANONYMOUS_PEER_REVIEW.md",
+    "sha256": "b7c57b0d56265ece18f622501f93692c1a156f67d5b2fbfda9755621b8cdaa98"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/CHAIRMAN_FINAL_ROI_VERDICT.md",
+    "bytes": 3847,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/CHAIRMAN_FINAL_ROI_VERDICT.md",
+    "sha256": "8cb30f6804ad4ca6d4fd958c423ffc64ad8acea097440855eb73c7f1292c0ae2"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/CHAIRMAN_FIRST_ROI_SYNTHESIS.md",
+    "bytes": 2650,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/CHAIRMAN_FIRST_ROI_SYNTHESIS.md",
+    "sha256": "2b6062ec731dfb8e3e01f4fcd978296d11b6b7d2dbb55e3a6da0ffcbe35fb692"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/DEVILS_ADVOCATE_ROI_ATTACK.md",
+    "bytes": 2649,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/DEVILS_ADVOCATE_ROI_ATTACK.md",
+    "sha256": "7ba1ff699908116530c9bb48cd025f2c06bb7a41ac9a73a6c78dd2a538300adb"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/EVIDENCE_AUDITOR_ROI_REVIEW.md",
+    "bytes": 1910,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/EVIDENCE_AUDITOR_ROI_REVIEW.md",
+    "sha256": "5de3413cfc9bd6533def71b4fd53b72cdf4110b3f381d1bedef17e1b95d6a251"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/EXECUTIVE_MEMOS.md",
+    "bytes": 8677,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/EXECUTIVE_MEMOS.md",
+    "sha256": "8168687e5a9bbfb5542efb87e4eef2d7332b10f029362a145e1418a73940e971"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/EXECUTIVE_POST_DECISION_RESPONSES.md",
+    "bytes": 4046,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/EXECUTIVE_POST_DECISION_RESPONSES.md",
+    "sha256": "f3fb7a5fc76cd2238f7e26e7b871964a7ec4862382c92ee02ccb891f409280f2"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/FULL_RESTAURANT_ROI_MAP.md",
+    "bytes": 8169,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/FULL_RESTAURANT_ROI_MAP.md",
+    "sha256": "40e91f47acd43dd60b774fcb93e8581777b872b9021c8795fc0be181dd10deff"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/RESTAURANT_ARCHETYPE_ROI_MATRIX.md",
+    "bytes": 4880,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/RESTAURANT_ARCHETYPE_ROI_MATRIX.md",
+    "sha256": "185b70ddf56c42b05caa9b5b2d919fc4e2d1216cb7e45795a67772ffe40ea6c5"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ROI_CALCULATOR.html",
+    "bytes": 35332,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ROI_CALCULATOR.html",
+    "sha256": "efe3071f26ee037d1f6360575d5b60f2645a9b534ac4869a750d6d673ca781b8"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ROI_CALCULATOR_MODEL.csv",
+    "bytes": 3239,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ROI_CALCULATOR_MODEL.csv",
+    "sha256": "b539c57d187121e141684697bf2a23cd594c5f6a246f992e70113a5c59f4fc76"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ROI_CALCULATOR_SPEC.md",
+    "bytes": 8577,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ROI_CALCULATOR_SPEC.md",
+    "sha256": "c3867eb70a3cd3cc6fbd7c4e6d2ab599380e244a75051b813ed9b5ab53706ec2"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ROI_NUMBERS_AND_RANGES_LEDGER.md",
+    "bytes": 2469,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ROI_NUMBERS_AND_RANGES_LEDGER.md",
+    "sha256": "6cb7b8117f7c8ea34368f72f4b08f1e0c7cc26420cd12750b095b3f98b47e01f"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ROI_OWNER_QUESTIONNAIRE.md",
+    "bytes": 3146,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ROI_OWNER_QUESTIONNAIRE.md",
+    "sha256": "f26e1037629b9b8dcce32ef44c50bf7fe5e0760541062ab74bbfadaee1e6c1e8"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ROLE_SPECIFIC_STARTING_BRIEFS.md",
+    "bytes": 3977,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/ROLE_SPECIFIC_STARTING_BRIEFS.md",
+    "sha256": "b187922becd58bfc739f1cf026338c9837de5a5b0d58c1f648ec9d1bf4ee2361"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/RUN_2B_HANDOFF.md",
+    "bytes": 3334,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/artifacts/RUN_2B_HANDOFF.md",
+    "sha256": "69d6dfc12625deabd985ace343e0da43ae7a3da9b5c2327ca337676b48f32e4c"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/ASSUMPTION_LEDGER.md",
+    "bytes": 1506,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/ASSUMPTION_LEDGER.md",
+    "sha256": "a30dfd5cb83e734e5f14f0f24812d55f94f76d6751cfb4181719aad5efe02fa8"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/DECISION_LOG.md",
+    "bytes": 1705,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/DECISION_LOG.md",
+    "sha256": "507f04b093121d562bb1974fa961df26e025f5388454e3d0cf6128337eccc53a"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/EVIDENCE_LEDGER.md",
+    "bytes": 3449,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/EVIDENCE_LEDGER.md",
+    "sha256": "1f709293c41d8cd4cbdf22f7c6cd7562144081f4c7240212bb52bae254b3e923"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/NEXT_SESSION_HANDOFF.md",
+    "bytes": 399,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/NEXT_SESSION_HANDOFF.md",
+    "sha256": "2ffe3deb2db938cfa0cfdedee69a33da3004c0a0505347b524b3daffe32bdb7c"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/NUMBER_LEDGER.md",
+    "bytes": 5505,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/NUMBER_LEDGER.md",
+    "sha256": "298e307e55960df38c7aed5719fd6b21d52f0767f9d383d3802114a107ce654c"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/QUERY_LEDGER.csv",
+    "bytes": 1111,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/QUERY_LEDGER.csv",
+    "sha256": "319523f01612cf5aeef18afd1b50c8abaa7765a8b912897db0580216d46be292"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/RESEARCH_LEDGER.md",
+    "bytes": 1852,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/RESEARCH_LEDGER.md",
+    "sha256": "9a30c8c971d6defc53d9f24e09df7376da5f3d0d9e28bfc8392cb4988f0f2d21"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/RUN_002A_REDO_COMPLETION_REPORT.md",
+    "bytes": 3617,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/RUN_002A_REDO_COMPLETION_REPORT.md",
+    "sha256": "89463b2613e093aa8a58218f1bf0a1d21bed94687c156c5512da796f979f369b"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/RUN_STATUS.md",
+    "bytes": 1525,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/RUN_STATUS.md",
+    "sha256": "f6d27933aba9e3e614a318ded5fc270fd76460cd990cde68cd467977ef075eb8"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/SOURCE_LEDGER.md",
+    "bytes": 3929,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo/SOURCE_LEDGER.md",
+    "sha256": "0facc1fdddbd04ac398c1584cb3f25e6fb376bff30d074696d7cf8d1ab662a38"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/ACTIVITY_LOG.md",
+    "bytes": 831,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/ACTIVITY_LOG.md",
+    "sha256": "87d8ab3b3e0152d3198d4427f7371020304aa6cf77a75b9800f728b4874e01e7"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/ASSUMPTION_VALIDATION_LEDGER.md",
+    "bytes": 166,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/ASSUMPTION_VALIDATION_LEDGER.md",
+    "sha256": "08dd1284ba5bd375296339e19bcd0c9475fee6a7603914d740a5898b04bc15a4"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/EVIDENCE_VALIDATION_LEDGER.md",
+    "bytes": 195,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/EVIDENCE_VALIDATION_LEDGER.md",
+    "sha256": "d205100fafd65ffada866ce52d45010e0300dc1beb52e7dfd6f25a6e2d451f09"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/NEXT_SESSION_HANDOFF.md",
+    "bytes": 469,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/NEXT_SESSION_HANDOFF.md",
+    "sha256": "7ef0b3ef4da40c7c0cd5230e0aefc2430e9594a8398184a97d8c54d255c7db0d"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/NUMBER_VALIDATION_LEDGER.md",
+    "bytes": 199,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/NUMBER_VALIDATION_LEDGER.md",
+    "sha256": "ce3a2c35441b5115272cbc4e0d8a99ea278f4377f4f285d82af9742803edf72c"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/QUERY_LEDGER.csv",
+    "bytes": 872,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/QUERY_LEDGER.csv",
+    "sha256": "764eb5c53fa74d3b49685a4015118c66609b5fb970a6734d5fa40264af8d0553"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/QUERY_PLAN.md",
+    "bytes": 4023,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/QUERY_PLAN.md",
+    "sha256": "5aabcfda162d6e3c7f24576bd99b62bc793e6eb2361e506d0ca377680182e5c2"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/RUN_STATUS.md",
+    "bytes": 901,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/RUN_STATUS.md",
+    "sha256": "7ce5e41a91dbcd6c4d31f1dd321d773745a42d7511587ee8c843469865e53669"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/SOURCE_LEDGER.md",
+    "bytes": 204,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-full-restaurant-roi-research-calculator-002A-redo-notebooklm-validation/SOURCE_LEDGER.md",
+    "sha256": "ec22c250a0dd8fcbf426f22850b23ce9fbfebd9569c5a3888cdfd106c2dc3017"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/ACTIVITY_LOG.md",
+    "bytes": 1351,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/ACTIVITY_LOG.md",
+    "sha256": "f792f58a96ec7d90b6232f7a80134bc13fc0dd436af1ea94238ec90a05b88b4d"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/ALLOWANCE_LEDGER.md",
+    "bytes": 761,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/ALLOWANCE_LEDGER.md",
+    "sha256": "08d2d095f99f1a14b817aabdbd07e2eb044760009060ecffdadaffcb8f1bb648"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/ALLOWANCES_AND_OVERAGES.md",
+    "bytes": 1088,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/ALLOWANCES_AND_OVERAGES.md",
+    "sha256": "9fb4e072d9387cf43a2463023012c143b8b93c133b86591eaa6b0722f0bee628"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/ANONYMOUS_PRICING_PEER_REVIEW.md",
+    "bytes": 4310,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/ANONYMOUS_PRICING_PEER_REVIEW.md",
+    "sha256": "2f9aa813c35618c5381bee27c530da8ff168f74f058862a181581be2f7cd2e65"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/CHAIRMAN_FIRST_PRICING_SYNTHESIS.md",
+    "bytes": 4532,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/CHAIRMAN_FIRST_PRICING_SYNTHESIS.md",
+    "sha256": "42ad926beb311ffbdd8d6f22ea81f28251d06c4f3cf8244cb9bc71094d9226c2"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/CHEAP_WORDPRESS_COMPETITOR_JUSTIFICATION.md",
+    "bytes": 1116,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/CHEAP_WORDPRESS_COMPETITOR_JUSTIFICATION.md",
+    "sha256": "5c26d89db815e14bd93506d61ff23ad020d7a7d7c0c94ea7f6da13db568697b9"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/COMPETITOR_PRICE_AND_SCOPE_COMPARISON.md",
+    "bytes": 1654,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/COMPETITOR_PRICE_AND_SCOPE_COMPARISON.md",
+    "sha256": "02b402db0f41856423b1c07f60fbfbbc8314dd7880cee8f3b076da1d2048c80a"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/DEVILS_ADVOCATE_PRICING_ATTACK.md",
+    "bytes": 3256,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/DEVILS_ADVOCATE_PRICING_ATTACK.md",
+    "sha256": "43ee5947e009804bdcb6754e1e7ad40dbab61f0cf5231f2ecd4454ad9705b9e6"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/EVIDENCE_AUDITOR_PRICING_REVIEW.md",
+    "bytes": 2224,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/EVIDENCE_AUDITOR_PRICING_REVIEW.md",
+    "sha256": "1689440dfc0094ecce6fb91fe6bd4be730e3fc9da99150e7500a74c92be2ab17"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/EXECUTIVE_POST_PRICING_RESPONSES.md",
+    "bytes": 4412,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/EXECUTIVE_POST_PRICING_RESPONSES.md",
+    "sha256": "e724aa66f32c85eef4d15675b6e33be55e60163e666308bdf4ac46b6688da86e"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/EXECUTIVE_PRICING_MEMOS.md",
+    "bytes": 6454,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/EXECUTIVE_PRICING_MEMOS.md",
+    "sha256": "4e8121f3333c7d8e09d20d16d0e58f06acf4d83a133ed560a6c7d4d61b852632"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/HOSTING_AND_RESPONSIBILITY_PRICING_OPTIONS.md",
+    "bytes": 1709,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/HOSTING_AND_RESPONSIBILITY_PRICING_OPTIONS.md",
+    "sha256": "6e8d84b5149d33016fd59e624617fa213f5749e0e95ece1bde8d060d6d400193"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/MODULE_PRICING_DRAFT.md",
+    "bytes": 1266,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/MODULE_PRICING_DRAFT.md",
+    "sha256": "111943e3e12f63ef751f8db70a6368a5c99eaaacead09f77dd7f4260b01e828a"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/PRICE_CARD_DRAFT_INTERNAL.md",
+    "bytes": 717,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/PRICE_CARD_DRAFT_INTERNAL.md",
+    "sha256": "ad7e230e2f521a3cbdaafbf580fb1057c5862905f366a65b85c77e6fbe0e9aa9"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/PRICING_BASIS_MAP.md",
+    "bytes": 1629,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/PRICING_BASIS_MAP.md",
+    "sha256": "f7d99df8d0292786f7cce246c629ae00754222c7421e913487ee17b7276fddc6"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/PRICING_FINAL_VERDICT.md",
+    "bytes": 6978,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/PRICING_FINAL_VERDICT.md",
+    "sha256": "e90e72f0b9f36a00650df81f1406ca773051f70ad22d60cb038502b68e3991c7"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/PRICING_OPTIONS_COMPARISON.md",
+    "bytes": 748,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/PRICING_OPTIONS_COMPARISON.md",
+    "sha256": "d5c947e86b8a1f80ba01935c24e025e3124fafe7d4a91451802be8a93eba356f"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/PROVIDER_COST_AND_ALLOWANCE_MODEL.md",
+    "bytes": 960,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/PROVIDER_COST_AND_ALLOWANCE_MODEL.md",
+    "sha256": "303b68bb9e73cb4d014d742b1d80b6ff2e0532e4cf0670bc6db5dbb4f4aa66c7"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/ROLE_SPECIFIC_STARTING_BRIEFS.md",
+    "bytes": 2341,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/ROLE_SPECIFIC_STARTING_BRIEFS.md",
+    "sha256": "92ce86edacc3fe3a40cdbf0f986cfe0328807b1adf07ab5822352db65fa7efa2"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/RUN_003_SALES_DELIVERABLES_HANDOFF.md",
+    "bytes": 1289,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/artifacts/RUN_003_SALES_DELIVERABLES_HANDOFF.md",
+    "sha256": "429ba23bce3a5b882aaa3f2477fbfc7477dc21e8e7bfe089c9d79e04a0267182"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/ASSUMPTION_LEDGER.md",
+    "bytes": 1486,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/ASSUMPTION_LEDGER.md",
+    "sha256": "4bff595fe9e74c5727b0d6d10b9a2d97228a041fb342eba2c92b8e9a5bbb9af4"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/COMPETITOR_LEDGER.md",
+    "bytes": 1105,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/COMPETITOR_LEDGER.md",
+    "sha256": "045f1ace953a67159c3f3feb41cf4c6bf2ff4d54004ddecd2918a529fe2952d8"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/CUSTOM_QUOTE_LEDGER.md",
+    "bytes": 955,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/CUSTOM_QUOTE_LEDGER.md",
+    "sha256": "ba3abd5d2a765acf820cbf550b19eb114f1993d202b48fb9895ad5bf24b0b2a0"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/DECISION_LOG.md",
+    "bytes": 1708,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/DECISION_LOG.md",
+    "sha256": "d7676dcf8a4b95c7ba1438339589839cc567ff23b247d9516b9eaa7b7c7524fb"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/EVIDENCE_LEDGER.md",
+    "bytes": 1702,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/EVIDENCE_LEDGER.md",
+    "sha256": "2e2db01e66e71d4f6c92c1e6971f6bfa9e0b335f5668928ea431eb2ee9950202"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/HOSTING_RESPONSIBILITY_LEDGER.md",
+    "bytes": 819,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/HOSTING_RESPONSIBILITY_LEDGER.md",
+    "sha256": "183674405e1efc7ac7693913a2dff701af42f9d35ead1590c79b33f7ce39e4e7"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/MODULE_PRICING_LEDGER.md",
+    "bytes": 1296,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/MODULE_PRICING_LEDGER.md",
+    "sha256": "5e6009c65a64dcae8313674302e4603b388130c31deddbf7a4f5fd1da11b1621"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/NEXT_SESSION_HANDOFF.md",
+    "bytes": 285,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/NEXT_SESSION_HANDOFF.md",
+    "sha256": "1be2bb6bbbe3ce420bdde26b7064c1aede80adf94aa6584b8cc3c9fabd52f2da"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/PRICING_LEDGER.md",
+    "bytes": 524,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/PRICING_LEDGER.md",
+    "sha256": "f2631a66fed28652f7e04ce906a62582aa34578d8ac7c31b7710b93a01f64df8"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/RESEARCH_LEDGER.md",
+    "bytes": 830,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/RESEARCH_LEDGER.md",
+    "sha256": "c8317aff942a78588a85a736b04bc8633e61a2d665e6dec544c4bcd30c05a53a"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/RUN_002C_COMPLETION_REPORT.md",
+    "bytes": 2685,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/RUN_002C_COMPLETION_REPORT.md",
+    "sha256": "6551bf1d7cc5e10b80e68976efd7e4a4e5bc1c7be8c0293cbd31118d807dca50"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/RUN_STATUS.md",
+    "bytes": 442,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/RUN_STATUS.md",
+    "sha256": "cb6b2dbd1205ebaaf3c96a136df951e133108b93fdbcd4684dfe142678b513fb"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/SOURCE_LEDGER.md",
+    "bytes": 1558,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-pricing-and-commercial-justification-002C/SOURCE_LEDGER.md",
+    "sha256": "4168a8840dce16a2388ab7c491c3fe94263396d57b87cf001d421af6e3058e62"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/ACTIVITY_LOG.md",
+    "bytes": 415,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/ACTIVITY_LOG.md",
+    "sha256": "06fbdd0aa60dcca1c6143220032b3882e50de4758a76323704b0551156c83ee7"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/advisor-memos/BUSINESS_BUILDER_MEMO.md",
+    "bytes": 885,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/advisor-memos/BUSINESS_BUILDER_MEMO.md",
+    "sha256": "696cdea573ac65f0c5e8af7cb4fccf46e0bc38a0096545c40ba50fd27716cb7e"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/advisor-memos/COMPETITOR_ALTERNATIVES_ANALYST_MEMO.md",
+    "bytes": 921,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/advisor-memos/COMPETITOR_ALTERNATIVES_ANALYST_MEMO.md",
+    "sha256": "c13dcf9ab9085e3bdb5370ccece780ebd842e22fb2d5cd1c29bdae21c4cdb2ba"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/advisor-memos/MARKET_ECONOMICS_ANALYST_MEMO.md",
+    "bytes": 943,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/advisor-memos/MARKET_ECONOMICS_ANALYST_MEMO.md",
+    "sha256": "b5d3023f8f7df913fbeaaa0d025fbb195f5b800a925c5daba715640452ccfea2"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/advisor-memos/RESTAURANT_OPERATOR_FULFILMENT_MANAGER_MEMO.md",
+    "bytes": 951,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/advisor-memos/RESTAURANT_OPERATOR_FULFILMENT_MANAGER_MEMO.md",
+    "sha256": "e610562d610db1b2428907e473919384251770ce03514fbb06e2d5dba866a4e9"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/advisor-memos/RESTAURANT_OWNER_ECONOMIST_MEMO.md",
+    "bytes": 1022,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/advisor-memos/RESTAURANT_OWNER_ECONOMIST_MEMO.md",
+    "sha256": "aa4df213aeb7111dca1488ac8c7936ab423799161c0f378374650c266dee432b"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/chairman-verdict.md",
+    "bytes": 2377,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/chairman-verdict.md",
+    "sha256": "3a60a5c23a91eab506b7235837d79598300e604308639281d2157c8ee2c07a80"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/devils-advocate.md",
+    "bytes": 1100,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/devils-advocate.md",
+    "sha256": "5d39bbc34945993c34c9aff6a9f6742d0b3f117954988664746d9e1750e5458d"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/evidence-auditor.md",
+    "bytes": 953,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/evidence-auditor.md",
+    "sha256": "0926373654e72f9b2bb02f2d6c56dd2c8ff930a53cfc139d6160d389a2c759ae"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/FULFILLMENT_MODEL_MATRIX.md",
+    "bytes": 3499,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/FULFILLMENT_MODEL_MATRIX.md",
+    "sha256": "9834fa43b38724554079d66cd960f571211833e0d1db421dad81790b0254356f"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/peer-review.md",
+    "bytes": 657,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/peer-review.md",
+    "sha256": "38b4f45faeeb62a403034f3cdb28acfe4e21394ae0040a935216270dbe25e207"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/RESTAURANT_OWNER_QUESTIONS_FOR_ROI.md",
+    "bytes": 1724,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/RESTAURANT_OWNER_QUESTIONS_FOR_ROI.md",
+    "sha256": "8cb119dd3238ff8109ef18a6f601a32cd541d028d250242c8829cf910b6f4e95"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/ROI_AND_FULFILLMENT_VERDICT.md",
+    "bytes": 13796,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/ROI_AND_FULFILLMENT_VERDICT.md",
+    "sha256": "c396ddb72c0237aac16d912824ed0d3534d0745ace60225c24b15449a77f3177"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/ROI_VARIABLES_MODEL.md",
+    "bytes": 6511,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/ROI_VARIABLES_MODEL.md",
+    "sha256": "688402525744d83a4806350ff2bee44aed24aad851a8bd5ba13244426d8ab347"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/RUN_2B_HANDOFF.md",
+    "bytes": 723,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/artifacts/RUN_2B_HANDOFF.md",
+    "sha256": "e6f60e8efeebfaecadeb5b0549ea72eee58bd70a5be72cd38502276488328ecd"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/ASSUMPTION_LEDGER.md",
+    "bytes": 1466,
+    "classification": "SCENARIO_ASSUMPTION",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/ASSUMPTION_LEDGER.md",
+    "sha256": "287214857c439bac58a160bd8cab718e5fb528f467e55d3c30f4425c9ea677f8"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/DECISION_LOG.md",
+    "bytes": 596,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/DECISION_LOG.md",
+    "sha256": "131667d5db7b5a8c06b4850cc7f2292236b34231100c306f24f973feed23a95e"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/EVIDENCE_LEDGER.md",
+    "bytes": 1978,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/EVIDENCE_LEDGER.md",
+    "sha256": "b1a995ee5250ad17adc88e787a15ece03ceae6c1059c7f70ff5da6e8425c776e"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/NEXT_SESSION_HANDOFF.md",
+    "bytes": 846,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/NEXT_SESSION_HANDOFF.md",
+    "sha256": "baff24fa01b6ce752744372d504252f233df5433a83a952f20989b6ba97a5c70"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/QUERY_LEDGER.csv",
+    "bytes": 476,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/QUERY_LEDGER.csv",
+    "sha256": "24873dbf2078146aace1f2e7d2304d7cba41fe206a91caec323df765b3cf1766"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/RESEARCH_LEDGER.md",
+    "bytes": 795,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/RESEARCH_LEDGER.md",
+    "sha256": "60ea707db59f42bc2f4eaaf8a845e4062d48582ca72a76eea3c69feab077dfc3"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/RUN_002A_COMPLETION_REPORT.md",
+    "bytes": 2741,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/RUN_002A_COMPLETION_REPORT.md",
+    "sha256": "d9f996eb6999d38cc193ecc60cd6416dec039cf12581e8b1264765e469426d95"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/RUN_STATUS.md",
+    "bytes": 989,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/council-runs/2026-06-14-restaurant-roi-fulfillment-economics-002A/RUN_STATUS.md",
+    "sha256": "f3436c2874d0bc7caa0f83871d1b22caa3d68a3257b1fdd1647e3846b35fe1c8"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/dry-runs/case-a-one-notebook.md",
+    "bytes": 350,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/dry-runs/case-a-one-notebook.md",
+    "sha256": "c606ddd000858e2f252f7cd96c737eb21ab1af3d64845308dedb905b3cef6fa2"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/dry-runs/case-b-cross-notebook.md",
+    "bytes": 409,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/dry-runs/case-b-cross-notebook.md",
+    "sha256": "323d47a1d9ee952966c7db9d00e58113515dddce7179adb050cc3621174db081"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/dry-runs/case-c-unsupported-number.md",
+    "bytes": 344,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/dry-runs/case-c-unsupported-number.md",
+    "sha256": "402cc17d9290d0548f24cb06da434034affc13bc2438d5fb62eb24441c37cb51"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/dry-runs/case-d-engineering-drift.md",
+    "bytes": 345,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/dry-runs/case-d-engineering-drift.md",
+    "sha256": "b83c857aa66f5a83d45ff1e9def76536cc5ce4aaf9441c6a4892b690a989567e"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/dry-runs/case-e-contradictory-handoffs.md",
+    "bytes": 374,
+    "classification": "INTERNAL_PROJECT_FACT",
+    "original_path": "working/dry-runs/case-e-contradictory-handoffs.md",
+    "sha256": "ef9e686bea93ec46cbb056a87a54160e2fbf71c271ea29953471067b7e5d4970"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/dry-runs/case-f-online-fallback.md",
+    "bytes": 672,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/dry-runs/case-f-online-fallback.md",
+    "sha256": "9e15434c325e2044ba1ce1ecc8e4781e15ba79876029c8f7826476d2e18fe7e6"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/dry-runs/case-g-notebook-connection-failure.md",
+    "bytes": 662,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/dry-runs/case-g-notebook-connection-failure.md",
+    "sha256": "050ab2763383e745ff0e6684f19a3b9763a37a640c40dac209724c10f92e535f"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/dry-runs/DRY_RUN_RESULTS.md",
+    "bytes": 1365,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/dry-runs/DRY_RUN_RESULTS.md",
+    "sha256": "e591e0b410578ce981d88c83149c77e8a3fcc6c09dece39f595eccf718d0fdc4"
+  },
+  {
+    "archive_path": "legacy-council-import/source-archive/working/ledgers/notebooklm-query-ledger.csv",
+    "bytes": 7484,
+    "classification": "COUNCIL_INFERENCE",
+    "original_path": "working/ledgers/notebooklm-query-ledger.csv",
+    "sha256": "7053d05072c3bc9a893f69e15b58f5f714f512bc176cde212f73985ece5f4eb5"
+  }
+]

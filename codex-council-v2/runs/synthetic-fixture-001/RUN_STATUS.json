@@ -1,11 +1,15 @@
 {
-  "run_id": "synthetic-fixture-001",
-  "stage": "FINAL_VERDICT_COMPLETE",
-  "last_valid_stage": "FINAL_VERDICT_COMPLETE",
-  "resume_test": {
-    "simulated_interruption_stage": "AUTHOR_REVISION",
-    "resumed_from": "AUTHOR_REVISION",
-    "status": "PASSED"
+  "last_valid_stage": "RUN_COMPLETE",
+  "pending_tasks": [],
+  "quorum": {
+    "degraded_mode": "human_approval_required",
+    "executives_required": 5
   },
-  "old_system_preservation": "PASSED"
+  "release_gate": "READY_FOR_BOUNDED_REAL_RUN",
+  "retry_policy": {
+    "default_retries": 1
+  },
+  "run_id": "synthetic-fixture-001",
+  "stage": "RUN_COMPLETE",
+  "updated": "2026-06-18T12:07:30+00:00"
 }

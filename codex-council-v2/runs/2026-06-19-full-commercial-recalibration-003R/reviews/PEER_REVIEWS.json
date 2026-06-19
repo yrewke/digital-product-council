@@ -1,0 +1,162 @@
+[
+  {
+    "anonymous_reviewer": "R-0eab6a",
+    "comment": "Objection: ROI mechanics are correct but need explicit channel-mix outputs by restaurant archetype, otherwise the formula can still be sold as a universal calculator.",
+    "packet_id": "PKT-0001",
+    "review_id": "PR-0001",
+    "source_memo": "first-principles",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-0eab6a",
+    "comment": "Objection: Upside map is broad; it must distinguish immediate cash return from strategic value so sales does not monetize every benefit in year one.",
+    "packet_id": "PKT-0002",
+    "review_id": "PR-0002",
+    "source_memo": "expansionist",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-0eab6a",
+    "comment": "Objection: Alternative-fit rule is sound but may become too conservative unless paired with a small entry product for high-need low-readiness restaurants.",
+    "packet_id": "PKT-0003",
+    "review_id": "PR-0003",
+    "source_memo": "outsider",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-0eab6a",
+    "comment": "Objection: Price ranges need support caps and pass-through rules on the face of the offer, not buried in implementation notes.",
+    "packet_id": "PKT-0004",
+    "review_id": "PR-0004",
+    "source_memo": "executor",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-5b4f3e",
+    "comment": "Objection: Contrarian migration ranges are useful but should not freeze pilots at low ambition; restaurants with strong repeat demand need an upside lane.",
+    "packet_id": "PKT-0005",
+    "review_id": "PR-0005",
+    "source_memo": "contrarian",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-5b4f3e",
+    "comment": "Objection: Expansion value paths need causal ordering; CRM and loyalty only create value after capture volume and activation cadence exist.",
+    "packet_id": "PKT-0006",
+    "review_id": "PR-0006",
+    "source_memo": "expansionist",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-5b4f3e",
+    "comment": "Objection: Alternatives analysis should include the cost of operational failure in cheap alternatives, not just purchase price.",
+    "packet_id": "PKT-0007",
+    "review_id": "PR-0007",
+    "source_memo": "outsider",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-5b4f3e",
+    "comment": "Objection: Pricing tiers must expose minimum viable implementation details; otherwise buyers compare custom commerce work against cheap websites incorrectly.",
+    "packet_id": "PKT-0008",
+    "review_id": "PR-0008",
+    "source_memo": "executor",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-6d9571",
+    "comment": "Objection: Downside memo underweights strategic need where restaurants have no owned customer layer; lack of readiness should lead to staged scope, not rejection.",
+    "packet_id": "PKT-0009",
+    "review_id": "PR-0009",
+    "source_memo": "contrarian",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-6d9571",
+    "comment": "Objection: First-principles model should include delivery capacity constraints as a hard gate before direct delivery ROI is calculated.",
+    "packet_id": "PKT-0010",
+    "review_id": "PR-0010",
+    "source_memo": "first-principles",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-6d9571",
+    "comment": "Objection: Outsider memo risks recommending hygiene-only alternatives without specifying when hygiene is insufficient for ordering and data goals.",
+    "packet_id": "PKT-0011",
+    "review_id": "PR-0011",
+    "source_memo": "outsider",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-6d9571",
+    "comment": "Objection: Executor prices look commercially usable but need explicit pilot learning goals and stop conditions for each tier.",
+    "packet_id": "PKT-0012",
+    "review_id": "PR-0012",
+    "source_memo": "executor",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-efb7f2",
+    "comment": "Objection: Contrarian position rightly rejects hype but should preserve measurable medium-term returns from repeat activation and catering capture.",
+    "packet_id": "PKT-0013",
+    "review_id": "PR-0013",
+    "source_memo": "contrarian",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-efb7f2",
+    "comment": "Objection: Formula memo should explain which variables are verified facts, supported estimates, planning assumptions, and pilot variables.",
+    "packet_id": "PKT-0014",
+    "review_id": "PR-0014",
+    "source_memo": "first-principles",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-efb7f2",
+    "comment": "Objection: Expansion memo needs affordability filters; the product should not become a wish list that low-volume restaurants cannot pay for.",
+    "packet_id": "PKT-0015",
+    "review_id": "PR-0015",
+    "source_memo": "expansionist",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-efb7f2",
+    "comment": "Objection: Executor package model should name what is not included: POS, delivery guarantees, ad spend, marketplace replacement, and unlimited support.",
+    "packet_id": "PKT-0016",
+    "review_id": "PR-0016",
+    "source_memo": "executor",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-b1033a",
+    "comment": "Objection: Contrarian warnings need to become qualification rules that sales can use quickly, not just caveats.",
+    "packet_id": "PKT-0017",
+    "review_id": "PR-0017",
+    "source_memo": "contrarian",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-b1033a",
+    "comment": "Objection: First-principles ROI model should output payback only after restaurant-specific data, not from generic default assumptions.",
+    "packet_id": "PKT-0018",
+    "review_id": "PR-0018",
+    "source_memo": "first-principles",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-b1033a",
+    "comment": "Objection: Expansion product view should stage AI later unless enough order volume and support budget justify it.",
+    "packet_id": "PKT-0019",
+    "review_id": "PR-0019",
+    "source_memo": "expansionist",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-b1033a",
+    "comment": "Objection: Outsider comparison needs a positive path for restaurants that cannot operate a full system today but have high need and high potential value.",
+    "packet_id": "PKT-0020",
+    "review_id": "PR-0020",
+    "source_memo": "outsider",
+    "type": "OBJECTION"
+  }
+]

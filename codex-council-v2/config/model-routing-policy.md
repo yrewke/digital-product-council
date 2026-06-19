@@ -14,6 +14,30 @@ Use for ordinary executive memos, evidence synthesis, implementation analysis, a
 
 Use only for difficult Contrarian or First-Principles analysis, major contradiction resolution, complex Chairman synthesis, and high-stakes final review.
 
-## Manual Fallback
+## Sub-Agent Dispatch
 
-If per-agent model routing is unavailable in the current Codex app, preserve this policy in the run charter and run the same Codex session with explicit tier labels in task prompts. Do not spend frontier reasoning on mechanical file operations.
+## Current Verification
+
+`codex.cmd doctor` on 2026-06-17 reported Codex `0.131.0` with active model `gpt-5.5`. The local TOML agent profiles are available as separate role entry points, but this repository does not rely on unverified per-agent model keys.
+
+For real runs, use visible isolated sub-agents for substantive role reasoning whenever the current Codex session exposes sub-agent tools. Model tier labels guide dispatch prompts and optional model overrides; they do not require hardcoded model keys in TOML.
+
+Required real-run role dispatch:
+
+- Standard or Frontier: `codex-council-v2-contrarian`, `codex-council-v2-first-principles`, `codex-council-v2-expansionist`, `codex-council-v2-outsider`, and `codex-council-v2-executor` for independent executive memos.
+- Economy or Standard: `codex-council-v2-librarian` for evidence routing and cache/provenance packets.
+- Standard or Frontier: `codex-council-v2-auditor` for substantive factual and numerical review.
+- Frontier for complex decisions, otherwise Standard: `codex-council-v2-chairman`.
+- Standard or Frontier: `codex-council-v2-devils-advocate`, only after Chairman direction exists.
+
+The operator keeps deterministic engine commands, state transitions, validation, and user-visible progress in the main Codex session.
+
+## Explicit Manual Fallback
+
+The run charter records tier assignments. If sub-agent spawning itself is unavailable, the `$codex-council-v2` operator must tell the user before continuing, label the run notes `MANUAL_SINGLE_SESSION_FALLBACK`, and use explicit tier labels in prompts:
+
+- Economy: run engine commands, packet creation, metadata, and validation.
+- Standard: ordinary executive memos, peer review, and evidence synthesis.
+- Frontier: Chairman synthesis, difficult Contrarian / First-Principles passes, and major contradiction resolution.
+
+Do not spend frontier reasoning on mechanical file operations.

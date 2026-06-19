@@ -1,0 +1,162 @@
+[
+  {
+    "anonymous_reviewer": "R-0eab6a",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0001",
+    "review_id": "PR-0001",
+    "source_memo": "first-principles",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-0eab6a",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0002",
+    "review_id": "PR-0002",
+    "source_memo": "expansionist",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-0eab6a",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0003",
+    "review_id": "PR-0003",
+    "source_memo": "outsider",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-0eab6a",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0004",
+    "review_id": "PR-0004",
+    "source_memo": "executor",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-5b4f3e",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0005",
+    "review_id": "PR-0005",
+    "source_memo": "contrarian",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-5b4f3e",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0006",
+    "review_id": "PR-0006",
+    "source_memo": "expansionist",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-5b4f3e",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0007",
+    "review_id": "PR-0007",
+    "source_memo": "outsider",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-5b4f3e",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0008",
+    "review_id": "PR-0008",
+    "source_memo": "executor",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-6d9571",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0009",
+    "review_id": "PR-0009",
+    "source_memo": "contrarian",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-6d9571",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0010",
+    "review_id": "PR-0010",
+    "source_memo": "first-principles",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-6d9571",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0011",
+    "review_id": "PR-0011",
+    "source_memo": "outsider",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-6d9571",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0012",
+    "review_id": "PR-0012",
+    "source_memo": "executor",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-efb7f2",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0013",
+    "review_id": "PR-0013",
+    "source_memo": "contrarian",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-efb7f2",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0014",
+    "review_id": "PR-0014",
+    "source_memo": "first-principles",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-efb7f2",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0015",
+    "review_id": "PR-0015",
+    "source_memo": "expansionist",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-efb7f2",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0016",
+    "review_id": "PR-0016",
+    "source_memo": "executor",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-b1033a",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0017",
+    "review_id": "PR-0017",
+    "source_memo": "contrarian",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-b1033a",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0018",
+    "review_id": "PR-0018",
+    "source_memo": "first-principles",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-b1033a",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0019",
+    "review_id": "PR-0019",
+    "source_memo": "expansionist",
+    "type": "OBJECTION"
+  },
+  {
+    "anonymous_reviewer": "R-b1033a",
+    "comment": "Clarify failure criteria and support cap.",
+    "packet_id": "PKT-0020",
+    "review_id": "PR-0020",
+    "source_memo": "outsider",
+    "type": "OBJECTION"
+  }
+]

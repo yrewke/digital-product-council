@@ -1,0 +1,183 @@
+[
+  {
+    "audit_status": "LABELED",
+    "claim_id": "CL-0001",
+    "claim_type": [
+      "CALCULATION",
+      "DATE_OR_PERIOD",
+      "MONEY"
+    ],
+    "classification": "SCENARIO_ASSUMPTION",
+    "detected_values": {
+      "dates_or_periods": [
+        "per month",
+        "annually"
+      ],
+      "money": [
+        "AED 100",
+        "AED 1,200"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "## Economic Consequences Scenario assumption: AED 100 per month equals AED 1,200 annually for the fixture pilot.",
+    "memo": "contrarian",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0002",
+    "claim_type": [
+      "CALCULATION",
+      "DATE_OR_PERIOD",
+      "MONEY"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "dates_or_periods": [
+        "per month",
+        "annually"
+      ],
+      "money": [
+        "AED 100",
+        "AED 1,000"
+      ]
+    },
+    "deterministic_audit": [
+      "BROKEN_MONTHLY_TO_ANNUAL: 100.0 x 12 != 1000.0"
+    ],
+    "evidence_ids": [],
+    "exact_text": "## Economic Consequences AED 100 per month equals AED 1,000 annually.",
+    "memo": "first-principles",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "LABELED",
+    "claim_id": "CL-0003",
+    "claim_type": [
+      "QUANTITY_OR_UNIT"
+    ],
+    "classification": "SCENARIO_ASSUMPTION",
+    "detected_values": {
+      "quantities": [
+        "200 support hours/month"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "## Economic Consequences The fixture has 200 support hours/month.",
+    "memo": "expansionist",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "LABELED",
+    "claim_id": "CL-0004",
+    "claim_type": [
+      "MONEY"
+    ],
+    "classification": "SCENARIO_ASSUMPTION",
+    "detected_values": {
+      "money": [
+        "AED 999"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "The fixture price is AED 999.",
+    "memo": "expansionist",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "LABELED",
+    "claim_id": "CL-0005",
+    "claim_type": [
+      "ABSOLUTE_LANGUAGE"
+    ],
+    "classification": "SCENARIO_ASSUMPTION",
+    "detected_values": {
+      "absolute_terms": [
+        "guaranteed",
+        "best"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "## Economic Consequences This fixture is guaranteed to be the best substitute.",
+    "memo": "outsider",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "LABELED",
+    "claim_id": "CL-0006",
+    "claim_type": [
+      "QUANTITY_OR_UNIT"
+    ],
+    "classification": "SCENARIO_ASSUMPTION",
+    "detected_values": {
+      "quantities": [
+        "20 support hours/month"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "## Economic Consequences Scenario assumption: the pilot requires 20 support hours/month and one owner.",
+    "memo": "executor",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0007",
+    "claim_type": [
+      "MONEY",
+      "PERCENTAGE_OR_RATIO"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "money": [
+        "AED 200",
+        "AED 30"
+      ],
+      "percentages": [
+        "20%"
+      ],
+      "ratios": []
+    },
+    "deterministic_audit": [
+      "BROKEN_PERCENTAGE: 200.0% of 20.0 = 40.0, not 30.0"
+    ],
+    "evidence_ids": [],
+    "exact_text": "20% of AED 200 is AED 30.",
+    "memo": "executor",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0008",
+    "claim_type": [
+      "MONEY",
+      "PERCENTAGE_OR_RATIO",
+      "ROI_PAYBACK_OR_MARGIN"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "money": [
+        "AED 100",
+        "AED 60"
+      ],
+      "percentages": [
+        "70%"
+      ],
+      "ratios": [],
+      "roi_terms": [
+        "margin"
+      ]
+    },
+    "deterministic_audit": [
+      "BROKEN_MARGIN: (100.0 - 60.0) / 100.0 = 40.0%, not 70.0%"
+    ],
+    "evidence_ids": [],
+    "exact_text": "A margin with revenue AED 100 and cost AED 60 is 70%.",
+    "memo": "executor",
+    "section": "CURRENT_MEMO"
+  }
+]

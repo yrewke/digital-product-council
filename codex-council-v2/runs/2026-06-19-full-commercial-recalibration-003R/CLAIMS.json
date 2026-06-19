@@ -1,0 +1,691 @@
+[
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0001",
+    "claim_type": [
+      "ROI_PAYBACK_OR_MARGIN"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "roi_terms": [
+        "ROI",
+        "margin"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "## Assigned Question Find how the commercial model fails: migration, ROI, willingness to pay, delivery, support, and margin.",
+    "memo": "contrarian",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0002",
+    "claim_type": [
+      "ABSOLUTE_LANGUAGE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "absolute_terms": [
+        "replace"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "Reject any model that implies restaurants can broadly replace marketplaces, save the full commission, or recover software costs quickly without restaurant-specific baselines.",
+    "memo": "contrarian",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0003",
+    "claim_type": [
+      "ROI_PAYBACK_OR_MARGIN"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "roi_terms": [
+        "profit"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "The second is treating commission savings as profit while ignoring incentives, payment fees, delivery, support, refunds, and staff handling.",
+    "memo": "contrarian",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "LABELED",
+    "claim_id": "CL-0004",
+    "claim_type": [
+      "ROI_PAYBACK_OR_MARGIN"
+    ],
+    "classification": "INTERNAL_PROJECT_FACT",
+    "detected_values": {
+      "roi_terms": [
+        "payback"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "NotebookLM evidence says aggregators still dominate mobile order flow, customers remain loyal to convenience and discounts, UAE online orders often carry heavy incentives, and no verified payback period exists for independent restaurants.",
+    "memo": "contrarian",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0005",
+    "claim_type": [
+      "MONEY",
+      "RANGE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "money": [
+        "AED 60",
+        "AED 20"
+      ],
+      "ranges": [
+        "20-35"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "If a restaurant shifts an AED 60 marketplace order to direct delivery and then pays AED 20-35 equivalent delivery cost plus a discount, the saved commission may disappear.",
+    "memo": "contrarian",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0006",
+    "claim_type": [
+      "CALCULATION",
+      "DATE_OR_PERIOD"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "dates_or_periods": [
+        "monthly"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "Low setup fees plus low monthly fees plus unlimited support will lose money.",
+    "memo": "contrarian",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0007",
+    "claim_type": [
+      "CALCULATION",
+      "PERCENTAGE_OR_RATIO"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "percentages": [
+        "2%",
+        "5%"
+      ],
+      "ratios": []
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "## Assumptions Conservative marketplace-to-direct migration should start at 2%-5% of eligible repeat marketplace orders in pilot planning, not total marketplace volume.",
+    "memo": "contrarian",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0008",
+    "claim_type": [
+      "PERCENTAGE_OR_RATIO"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "percentages": [
+        "8%",
+        "12%",
+        "15%",
+        "20%"
+      ],
+      "ratios": []
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "Base case can test 8%-12%; optimistic 15%-20% only after visible customer prompts, incentives, and operational reliability.",
+    "memo": "contrarian",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0009",
+    "claim_type": [
+      "ABSOLUTE_LANGUAGE",
+      "ROI_PAYBACK_OR_MARGIN"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "absolute_terms": [
+        "never"
+      ],
+      "roi_terms": [
+        "ROI",
+        "profit",
+        "margin"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "Direct-channel ROI should use contribution profit and margin delta, never gross revenue.",
+    "memo": "contrarian",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0010",
+    "claim_type": [
+      "ROI_PAYBACK_OR_MARGIN"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "roi_terms": [
+        "ROI"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "## Position The model must be a hybrid of product tiers, optional modules, and restaurant-specific ROI calculation.",
+    "memo": "first-principles",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0011",
+    "claim_type": [
+      "ROI_PAYBACK_OR_MARGIN"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "roi_terms": [
+        "margin"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "Shifted orders create margin delta.",
+    "memo": "first-principles",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0012",
+    "claim_type": [
+      "MONEY",
+      "PERCENTAGE_OR_RATIO",
+      "RANGE",
+      "ROI_PAYBACK_OR_MARGIN"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "money": [
+        "AED 12",
+        "AED 1"
+      ],
+      "percentages": [
+        "35%",
+        "60%",
+        "18%",
+        "35%",
+        "0%",
+        "15%",
+        "2.9%"
+      ],
+      "ranges": [
+        "12-35"
+      ],
+      "ratios": [],
+      "roi_terms": [
+        "margin"
+      ]
+    },
+    "deterministic_audit": [
+      "BROKEN_MARGIN: (35.0 - 60.0) / 35.0 = -71.4%, not 1.0%"
+    ],
+    "evidence_ids": [],
+    "exact_text": "## Assumptions Use scenario variables rather than false precision: food contribution margin 35%-60%; effective marketplace burden 18%-35%; direct delivery AED 12-35 per order depending model; direct incentive 0%-15%; payment 2.9% + AED 1 when online card is used.",
+    "memo": "first-principles",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0013",
+    "claim_type": [
+      "ROI_PAYBACK_OR_MARGIN"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "roi_terms": [
+        "ROI"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "The ROI tool must expose sensitivity.",
+    "memo": "first-principles",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0014",
+    "claim_type": [
+      "ROI_PAYBACK_OR_MARGIN"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "roi_terms": [
+        "ROI"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "## Recommendation Adopt conservative/base/optimistic ROI scenarios with transparent labels.",
+    "memo": "first-principles",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0015",
+    "claim_type": [
+      "ABSOLUTE_LANGUAGE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "absolute_terms": [
+        "replace"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "Use pilot measurement to replace migration, incentive, delivery, and support variables.",
+    "memo": "first-principles",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0016",
+    "claim_type": [
+      "COMPARATIVE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "comparatives": [
+        "better"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "Operational returns come from fewer phone/WhatsApp mistakes, better order records, availability, confirmations, and reduced staff back-and-forth.",
+    "memo": "expansionist",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0017",
+    "claim_type": [
+      "COMPARATIVE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "comparatives": [
+        "lower"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "Strategic value comes from data ownership, brand credibility, resilience, Google/SEO, and lower dependence.",
+    "memo": "expansionist",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0018",
+    "claim_type": [
+      "ABSOLUTE_LANGUAGE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "absolute_terms": [
+        "best"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "## Assumptions The best early target segments have repeat-demand intensity, medium/high AOV, family/group/catering potential, visible existing demand, and an owner who can prompt repeat customers to order direct.",
+    "memo": "expansionist",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0019",
+    "claim_type": [
+      "ABSOLUTE_LANGUAGE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "absolute_terms": [
+        "best"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "## Position The product should be sold only when it beats the buyer\u2019s next-best alternative for that restaurant.",
+    "memo": "outsider",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0020",
+    "claim_type": [
+      "COMPARATIVE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "comparatives": [
+        "cheaper"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "- Wix/WordPress/freelancers are cheaper for a static website but do not automatically create operational ordering, CRM, delivery, or analytics.",
+    "memo": "outsider",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0021",
+    "claim_type": [
+      "COMPARATIVE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "comparatives": [
+        "better"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "- POS ecosystems like Foodics/Sapaad/Syrve are better for mature operators needing operational backbone.",
+    "memo": "outsider",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0022",
+    "claim_type": [
+      "CALCULATION",
+      "DATE_OR_PERIOD"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "dates_or_periods": [
+        "monthly"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "- Ordering SaaS platforms set a competitive ceiling for monthly pricing.",
+    "memo": "outsider",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0023",
+    "claim_type": [
+      "ROI_PAYBACK_OR_MARGIN"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "roi_terms": [
+        "ROI"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "## What Would Change This Position Evidence that target restaurants already reject low-cost alternatives and ask specifically for owned ordering plus ROI analysis.",
+    "memo": "outsider",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0024",
+    "claim_type": [
+      "MONEY",
+      "RANGE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "money": [
+        "AED 1,500",
+        "AED 150",
+        "AED 1,000",
+        "AED 150"
+      ],
+      "ranges": [
+        "1,500-2,500",
+        "150-300"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "Pricing should triangulate affordability, value, alternatives, support burden, and provider cost: - Launch Ordering Page: AED 1,500-2,500 setup, AED 150-300/mo support/hosting, pilot discount floor AED 1,000 setup plus AED 150/mo.",
+    "memo": "executor",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0025",
+    "claim_type": [
+      "MONEY",
+      "RANGE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "money": [
+        "AED 3,000",
+        "AED 250"
+      ],
+      "ranges": [
+        "3,000-5,500",
+        "250-500"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "- Website + Ordering: AED 3,000-5,500 setup, AED 250-500/mo.",
+    "memo": "executor",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0026",
+    "claim_type": [
+      "MONEY",
+      "RANGE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "money": [
+        "AED 6,000",
+        "AED 500"
+      ],
+      "ranges": [
+        "6,000-10,000",
+        "500-900"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "- Direct Orders Dashboard: AED 6,000-10,000 setup, AED 500-900/mo.",
+    "memo": "executor",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0027",
+    "claim_type": [
+      "MONEY",
+      "RANGE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "money": [
+        "AED 10,000",
+        "AED 900"
+      ],
+      "ranges": [
+        "10,000-18,000",
+        "900-1,500"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "- Direct Commerce: AED 10,000-18,000 setup, AED 900-1,500/mo.",
+    "memo": "executor",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0028",
+    "claim_type": [
+      "MONEY",
+      "RANGE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "money": [
+        "AED 500"
+      ],
+      "ranges": [
+        "500-1,500"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "- WhatsApp handoff: AED 500-1,500 setup.",
+    "memo": "executor",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0029",
+    "claim_type": [
+      "MONEY",
+      "RANGE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "money": [
+        "AED 2,000",
+        "AED 200"
+      ],
+      "ranges": [
+        "2,000-5,000",
+        "200-500"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "- Deterministic Telegram bot: AED 2,000-5,000 setup, AED 200-500/mo.",
+    "memo": "executor",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0030",
+    "claim_type": [
+      "MONEY",
+      "RANGE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "money": [
+        "AED 4,000",
+        "AED 500"
+      ],
+      "ranges": [
+        "4,000-9,000",
+        "500-1,200"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "- Deterministic WhatsApp bot: AED 4,000-9,000 setup, AED 500-1,200/mo plus pass-through.",
+    "memo": "executor",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0031",
+    "claim_type": [
+      "MONEY",
+      "RANGE"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "money": [
+        "AED 6,000",
+        "AED 800"
+      ],
+      "ranges": [
+        "6,000-15,000",
+        "800-2,000"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "- AI assistant: AED 6,000-15,000 setup, AED 800-2,000/mo plus AI usage cap.",
+    "memo": "executor",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0032",
+    "claim_type": [
+      "MONEY",
+      "ROI_PAYBACK_OR_MARGIN"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "money": [
+        "AED 2,000"
+      ],
+      "roi_terms": [
+        "ROI"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "## What Would Change This Position If pilots show close resistance above AED 2,000 setup for Tier 0, keep Tier 0 as a cash-entry product and move ROI-heavy selling to Tier 1/2.",
+    "memo": "executor",
+    "section": "CURRENT_MEMO"
+  },
+  {
+    "audit_status": "NEEDS_AUDIT",
+    "claim_id": "CL-0033",
+    "claim_type": [
+      "ROI_PAYBACK_OR_MARGIN"
+    ],
+    "classification": "UNKNOWN",
+    "detected_values": {
+      "roi_terms": [
+        "ROI"
+      ]
+    },
+    "deterministic_audit": [],
+    "evidence_ids": [],
+    "exact_text": "Use the ROI calculator as a diagnostic, not a promise.",
+    "memo": "executor",
+    "section": "CURRENT_MEMO"
+  }
+]

@@ -1,0 +1,76 @@
+{"kind": "RUN_INITIALIZED", "run_id": "synthetic-fixture-001", "time": "2026-06-18T12:07:05+00:00"}
+{"from": "CHARTER_DRAFTED", "kind": "STAGE_TRANSITION", "reason": "charter validated", "time": "2026-06-18T12:07:05+00:00", "to": "CHARTER_APPROVED"}
+{"from": "CHARTER_APPROVED", "kind": "STAGE_TRANSITION", "reason": "evidence request window opened", "time": "2026-06-18T12:07:05+00:00", "to": "EVIDENCE_REQUESTS_OPEN"}
+{"acceptable_evidence_type": "SCENARIO_ASSUMPTION", "answer_source": null, "cache_key": "fixture-demand-cap", "decision_affected": "pilot size", "freshness_days": 9999, "geography": "SYNTHETIC", "kind": "EVIDENCE_REQUEST_REGISTERED", "normalized_question": "fixture-demand-cap", "question": "What is the fixture demand cap?", "request_id": "ER-0001", "requester": "contrarian", "response_id": null, "scope": "synthetic", "status": "OPEN", "time": "2026-06-18T12:07:05+00:00"}
+{"answer_source": "user-supplied fact", "cache_key": "fixture-demand-cap", "claim": "Fixture demand is capped at 40 orders/day.", "classification": "SCENARIO_ASSUMPTION", "evidence_id": "EV-0001", "freshness_days": 9999, "geography": "SYNTHETIC", "kind": "EVIDENCE_REQUEST_RESOLVED", "request_id": "ER-0001", "source_id": "SRC-0001", "time": "2026-06-18T12:07:06+00:00"}
+{"acceptable_evidence_type": "SCENARIO_ASSUMPTION", "answer_source": "cache", "cache_key": "fixture-demand-cap", "decision_affected": "pilot size", "freshness_days": 9999, "geography": "SYNTHETIC", "kind": "EVIDENCE_REQUEST_REGISTERED", "normalized_question": "fixture-demand-cap", "question": "What is the fixture demand cap?", "request_id": "ER-0002", "requester": "outsider", "response_id": "EV-0001", "scope": "synthetic", "status": "ANSWERED_FROM_CACHE", "time": "2026-06-18T12:07:07+00:00"}
+{"acceptable_evidence_type": "INTERNAL_PROJECT_FACT", "answer_source": null, "cache_key": "fixture-support-budget", "decision_affected": "support load", "freshness_days": 9999, "geography": "SYNTHETIC", "kind": "EVIDENCE_REQUEST_REGISTERED", "normalized_question": "fixture-support-budget", "question": "What is the fixture support budget?", "request_id": "ER-0003", "requester": "executor", "response_id": null, "scope": "synthetic", "status": "OPEN", "time": "2026-06-18T12:07:07+00:00"}
+{"answer_source": "user-supplied fact", "cache_key": "fixture-support-budget", "claim": "Fixture support budget is 20 hours/month, not 200.", "classification": "INTERNAL_PROJECT_FACT", "evidence_id": "EV-0002", "freshness_days": 9999, "geography": "SYNTHETIC", "kind": "EVIDENCE_REQUEST_RESOLVED", "request_id": "ER-0003", "source_id": "SRC-0002", "time": "2026-06-18T12:07:07+00:00"}
+{"acceptable_evidence_type": "INTERNAL_PROJECT_FACT", "answer_source": null, "cache_key": "fixture-safe-price", "decision_affected": "price audit", "freshness_days": 9999, "geography": "SYNTHETIC", "kind": "EVIDENCE_REQUEST_REGISTERED", "normalized_question": "fixture-safe-price", "question": "What is the fixture safe price?", "request_id": "ER-0004", "requester": "auditor", "response_id": null, "scope": "synthetic", "status": "OPEN", "time": "2026-06-18T12:07:07+00:00"}
+{"answer_source": "user-supplied fact", "cache_key": "fixture-safe-price", "claim": "Fixture safe price is AED 499, not AED 999.", "classification": "INTERNAL_PROJECT_FACT", "evidence_id": "EV-0003", "freshness_days": 9999, "geography": "SYNTHETIC", "kind": "EVIDENCE_REQUEST_RESOLVED", "request_id": "ER-0004", "source_id": "SRC-0003", "time": "2026-06-18T12:07:07+00:00"}
+{"from": "EVIDENCE_REQUESTS_OPEN", "kind": "STAGE_TRANSITION", "reason": "all registered evidence requests answered or reused", "time": "2026-06-18T12:07:07+00:00", "to": "EVIDENCE_READY"}
+{"executive": "contrarian", "kind": "MEMO_SUBMITTED", "time": "2026-06-18T12:07:07+00:00"}
+{"from": "EVIDENCE_READY", "kind": "STAGE_TRANSITION", "reason": "first memo submitted", "time": "2026-06-18T12:07:07+00:00", "to": "MEMOS_DRAFTING"}
+{"executive": "first-principles", "kind": "MEMO_SUBMITTED", "time": "2026-06-18T12:07:07+00:00"}
+{"executive": "expansionist", "kind": "MEMO_SUBMITTED", "time": "2026-06-18T12:07:07+00:00"}
+{"executive": "outsider", "kind": "MEMO_SUBMITTED", "time": "2026-06-18T12:07:07+00:00"}
+{"executive": "executor", "kind": "MEMO_SUBMITTED", "time": "2026-06-18T12:07:07+00:00"}
+{"from": "MEMOS_DRAFTING", "kind": "STAGE_TRANSITION", "reason": "all five memos submitted", "time": "2026-06-18T12:07:07+00:00", "to": "MEMOS_SUBMITTED"}
+{"count": 8, "kind": "CLAIMS_EXTRACTED", "time": "2026-06-18T12:07:07+00:00"}
+{"from": "MEMOS_SUBMITTED", "kind": "STAGE_TRANSITION", "reason": "synthetic claim extraction started", "time": "2026-06-18T12:07:07+00:00", "to": "AUDIT_IN_PROGRESS"}
+{"blocking": true, "claim_id": "CL-0003", "contradicted_text": "The fixture has 200 support hours/month.", "corrected_text": "The fixture support budget is 20 hours/month.", "evidence_ids": ["EV-0002"], "fact_check_id": "FC-0001", "finding": "False. Fixture support budget is 20 hours/month.", "kind": "FACT_CHECK_RECORDED", "required_correction": "Replace 200 with 20 or explicitly downgrade to assumption.", "status": "OPEN", "time": "2026-06-18T12:07:07+00:00"}
+{"blocking": true, "claim_id": "CL-0004", "contradicted_text": "The fixture price is AED 999.", "corrected_text": "The fixture price is AED 499.", "evidence_ids": ["EV-0003"], "fact_check_id": "FC-0002", "finding": "False AED value. Fixture safe price is AED 499.", "kind": "FACT_CHECK_RECORDED", "required_correction": "Replace AED 999 with AED 499.", "status": "OPEN", "time": "2026-06-18T12:07:07+00:00"}
+{"blocking": true, "claim_id": "CL-0002", "contradicted_text": "AED 100 per month equals AED 1,000 annually.", "corrected_text": "AED 100 per month equals AED 1,200 annually.", "evidence_ids": [], "fact_check_id": "FC-0003", "finding": "Broken monthly-to-annual calculation.", "kind": "FACT_CHECK_RECORDED", "required_correction": "Replace AED 1,000 annually with AED 1,200 annually.", "status": "OPEN", "time": "2026-06-18T12:07:07+00:00"}
+{"blocking": true, "claim_id": "CL-0005", "contradicted_text": "This fixture is guaranteed to be the best substitute.", "corrected_text": "Scenario assumption: this fixture may be a useful substitute.", "evidence_ids": [], "fact_check_id": "FC-0004", "finding": "Unsupported guaranteed/best claim.", "kind": "FACT_CHECK_RECORDED", "required_correction": "Downgrade to a scenario assumption.", "status": "OPEN", "time": "2026-06-18T12:07:07+00:00"}
+{"blocking": true, "claim_id": "CL-0007", "contradicted_text": "20% of AED 200 is AED 30.", "corrected_text": "20% of AED 200 is AED 40.", "evidence_ids": [], "fact_check_id": "FC-0005", "finding": "Broken percentage calculation.", "kind": "FACT_CHECK_RECORDED", "required_correction": "Replace AED 30 with AED 40.", "status": "OPEN", "time": "2026-06-18T12:07:07+00:00"}
+{"blocking": true, "claim_id": "CL-0008", "contradicted_text": "A margin with revenue AED 100 and cost AED 60 is 70%.", "corrected_text": "A margin with revenue AED 100 and cost AED 60 is 40%.", "evidence_ids": [], "fact_check_id": "FC-0006", "finding": "Broken margin calculation.", "kind": "FACT_CHECK_RECORDED", "required_correction": "Replace 70% with 40%.", "status": "OPEN", "time": "2026-06-18T12:07:07+00:00"}
+{"from": "AUDIT_IN_PROGRESS", "kind": "STAGE_TRANSITION", "reason": "blocking fact checks remain", "time": "2026-06-18T12:07:07+00:00", "to": "AUDIT_BLOCKED"}
+{"executive": "expansionist", "kind": "MEMO_SUBMITTED", "time": "2026-06-18T12:07:08+00:00"}
+{"executive": "first-principles", "kind": "MEMO_SUBMITTED", "time": "2026-06-18T12:07:08+00:00"}
+{"executive": "outsider", "kind": "MEMO_SUBMITTED", "time": "2026-06-18T12:07:08+00:00"}
+{"executive": "executor", "kind": "MEMO_SUBMITTED", "time": "2026-06-18T12:07:08+00:00"}
+{"author_response_id": "AR-0001", "executive": "expansionist", "kind": "AUTHOR_RESPONSE_RECORDED", "time": "2026-06-18T12:07:08+00:00"}
+{"from": "AUDIT_BLOCKED", "kind": "STAGE_TRANSITION", "reason": "author corrections submitted", "time": "2026-06-18T12:07:08+00:00", "to": "AUDIT_IN_PROGRESS"}
+{"from": "AUDIT_IN_PROGRESS", "kind": "STAGE_TRANSITION", "reason": "all blocking fact checks resolved against current memos", "time": "2026-06-18T12:07:08+00:00", "to": "AUDIT_PASSED"}
+{"from": "AUDIT_PASSED", "kind": "STAGE_TRANSITION", "reason": "anonymous review packets created", "time": "2026-06-18T12:07:08+00:00", "to": "PEER_REVIEW_IN_PROGRESS"}
+{"count": 20, "kind": "REVIEW_PACKETS_CREATED", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0001", "review_id": "PR-0001", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0002", "review_id": "PR-0002", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0003", "review_id": "PR-0003", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0004", "review_id": "PR-0004", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0005", "review_id": "PR-0005", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0006", "review_id": "PR-0006", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0007", "review_id": "PR-0007", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0008", "review_id": "PR-0008", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0009", "review_id": "PR-0009", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0010", "review_id": "PR-0010", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0011", "review_id": "PR-0011", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0012", "review_id": "PR-0012", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0013", "review_id": "PR-0013", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0014", "review_id": "PR-0014", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0015", "review_id": "PR-0015", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0016", "review_id": "PR-0016", "time": "2026-06-18T12:07:08+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0017", "review_id": "PR-0017", "time": "2026-06-18T12:07:09+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0018", "review_id": "PR-0018", "time": "2026-06-18T12:07:09+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0019", "review_id": "PR-0019", "time": "2026-06-18T12:07:10+00:00"}
+{"kind": "PEER_REVIEW_RECORDED", "packet_id": "PKT-0020", "review_id": "PR-0020", "time": "2026-06-18T12:07:10+00:00"}
+{"from": "PEER_REVIEW_IN_PROGRESS", "kind": "STAGE_TRANSITION", "reason": "peer reviews merged for author response", "time": "2026-06-18T12:07:12+00:00", "to": "AUTHOR_REVISION"}
+{"count": 20, "kind": "PEER_REVIEWS_MERGED", "time": "2026-06-18T12:07:12+00:00"}
+{"chairman_resolution_note": null, "challenged_artifact": "memos/executor.md", "challenged_section": "CURRENT_MEMO", "challenged_statement": "Launch without support cap.", "evidence": "EV-0002", "holder": "executor", "kind": "VETO_RECORDED", "protected_domain": "feasible next action", "reason": "A launch without the support cap violates feasible next action.", "remedy_must_contain": "20-hour/month support cap before launch", "required_remedy": "Add the 20-hour/month support cap before Chairman review.", "stage": "PRE_CHAIR", "status": "OPEN", "time": "2026-06-18T12:07:12+00:00", "valid": true, "validation_reason": "valid scoped veto", "verification_method": "contains_text", "veto_id": "V-0001"}
+{"chairman_resolution_note": null, "challenged_artifact": "memos/outsider.md", "challenged_section": "CURRENT_MEMO", "challenged_statement": "Synthetic fixture decision.", "evidence": "none", "holder": "outsider", "kind": "VETO_RECORDED", "protected_domain": "brand preference", "reason": "Plain naming is less attractive.", "remedy_must_contain": "Rename the fixture.", "required_remedy": "Rename the fixture.", "stage": "PRE_CHAIR", "status": "DEMOTED_TO_OBJECTION", "time": "2026-06-18T12:07:12+00:00", "valid": false, "validation_reason": "outsider is not authorized for PRE_CHAIR / brand preference", "verification_method": "contains_text", "veto_id": "V-0002"}
+{"executive": "executor", "kind": "MEMO_SUBMITTED", "time": "2026-06-18T12:07:12+00:00"}
+{"kind": "VETO_REMEDY_VERIFIED", "reason": "required remedy text found", "status": "RESOLVED", "time": "2026-06-18T12:07:12+00:00", "veto_id": "V-0001"}
+{"author_response_id": "AR-0002", "executive": "executor", "kind": "AUTHOR_RESPONSE_RECORDED", "time": "2026-06-18T12:07:12+00:00"}
+{"from": "AUTHOR_REVISION", "kind": "STAGE_TRANSITION", "reason": "author revision and pre-chair veto cycle complete", "time": "2026-06-18T12:07:12+00:00", "to": "PRE_CHAIR_READY"}
+{"from": "PRE_CHAIR_READY", "kind": "STAGE_TRANSITION", "reason": "chairman first synthesis recorded", "time": "2026-06-18T12:07:12+00:00", "to": "CHAIRMAN_SYNTHESIS"}
+{"kind": "FIRST_SYNTHESIS_RECORDED", "time": "2026-06-18T12:07:12+00:00"}
+{"from": "CHAIRMAN_SYNTHESIS", "kind": "STAGE_TRANSITION", "reason": "devils advocate attack recorded", "time": "2026-06-18T12:07:12+00:00", "to": "DEVILS_ADVOCATE_COMPLETE"}
+{"kind": "DEVILS_ADVOCATE_RECORDED", "time": "2026-06-18T12:07:12+00:00"}
+{"from": "DEVILS_ADVOCATE_COMPLETE", "kind": "STAGE_TRANSITION", "reason": "provisional verdict recorded", "time": "2026-06-18T12:07:12+00:00", "to": "PROVISIONAL_VERDICT"}
+{"kind": "PROVISIONAL_VERDICT_RECORDED", "time": "2026-06-18T12:07:12+00:00"}
+{"from": "PROVISIONAL_VERDICT", "kind": "STAGE_TRANSITION", "reason": "post-chair veto review opened", "time": "2026-06-18T12:07:12+00:00", "to": "POST_CHAIR_VETO_REVIEW"}
+{"chairman_resolution_note": null, "challenged_artifact": "CHAIRMAN.md", "challenged_section": null, "challenged_statement": "Start without owner assignment.", "evidence": "RUN_CHARTER", "holder": "executor", "kind": "VETO_RECORDED", "protected_domain": "feasible next action", "reason": "No executable owner means the next action is not feasible.", "remedy_must_contain": "Owner: Fixture Lead", "required_remedy": "Assign owner and date.", "stage": "POST_CHAIR", "status": "OPEN", "time": "2026-06-18T12:07:12+00:00", "valid": true, "validation_reason": "valid scoped veto", "verification_method": "contains_text", "veto_id": "V-0003"}
+{"kind": "VETO_REMEDY_VERIFIED", "reason": "required remedy text found", "status": "RESOLVED", "time": "2026-06-18T12:07:12+00:00", "veto_id": "V-0003"}
+{"from": "POST_CHAIR_VETO_REVIEW", "kind": "STAGE_TRANSITION", "reason": "final verdict recorded", "time": "2026-06-18T12:07:12+00:00", "to": "FINAL_VERDICT_COMPLETE"}
+{"kind": "FINAL_VERDICT_RECORDED", "time": "2026-06-18T12:07:12+00:00"}
+{"from": "FINAL_VERDICT_COMPLETE", "kind": "STAGE_TRANSITION", "reason": "validation passed and completion accepted", "time": "2026-06-18T12:07:30+00:00", "to": "RUN_COMPLETE"}

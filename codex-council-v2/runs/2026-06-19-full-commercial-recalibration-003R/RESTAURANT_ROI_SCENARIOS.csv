@@ -1,0 +1,5 @@
+scenario,eligible_repeat_marketplace_orders_per_month,migration_rate,incremental_direct_orders_per_month,AOV_AED,contribution_margin,effective_marketplace_burden,direct_incentive,direct_payment_fee,direct_delivery_cost_per_order,monthly_solution_fee_AED,setup_fee_AED,monthly_net_benefit_AED,payback_months,label
+Conservative,300,0.03,5,60,0.35,0.18,0.10,2.74,20,300,2500,236,10.6,INTERNAL_PLANNING_ASSUMPTION
+Base,500,0.10,15,75,0.45,0.25,0.07,3.18,14,500,4500,1241,3.6,SCENARIO_VARIABLE
+Optimistic,900,0.18,35,90,0.55,0.30,0.05,3.61,10,900,8000,5370,1.5,REQUIRES_PILOT_VALIDATION
+Delivery-risk case,500,0.10,15,75,0.45,0.25,0.10,3.18,28,500,4500,306,14.7,SCENARIO_VARIABLE

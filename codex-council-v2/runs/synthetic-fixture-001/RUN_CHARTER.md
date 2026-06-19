@@ -10,40 +10,67 @@ Synthetic fixture decision
 
 ## Central Question
 
-Choose a bounded fixture launch option using synthetic facts only.
+Choose a bounded fixture launch option.
 
 ## Decision-Status Map
 
-- Fixture package: NEEDS_NEW_DECISION
-- Old launch idea: OLD_HYPOTHESIS
+{}
 
 ## Role-Specific Starting Briefs
 
 ### Contrarian
-Find how the fixture launch fails under capped demand and support limits.
+Find how the proposal fails and what evidence would defeat each objection.
 
-### First-Principles Thinker
-Decompose the fixture into demand, support budget, and reversibility.
+### First-Principles
+Decompose the decision into load-bearing claims and rebuild from constraints.
 
 ### Expansionist
-Find reusable upside without treating optionality as present value.
+Identify upside and reusable leverage without pricing speculation as fact.
 
 ### Outsider
-Compare against doing nothing and a low-cost substitute.
+Compare against doing nothing and low-cost substitutes from buyer perspective.
 
 ### Executor
-Define the next executable fixture step and dependencies.
+Map dependencies, ownership, support burden, failure criteria, and next action.
 
 ## Model-Routing Plan
 
-Economy for routing and validation; standard for memos and reviews; frontier only for Chairman contradiction resolution.
+{
+  "economy": "manual fallback in current Codex session; use for metadata and validation",
+  "frontier": "active Codex model from doctor output when available; reserve for Chairman and hard contradictions",
+  "standard": "manual fallback in current Codex session; use for ordinary memos and reviews",
+  "verified_environment": "Codex Doctor observed model gpt-5.5 on this workstation; per-agent model keys are not guaranteed by local TOML support."
+}
 
-## Veto Assignments
+## Machine-Readable Veto Assignments
 
-- Executor: PRE_CHAIR and POST_CHAIR veto over feasibility of next action.
-- Contrarian: PRE_CHAIR veto over unbounded downside claims.
-- Evidence Auditor: permanent factual and numerical veto.
+```json
+{
+  "auditor": [
+    {
+      "protected_domain": "factual and numerical validity",
+      "stage": "ANY"
+    }
+  ],
+  "contrarian": [
+    {
+      "protected_domain": "unbounded downside claims",
+      "stage": "PRE_CHAIR"
+    }
+  ],
+  "executor": [
+    {
+      "protected_domain": "feasible next action",
+      "stage": "PRE_CHAIR"
+    },
+    {
+      "protected_domain": "feasible next action",
+      "stage": "POST_CHAIR"
+    }
+  ]
+}
+```
 
 ## Stop Conditions
 
-Stop on unresolved blocking fact checks, malformed tags, missing final verdict, or skipped authorized veto holder.
+Stop on unresolved blocking fact checks, malformed tags, missing final verdict, illegal stage transition, failed old-system hash preservation, or skipped authorized veto holder.

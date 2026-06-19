@@ -1,1 +1,4 @@
 source_id,title,classification,geography,publication_date,retrieval_date,limitations
+SRC-0001,Fixture Operations Note,SCENARIO_ASSUMPTION,SYNTHETIC,,2026-06-18,fixture
+SRC-0002,Fixture Cost Sheet,INTERNAL_PROJECT_FACT,SYNTHETIC,,2026-06-18,fixture
+SRC-0003,Fixture Price Sheet,INTERNAL_PROJECT_FACT,SYNTHETIC,,2026-06-18,fixture
